@@ -1,1 +1,127 @@
 // app global css in SCSS form
+// app global css in SCSS form
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  // background: url("/images/authbg.png") no-repeat center center/cover;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1440px;
+}
+
+.small_container {
+  margin: 0 auto;
+  width: 75%;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+.register::before {
+  box-shadow: none;
+}
+.nav__links .q-tab__indicator {
+  width: 56.1px;
+  margin: 0 auto;
+  height: 2px;
+}
+
+.nav__links .q-tab {
+  padding: 0 30px;
+}
+
+.nav__links .q-tab__label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.nav_btns .q-btn {
+  font-size: 12px;
+  padding: 4px 1px;
+}
+.nav_btns .q-btn::before {
+  box-shadow: none;
+}
+.timeline .q-timeline--loose .q-timeline__entry--right .q-timeline__content {
+  float: none;
+  text-align: left;
+  padding-left: 0;
+}
+
+.timeline .q-timeline--loose .q-timeline__entry--left .q-timeline__content,
+.q-timeline--loose .q-timeline__entry--right .q-timeline__subtitle {
+  float: none;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.timeline .q-timeline__content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.give_height .q-timeline__dot {
+  display: none;
+}
+
+.give_height .q-timeline__subtitle {
+  background: #ffffff;
+  box-shadow: 0px 1px 54px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  transform: rotate(90deg);
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 9px 44px;
+  gap: 10px;
+  position: absolute;
+}
+.give_height .q-timeline__subtitle span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 148%;
+  letter-spacing: 0.9em;
+  color: #00a250;
+  position: relative;
+  top: 10%;
+  //   transform: rotate(90deg);
+}
+
+// .timeline .q-timeline__dot:before {
+//   background: rgba(0, 162, 80, 0.98);
+//   filter: blur(8px);
+// }
+
+@media (max-width: 600px) {
+  .nav .q-toolbar {
+    padding: 0;
+  }
+}
