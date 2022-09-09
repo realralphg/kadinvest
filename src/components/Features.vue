@@ -1,5 +1,8 @@
 <template>
   <div ref="features" class="wrapper cards_div section">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#fff" fill-opacity="1" d="M0,288L1440,32L1440,0L0,0Z"></path>
+    </svg>
     <div class="hold small_container">
       <header class="heading">
         <div class="abt">
@@ -151,7 +154,7 @@ export default {
 
         .to(card, {
           rotate: -185,
-          xPercent: 300,
+          x: 200,
           y: -100,
           delay: 8 * card.dataset.index,
         });
@@ -284,7 +287,7 @@ export default {
   align-items: center;
   flex-direction: row-reverse;
   position: relative;
-  padding: 5rem 0 10rem;
+  padding: 5rem 0 25rem;
   gap: 2rem;
 }
 .tap img {
@@ -310,6 +313,9 @@ export default {
 
   .para_hold {
     padding-bottom: 24rem;
+  }
+  .tap {
+    padding: 5rem 0 15rem;
   }
 }
 

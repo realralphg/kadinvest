@@ -190,7 +190,7 @@ export default {
 
 @media (min-width: 1300px) {
   .meet {
-    margin-top: -30%;
+    margin-top: -43%;
   }
 }
 @media (max-width: 950px) {
@@ -231,7 +231,7 @@ export default {
     margin-top: -120%;
   }
   .heading {
-    padding: 4rem 0 5rem !important;
+    padding: 4rem 0 0rem !important;
   }
 }
 

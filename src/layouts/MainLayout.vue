@@ -15,6 +15,7 @@
               class="text-dark nav_items"
               ripple
               no-caps
+              to="/home"
               exact
               @click="goHome"
             />
@@ -76,6 +77,16 @@
               ripple
               no-caps
               to="/register"
+              exact
+            />
+          </li>
+          <li>
+            <q-btn
+              class="text-dark sponsor nav_items"
+              label="Become a sponsor"
+              ripple
+              no-caps
+              to="/sponsor"
               exact
             />
           </li>
@@ -261,7 +272,7 @@ export default defineComponent({
       });
     },
     gotoMetaverse() {
-      this.$store.animate.refs[4].metaverse.scrollIntoView({
+      this.$store.animate.refs[5].metaverse.scrollIntoView({
         behavior: "smooth",
       });
     },
@@ -315,12 +326,15 @@ h1 {
   display: none;
 }
 
-.container {
-  max-width: 1200px;
-  width: 90%;
-  margin: auto;
+.sponsor {
+  padding: 14px 10px;
+  background: #1f1b5e;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff !important;
 }
-
 .navbar {
   box-shadow: 0px 5px 10px 0px #aaa;
   position: fixed;
@@ -341,6 +355,7 @@ h1 {
 .menu-items {
   order: 2;
   display: flex;
+  align-items: center;
 }
 .logo {
   order: 1;

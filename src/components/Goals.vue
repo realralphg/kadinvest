@@ -46,6 +46,7 @@ export default {
 <style scoped>
 .wrapper {
   margin-top: 7rem;
+  position: relative;
 }
 .about {
   font-style: normal;
@@ -108,5 +109,24 @@ export default {
   justify-content: center;
   max-width: 800px;
   margin: 2rem auto 0;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  left: 0;
+  top: 20%;
+  background: url("/images/backdrop.png") no-repeat;
+}
+.wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  right: 0;
+  top: 50%;
+  background: url("/images/drop.png") no-repeat;
 }
 </style>

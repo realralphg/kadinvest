@@ -239,7 +239,7 @@ export default {
     margin-bottom: 20rem;
   }
   .right img {
-    width: 100%;
+    width: 70%;
   }
   .bottom_images {
     width: 90%;

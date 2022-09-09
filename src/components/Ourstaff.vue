@@ -204,7 +204,7 @@ p.desc {
   position: relative;
   /* margin: 0 auto; */
   padding: 1em 0 4em;
-  max-width: 1100px;
+  /* max-width: 1100px; */
   list-style: none;
   text-align: center;
   display: grid;
@@ -226,7 +226,7 @@ p.desc {
   max-width: 480px;
   max-height: 360px;
   width: 100%;
-  background: #3085a3;
+  /* background: #3085a3; */
   text-align: center;
   cursor: pointer;
 }
@@ -237,8 +237,9 @@ p.desc {
   min-height: 100%;
   max-width: 100%;
   opacity: 0.8;
+  border-radius: 15px;
   width: 100%;
-  height: 300px;
+  height: 350px;
   object-fit: cover;
 }
 
@@ -273,7 +274,7 @@ span.office {
 
 .grid figure figcaption {
   padding: 2em;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   color: #fff;
   text-transform: uppercase;
   font-size: 1.25em;
@@ -361,7 +362,7 @@ figure.effect-sadie h2 {
   line-height: 23px;
   color: #ffffff;
   position: absolute;
-  bottom: -28%;
+  bottom: -20%;
   padding: 2rem 0;
   left: 0;
   width: 100%;
