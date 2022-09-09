@@ -141,6 +141,7 @@ h1 {
   color: #333333;
   padding: 0.5rem 0;
   margin-bottom: 3rem;
+  padding-top: 2rem;
 }
 /* .wrapper {
   height: 100vh;
