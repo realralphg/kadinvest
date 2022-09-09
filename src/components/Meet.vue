@@ -188,6 +188,11 @@ export default {
   color: rgba(255, 255, 255, 0.5);
 }
 
+@media (min-width: 1300px) {
+  .meet {
+    margin-top: -30%;
+  }
+}
 @media (max-width: 950px) {
   .meet {
     margin-top: -55%;

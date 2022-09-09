@@ -180,7 +180,7 @@ p.desc {
   position: relative;
 }
 
-.team::before {
+/* .team::before {
   content: "";
   position: absolute;
   background: rgba(217, 217, 217, 0.4);
@@ -199,7 +199,7 @@ p.desc {
   left: -2%;
   top: 2%;
   height: 20%;
-}
+} */
 .grid {
   position: relative;
   /* margin: 0 auto; */
@@ -273,6 +273,7 @@ span.office {
 
 .grid figure figcaption {
   padding: 2em;
+  border-radius: 15px;
   color: #fff;
   text-transform: uppercase;
   font-size: 1.25em;
