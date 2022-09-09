@@ -1,5 +1,5 @@
 <template>
-  <div ref="about" class="wrapper">
+  <div ref="about" class="wrapper section">
     <!-- <p class="text-white">
       {{ this.$store.animate.refs }}
     </p> -->
@@ -44,9 +44,11 @@
 
       <div class="imgs">
         <div class="bottom_images">
-          <img src="/images/khalil.png" class="image1" alt="" />
-          <img src="/images/component.png" class="image2" alt="" />
-          <img src="/images/mallam.png" class="image3" alt="" />
+          <img src="/images/khalil.png" class="im image1" alt="" />
+          <div class="bgh">
+            <img src="/images/ror.png" class="im image2" alt="" />
+          </div>
+          <img src="/images/mallam.png" class="im image3" alt="" />
           <a href="" class="download text-white q-pa-md"> Download </a>
         </div>
       </div>
@@ -133,43 +135,71 @@ export default {
 .bottom_images {
   position: absolute;
   margin: 0 auto;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -7%;
 }
 
 .bottom_images .image2 {
-  width: 80%;
+  width: 100%;
   z-index: 10;
+  /* transform: rotate(-13deg); */
   position: relative;
   transition: all 0.5s ease-in-out;
 }
+
 .bottom_images .image1 {
-  width: 50%;
+  width: 80%;
   position: absolute;
   bottom: 20%;
-  left: -15%;
+  left: -28%;
   z-index: 9;
 }
+.im {
+  transition: all 0.5s ease-in-out;
+}
+.bottom_images .im:hover {
+  z-index: 200;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.bottom_images .image2:hover {
+  transform: rotate(13deg);
+}
+
 .bottom_images .image3 {
-  width: 45%;
+  width: 65%;
   position: absolute;
   bottom: 20%;
-  right: 3%;
+  right: -25%;
   z-index: 9;
 }
 .download {
   position: absolute;
-  left: 35%;
+  left: 50%;
   top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 5;
   border-radius: 10px;
   background: olive;
 }
-.bottom_images .image2:hover {
+
+.bottom_images:hover .download {
+  z-index: 500;
+}
+.bottom_images .image2:hover .bgh {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 16%;
+  transform: translateX(-50%);
+  width: 390px;
+  height: 600px;
   cursor: pointer;
   transform: scale(1.1);
-}
-.bottom_images:hover .download {
+  background: rgba(45, 37, 166, 0.68);
+  transform: rotate(-13deg);
   z-index: 100;
 }
 
@@ -182,8 +212,67 @@ export default {
   }
 }
 @media (max-width: 1024px) {
+  .bottom_images .image1 {
+    width: 50%;
+    position: absolute;
+    bottom: 20%;
+    left: -13%;
+    z-index: 9;
+  }
+  .bottom_images .image3 {
+    width: 45%;
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    z-index: 9;
+  }
+}
+@media (max-width: 800px) {
+  .paragraphs {
+    grid-template-columns: 1fr;
+    padding-bottom: 15rem;
+  }
+  .heading {
+    flex-wrap: wrap;
+  }
+  .right {
+    margin-bottom: 20rem;
+  }
+  .right img {
+    width: 100%;
+  }
   .bottom_images {
-    left: 19%;
+    width: 90%;
+  }
+  .bottom_images .image2 {
+    width: 100%;
+  }
+  .bottom_images .image3 {
+    right: -15%;
+  }
+}
+
+/* @media (max-width: 800px) {
+  .paragraphs {
+    grid-template-columns: 1fr;
+    padding-bottom: 25rem;
+  }
+} */
+@media (max-width: 550px) {
+  .paragraphs {
+    padding-bottom: 7rem;
+  }
+  .right {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .paragraphs {
+    padding-bottom: 17rem;
+  }
+  .bottom_images {
+    bottom: -2%;
   }
 }
 </style>

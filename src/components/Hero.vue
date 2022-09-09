@@ -1,13 +1,13 @@
 <template>
   <div ref="home" class="wrapper">
     <div class="hold">
-      <img src="/images/logo.png" alt="" />
+      <img src="/images/logoc.png" alt="" />
       <p class="small_spaced_text">SEPTEMBER 26TH - 28TH</p>
       <h1 class="main_text">KADINVEST 7.0</h1>
       <p class="smaller_text">KADUNA, KADUNA STATE</p>
       <h2 class="subtext">Building a resilient Economy</h2>
 
-      <q-btn class="register"> Register Now </q-btn>
+      <q-btn to="/register" class="register"> Register Now </q-btn>
     </div>
   </div>
 </template>
@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  padding: 4rem 0 6rem;
+}
 .hold {
   height: 100vh;
   display: flex;
@@ -84,5 +87,34 @@ export default {
   border: 2px solid #00a250;
   background: #00a250;
   color: #fff;
+}
+
+@media (max-width: 550px) {
+  .main_text {
+    font-size: 53.2511px;
+  }
+
+  .subtext {
+    font-size: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .hold {
+    text-align: center;
+  }
+  .main_text {
+    font-size: 33.2511px;
+  }
+
+  .subtext {
+    font-size: 18px;
+  }
+  .register {
+    width: 182px;
+  }
+  .small_spaced_text {
+    padding: 0.3rem;
+    line-height: 1.5;
+  }
 }
 </style>

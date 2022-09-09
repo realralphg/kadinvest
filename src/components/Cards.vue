@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <Singlecard
+    <GameCard
       v-for="(card, index) in cards"
       :key="card"
       :card="card"
@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import Singlecard from "../components/Singlecard.vue";
+import GameCard from "../components/GameCard.vue";
 
 export default {
   components: {
-    Singlecard,
+    GameCard,
   },
 
   props: {

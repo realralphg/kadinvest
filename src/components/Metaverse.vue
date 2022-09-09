@@ -1,6 +1,6 @@
 <template>
   <div ref="metaverse" class="wrapper metaverse">
-    <div class="hold">
+    <div class="hold small_container">
       <div class="top_cards">
         <img class="hand" src="/images/hand.png" alt="" />
         <div class="top_card">
@@ -11,7 +11,7 @@
           </div>
           <div class="right">
             <p class="date">SEPTEMBER 26TH - 28TH</p>
-            <h3 class="heading">
+            <h3 class="heading reducepad">
               Building a resilient <br />
               Economy
             </h3>
@@ -55,9 +55,10 @@ export default {
 
 <style scoped>
 .wrapper {
-  background: linear-gradient(274.66deg, #f9a838 33.66%, #463cdf 80.38%);
+  /* background: linear-gradient(274.66deg, #f9a838 33.66%, #463cdf 80.38%); */
+  background: url("/images/bg_mete.jpg") center center/cover;
   mix-blend-mode: hard-light;
-  margin-top: 13rem;
+  margin-top: 23rem;
   /* height: 100vh; */
 }
 .top_cards {
@@ -69,7 +70,7 @@ export default {
 .hand {
   position: absolute;
   width: 300px;
-  left: 0;
+  left: -20%;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -88,7 +89,7 @@ export default {
   align-items: center;
   gap: 2rem;
   margin: 4rem 0 2rem;
-  width: 50%;
+  width: 100%;
 }
 
 .logo {
@@ -190,7 +191,7 @@ h3.heading {
   align-items: center;
   position: absolute;
   left: 50%;
-  width: 50%;
+  width: 100%;
   top: 70%;
   transform: translate(-50%, -70%);
 }
@@ -241,10 +242,66 @@ h3.heading {
   padding: 1rem;
 }
 
-@media (max-width: 1280px) {
-  .top_card,
-  .info {
-    width: 70%;
+@media (max-width: 1024px) {
+  .info_main,
+  h3.heading {
+    font-size: 40.57px;
+  }
+  .hand {
+    left: -22%;
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    margin-top: 25rem;
+  }
+  .top_card {
+    display: grid;
+  }
+  .top_card .left {
+    border-right: none;
+    border-bottom: 1px dashed #ffffff;
+    text-align: center;
+  }
+
+  .top_card .right {
+    text-align: center;
+  }
+  .btns {
+    justify-content: center;
+  }
+  .hand {
+    top: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .hand {
+    top: 25%;
+  }
+}
+@media (max-width: 500px) {
+  .hand {
+    width: 200px;
+  }
+
+  .about_images {
+    width: 100%;
+  }
+  .reducepad {
+    padding: 1rem 0 !important;
+  }
+}
+@media (max-width: 320px) {
+  .info_main,
+  h3.heading {
+    font-size: 30.57px;
+  }
+
+  .wrapper {
+    margin-top: 15rem;
+  }
+  .btns {
+    flex-wrap: wrap;
   }
 }
 </style>

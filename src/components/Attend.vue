@@ -58,8 +58,8 @@ h6.small_text {
 }
 
 .images_sec {
-  padding-top: 3rem;
-  width: 80%;
+  padding-top: 5rem;
+  width: 100%;
 }
 .images_hold {
   display: flex;
@@ -68,6 +68,7 @@ h6.small_text {
 .images_hold .img {
   position: relative;
   height: 100%;
+  width: 30%;
 }
 
 .images_hold .img .emoji {
@@ -90,16 +91,47 @@ h6.small_text {
 }
 
 .bump {
-  width: 426px;
-  height: 445px;
+  width: 60%;
+  height: 3%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
 }
-@media (min-width: 1281px) {
+
+@media (max-width: 1025px) {
+  .images_sec {
+    width: 100%;
+  }
+
+  .emoji2 {
+    left: unset !important;
+    right: 0 !important;
+  }
+  .emoji1 {
+    left: 0 !important;
+  }
+}
+
+@media (max-width: 800px) {
   .bump {
-    width: 626px;
+    width: 100%;
+  }
+
+  .images_hold .img {
+    width: 40%;
+  }
+}
+@media (max-width: 320px) {
+  .images_hold .img .emoji {
+    width: 50px;
+  }
+
+  .bump {
+    height: 300px;
+  }
+  h3 {
+    font-size: 35.12px;
   }
 }
 </style>

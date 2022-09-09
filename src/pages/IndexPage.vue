@@ -1,11 +1,11 @@
 <template>
   <q-page class="">
+    <!-- <div class="section">heyy</div> -->
     <Hero />
     <About />
     <Goals />
-    <Timeline />
     <Features />
-    <Attend />
+    <Meet /> <Attend />
     <Metaverse />
     <Sponsors />
     <Footer />
@@ -15,12 +15,14 @@
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Hero from "../components/Hero.vue";
 import About from "../components/About.vue";
 import Goals from "../components/Goals.vue";
-import Timeline from "../components/Timeline.vue";
 import Features from "../components/Features.vue";
+import Meet from "../components/Meet.vue";
 import Attend from "../components/Attend.vue";
 import Metaverse from "../components/Metaverse.vue";
 import Sponsors from "../components/Sponsors.vue";
@@ -40,7 +42,7 @@ export default defineComponent({
     Hero,
     About,
     Goals,
-    Timeline,
+    Meet,
     Features,
     Attend,
     Metaverse,
@@ -48,9 +50,33 @@ export default defineComponent({
     Footer,
   },
   mounted() {
-    // this.$store.animate.refs = this.$refs;
-    // console.log(this.$store.animate.refs);
-    console.log(this.$refs);
+    gsap.registerPlugin(ScrollTrigger);
+    let sections = gsap.utils.toArray(".section");
+    console.log(sections);
+
+    // sections.forEach((section) => {
+    //   let title = section.querySelector(".about");
+    //   let text = section.querySelector(".line");
+    //   gsap
+    //     .timeline({
+    //       scrollTrigger: {
+    //         trigger: section,
+    //         start: "top center",
+    //         end: "+=400",
+    //         scrub: true,
+    //         markers: false,
+    //       },
+    //     })
+
+    //     .from(text, {
+    //       opacity: 0,
+    //       x: 500,
+    //     })
+
+    //     .from(title, {
+    //       xPercent: -120,
+    //     });
+    // });
   },
 });
 </script>

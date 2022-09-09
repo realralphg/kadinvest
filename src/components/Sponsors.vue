@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper section">
     <div class="hold small_container">
       <header class="heading">
         <div class="abt">
@@ -64,12 +64,20 @@ export default {};
 }
 
 .sponsors_wrap img {
-  width: 150px;
+  width: 100px;
   opacity: 0.7;
-  transition: all 0.5 ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .sponsors_wrap img:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+@media (max-width: 800px) {
+  .heading {
+    flex-wrap: wrap;
+  }
+  .wrapper {
+    margin-top: 3rem;
+  }
 }
 </style>

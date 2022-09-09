@@ -28,7 +28,7 @@
           </div>
           <div class="q-pt-xl">
             <p class="location">
-              <i class="ri-map-pin-3-line q-mr-lg"></i>KADUNA, KADUNA STATE
+              <i class="ri-map-pin-3-line q-mr-sm"></i>KADUNA, KADUNA STATE
             </p>
           </div>
         </div>
@@ -141,5 +141,14 @@ form {
   text-align: center;
   letter-spacing: 0.34em;
   color: #ffffff;
+}
+
+@media (max-width: 400px) {
+  ::placeholder {
+    font-size: 14px;
+  }
+  .sub {
+    font-size: 15px;
+  }
 }
 </style>

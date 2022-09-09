@@ -1,14 +1,10 @@
 <template>
-  <div class="q-px-lg timeline q-pb-md">
-    <q-timeline
-      class="q-pb-xl small_container"
-      :layout="layout"
-      color="secondary"
-    >
+  <div class="timeline q-pb-md">
+    <q-timeline class="q-pb-xl" :layout="layout" color="secondary">
       <q-timeline-entry side="left">
         <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <img src="/images/goal1.png" alt="" />
+            <img src="/images/gol1.png" alt="" />
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="left_div">
@@ -43,7 +39,7 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <img src="/images/healthy.png" alt="" />
+            <img src="/images/gol2.png" alt="" />
           </div>
         </div>
       </q-timeline-entry>
@@ -55,7 +51,7 @@
       <q-timeline-entry side="left">
         <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <img src="/images/job.png" alt="" />
+            <img src="/images/gol3.png" alt="" />
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="left_div">
@@ -83,7 +79,7 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <img src="/images/job.png" alt="" />
+            <img src="/images/gol4.png" alt="" />
           </div>
         </div>
       </q-timeline-entry>
@@ -93,7 +89,7 @@
       <q-timeline-entry side="left" color="orange" icon="done_all">
         <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <img src="/images/job.png" alt="" />
+            <img src="/images/gol5.png" alt="" />
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="left_div">
@@ -122,7 +118,7 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <img src="/images/industry.png" alt="" />
+            <img src="/images/gol6.png" alt="" />
           </div>
         </div>
       </q-timeline-entry>
@@ -132,7 +128,7 @@
       <q-timeline-entry side="right">
         <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <img src="/images/job.png" alt="" />
+            <img src="/images/gol7.png" alt="" />
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="left_div">
@@ -180,7 +176,7 @@ export default {
   padding-bottom: 5rem;
 }
 img {
-  height: 300px;
+  object-fit: cover;
 }
 
 .timeline h6 {
@@ -201,7 +197,7 @@ img {
   text-align: left;
 }
 
-.left_div {
+/* .left_div {
   padding-left: 7.5rem;
   padding-top: 5rem;
 }
@@ -209,9 +205,9 @@ img {
 .right_div {
   padding-right: 7.5rem;
   padding-top: 5rem;
-}
+} */
 
-.timeline::before {
+/* .timeline::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -228,11 +224,11 @@ img {
   right: 0;
   top: 70%;
   background: url("/images/drop.png") no-repeat;
-}
+} */
 .give_height {
   height: 100px;
 }
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .left_div {
     padding-left: 5.5rem;
   }
@@ -240,5 +236,5 @@ img {
   .right_div {
     padding-right: 5.5rem;
   }
-}
+} */
 </style>

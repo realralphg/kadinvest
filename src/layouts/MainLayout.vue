@@ -1,7 +1,95 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header class="bg-white q-pa-sm">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <input type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="linee line1"></span>
+          <span class="linee line2"></span>
+          <span class="linee line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li>
+            <q-btn
+              label="Home"
+              class="text-dark nav_items"
+              ripple
+              no-caps
+              exact
+              @click="goHome"
+            />
+          </li>
+          <li>
+            <q-btn
+              class="text-dark nav_items"
+              label="About"
+              ripple
+              no-caps
+              exact
+              @click="gotoAbout"
+            />
+          </li>
+          <li>
+            <q-btn
+              label="Objectives "
+              class="text-dark nav_items"
+              ripple
+              no-caps
+              @click="gotoGoals"
+              exact
+            />
+          </li>
+          <li>
+            <q-btn
+              class="text-dark nav_items"
+              label="Features"
+              ripple
+              no-caps
+              @click="gotoFeatures"
+              exact
+            />
+          </li>
+          <li>
+            <q-btn
+              class="text-dark nav_items"
+              label="Speakers"
+              ripple
+              no-caps
+              exact
+              @click="gotoSpeakers"
+            />
+          </li>
+          <li>
+            <q-btn
+              class="text-dark nav_items"
+              label="Metaverse"
+              ripple
+              no-caps
+              @click="gotoMetaverse"
+              exact
+            />
+          </li>
+          <li>
+            <q-btn
+              class="text-dark nav_items"
+              label="Register"
+              ripple
+              no-caps
+              to="/register"
+              exact
+            />
+          </li>
+        </ul>
+        <h1 class="logo">
+          <img class="logoo" src="/images/logo.png" alt="" />
+        </h1>
+      </div>
+    </nav>
+    <!-- <q-header elevated class="bg-white nav">
       <q-toolbar class="navBar no_pad justify-center">
+        <div class="logo">
+          <img class="logoo" src="/images/logo.png" alt="" />
+        </div>
         <div class="nav__links">
           <q-tabs indicator-color="accent" dense active-color="accent">
             <q-route-tab
@@ -61,16 +149,17 @@
           flat
           dense
           round
+          size="2rem"
           color="black"
-          icon="menu"
           aria-label="Menu"
           class="nav__toggler"
           @click="toggleLeftDrawer"
-        />
+          ><i class="ri-menu-4-fill"></i
+        ></q-btn>
       </q-toolbar>
-    </q-header>
+    </q-header> -->
 
-    <q-drawer v-model="leftDrawerOpen" bordered>
+    <!-- <q-drawer v-model="leftDrawerOpen" bordered>
       <q-tabs class="column" active-color="primary">
         <div
           style="width: 100%"
@@ -111,7 +200,7 @@
           />
         </div>
       </q-tabs>
-    </q-drawer>
+    </q-drawer> -->
 
     <!-- <q-page-container>
       <router-view />
@@ -167,7 +256,7 @@ export default defineComponent({
       });
     },
     gotoSpeakers() {
-      this.$store.animate.refs[3].speakers.scrollIntoView({
+      this.$store.animate.refs[4].speakers.scrollIntoView({
         behavior: "smooth",
       });
     },
@@ -180,11 +269,15 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+h1 {
+  line-height: 0;
+}
 .logo .q-item {
   padding: 0;
 }
-.logo img {
-  width: 80%;
+
+.logo {
+  display: none;
 }
 .nav__links ul,
 .right {
@@ -200,13 +293,6 @@ export default defineComponent({
   display: none;
 }
 
-.addbor {
-  border: 1px solid #f4f4f4;
-  padding: 0.55rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 .route-enter-from {
   opacity: 0;
   transform: translateX(100px);
@@ -224,6 +310,176 @@ export default defineComponent({
 .route-leave-active {
   transition: all 0.3s ease-in;
 }
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  z-index: 3000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #117964;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .linee {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #1f1b5e;
+    /* background: #333; */
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+    width: 70%;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+    width: 90%;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    overflow: scroll;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+  }
+}
 @media (max-width: 850px) {
   .menu {
     display: block;
@@ -237,13 +493,18 @@ export default defineComponent({
   .nav__toggler {
     display: flex;
   }
+  .logo img {
+    width: 40px;
+    height: 50px;
+  }
   .nav__links {
     display: none;
   }
-}
-@media (max-width: 600px) {
-  .logo > div {
-    font-size: 25px;
+  .navBar {
+    justify-content: space-between;
+  }
+  .logo {
+    display: block;
   }
 }
 </style>

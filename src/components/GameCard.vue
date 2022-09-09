@@ -164,7 +164,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/index.scss";
+// @import "../styles/index.scss";
+$c-white: #fff;
+$c-black: #000;
+$c-red-50: #73345e;
+$c-red-25: #432958;
+$c-navy: #0f0e3d;
+$c-text: #8285a7;
+$primary-gradient-start: #d94e47;
+$primary-gradient-end: #df1165;
+
+$fs-h2: rem(24px);
+$fw-bold: 700;
+
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 $cardsTotal: 3;
 $cardsWidth: 300px;
@@ -173,6 +186,49 @@ $cardsScaleOffset: 0.08;
 $defaultTranslation: $cardsPositionOffset * $cardsTotal;
 $defaultScale: 1 - ($cardsScaleOffset * $cardsTotal);
 $fs-card-title: 1.125em;
+
+@mixin _position($position, $args) {
+  @each $dir in top, left, bottom, right {
+    $i: index($args, $dir);
+
+    @if $i {
+      #{$dir}: nth($args, $i + 1);
+    }
+  }
+
+  position: $position;
+}
+
+@mixin absolute($args) {
+  @include _position(absolute, $args);
+}
+
+@mixin card() {
+  border-radius: 15px;
+  box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.05);
+}
+
+@mixin sizing($args, $prefix: "") {
+  $width: if(length($args) == 2, nth($args, 1), $args);
+  $height: if(length($args) == 2, nth($args, 2), $args);
+
+  #{$prefix}width: $width;
+  #{$prefix}height: $height;
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin after() {
+  &::after {
+    content: "";
+
+    @content;
+  }
+}
 
 .card {
   @include card();

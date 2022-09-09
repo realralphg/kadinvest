@@ -1,6 +1,6 @@
 <template>
   <div ref="goals" class="wrapper">
-    <div class="hold small_container">
+    <div class="hold section small_container">
       <header class="heading">
         <div class="abt">
           <h2 class="about">KadInvest</h2>
@@ -24,12 +24,19 @@
           include:
         </p>
       </div>
+
+      <Time />
     </div>
   </div>
 </template>
 
 <script>
+import Time from "../components/Time.vue";
+
 export default {
+  components: {
+    Time,
+  },
   mounted() {
     this.$store.animate.refs.push(this.$refs);
   },
@@ -100,6 +107,6 @@ export default {
   align-items: center;
   justify-content: center;
   max-width: 800px;
-  margin: 4rem auto;
+  margin: 2rem auto 0;
 }
 </style>
