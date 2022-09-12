@@ -215,7 +215,7 @@ export default {
   height: 82%;
   position: absolute;
   top: 8%;
-  left: 16.4%;
+  left: 16.9%;
   /* left: 50%; */
   /* top: 50%; */
   transform: translate(-50%, -50%);

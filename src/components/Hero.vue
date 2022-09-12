@@ -1,5 +1,5 @@
 <template>
-  <div ref="home" class="wrapper">
+  <div ref="home" class="wrapper main_we">
     <div class="hold">
       <img src="/images/logoc.png" alt="" />
       <p class="small_spaced_text">SEPTEMBER 26TH - 28TH</p>
@@ -21,6 +21,8 @@
 
 <script>
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 export default {
   setup() {
     const beforeEnter = (el) => {
@@ -29,12 +31,11 @@ export default {
     };
     const enter = (el, done) => {
       gsap.to(el, {
-        duration: 3,
+        duration: 1,
         y: 0,
         opacity: 1,
         ease: "bounce.out",
         onComplete: done,
-        delay: 5,
       });
     };
 
@@ -49,6 +50,8 @@ export default {
     };
   },
   mounted() {
+    gsap.registerPlugin(ScrollTrigger);
+
     this.$store.animate.refs.push(this.$refs);
   },
 };

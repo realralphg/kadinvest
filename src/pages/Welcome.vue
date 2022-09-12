@@ -4,8 +4,8 @@
     id="scrollable"
     :class="value ? 'bg_light wrapper' : 'wrapper bg_dark'"
   >
-    <div class="slide-1 slide"></div>
-    <div class="slide-2 slide"></div>
+    <!-- <div class="slide-1 slide"></div>
+    <div class="slide-2 slide"></div> -->
     <div class="hold welcome">
       <img v-show="value" src="/images/bulb.png" alt="" />
       <img v-show="!value" src="/images/bulb1.png" alt="" />
@@ -72,7 +72,7 @@ export default {
         opacity: 1,
         ease: "bounce.out",
         onComplete: done,
-        delay: 0.5,
+        delay: 1,
       });
     };
 
@@ -89,7 +89,6 @@ export default {
   },
   mounted() {
     this.functiondisable();
-
     // this.$store.animate.refs[5].wholePage.style.display = "0";
     // console.log((this.$store.animate.refs[5].wholePage.style.opacity = "0"));
   },
@@ -114,10 +113,7 @@ export default {
         .removeEventListener("wheel", (e) => {
           e.preventDefault();
           e.stopPropagation();
-
-          return false;
         });
-      //   function preventScroll(e) {}
       console.log("first");
     },
   },
@@ -127,7 +123,6 @@ export default {
         this.show = false;
         setTimeout(() => {
           this.functionenable();
-
           window.scrollBy(0, 100);
           document.querySelector("#scrollable").style.display = "none";
 
@@ -142,18 +137,18 @@ export default {
 </script>
 
 <style scoped>
-#scrollable .slide {
+/* #scrollable .slide {
   position: absolute;
   width: 100%;
   height: 100%;
   right: 0;
   bottom: 0;
-  /* background: #fff; */
+  background: #fff;
 }
 
 #scrollable .slide-2 {
   height: 0;
-}
+} */
 img {
   height: 40vh;
   top: -20%;
