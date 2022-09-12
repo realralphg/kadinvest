@@ -8,7 +8,7 @@
             <h2 class="about">Speakers</h2>
           </div>
 
-          <div class="line"></div>
+          <div class="line line4"></div>
         </header>
         <div class="speakers"><Ourstaff /></div>
       </div>
@@ -18,7 +18,7 @@
 
 <script>
 import Ourstaff from "../components/Ourstaff.vue";
-
+import gsap from "gsap";
 export default {
   setup() {
     const beforeEnter = (el) => {
@@ -45,6 +45,17 @@ export default {
     this.$store.animate.refs.push(this.$refs);
     console.log(this.$store.animate.refs);
     // console.log(this.$refs.about);
+    gsap.from(".line4", {
+      scrollTrigger: {
+        trigger: this.$refs.speakers,
+        toggleActions: "play complete reset",
+      },
+      scaleX: 0,
+      duration: 10,
+      repeat: -1,
+      transformOrigin: "left center",
+      ease: "none",
+    });
   },
 };
 </script>
@@ -87,7 +98,7 @@ export default {
   font-weight: 400;
   font-size: 18px;
   line-height: 190%;
-  text-align: justify;
+  text-align: left;
   text-transform: capitalize;
   color: #ffffff;
 }

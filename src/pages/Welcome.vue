@@ -4,6 +4,8 @@
     id="scrollable"
     :class="value ? 'bg_light wrapper' : 'wrapper bg_dark'"
   >
+    <div class="slide-1 slide"></div>
+    <div class="slide-2 slide"></div>
     <div class="hold welcome">
       <img v-show="value" src="/images/bulb.png" alt="" />
       <img v-show="!value" src="/images/bulb1.png" alt="" />
@@ -13,7 +15,14 @@
       <h1 :class="value ? 'dark_color welcome' : 'light_color welcome'">
         Welcome to
       </h1>
-      <h1 class="kad">KADINVEST 7.0</h1>
+      <transition
+        appear
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @after-enter="afterEnter"
+      >
+        <h1 class="kad">KADINVEST 7.0</h1>
+      </transition>
 
       <q-toggle
         v-show="show"
@@ -26,7 +35,7 @@
         label="Off"
       />
 
-      <div v-show="!show" class="q-mt-lg text-center">
+      <div v-show="!show" class="q-my-lg text-center">
         <!-- <q-spinner-hourglass color="info" size="2em" /> -->
         <h6
           :class="
@@ -47,17 +56,40 @@
 </template>
 
 <script>
+import gsap from "gsap";
 import { ref } from "vue";
 
 export default {
   setup() {
+    const beforeEnter = (el) => {
+      el.style.transform = "translateY(-60px)";
+      el.style.opacity = 0;
+    };
+    const enter = (el, done) => {
+      gsap.to(el, {
+        duration: 3,
+        y: 0,
+        opacity: 1,
+        ease: "bounce.out",
+        onComplete: done,
+        delay: 0.5,
+      });
+    };
+
+    const afterEnter = (el) => {
+      console.log("after enter");
+    };
     return {
+      beforeEnter,
+      enter,
+      afterEnter,
       value: ref(false),
       show: true,
     };
   },
   mounted() {
     this.functiondisable();
+
     // this.$store.animate.refs[5].wholePage.style.display = "0";
     // console.log((this.$store.animate.refs[5].wholePage.style.opacity = "0"));
   },
@@ -95,13 +127,8 @@ export default {
         this.show = false;
         setTimeout(() => {
           this.functionenable();
-          //   this.PageUp();
 
           window.scrollBy(0, 100);
-
-          //   this.$store.animate.refs[0].home.scrollIntoView({
-          //     behavior: "smooth",
-          //   });
           document.querySelector("#scrollable").style.display = "none";
 
           //   this.$router.replace("/home");
@@ -115,8 +142,17 @@ export default {
 </script>
 
 <style scoped>
-.addscroll {
-  height: 5000px;
+#scrollable .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  /* background: #fff; */
+}
+
+#scrollable .slide-2 {
+  height: 0;
 }
 img {
   height: 40vh;

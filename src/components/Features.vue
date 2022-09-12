@@ -10,9 +10,8 @@
           <h2 class="about">Outcomes</h2>
         </div>
 
-        <div class="line"></div>
+        <div class="line line3"></div>
       </header>
-
       <div class="para_hold">
         <div class="paragraphs">
           <div class="left">
@@ -44,6 +43,8 @@
               :modules="modules"
               class="mySwiper"
             >
+              <div class="trig"></div>
+
               <swiper-slide
                 class="card_cards"
                 v-for="(card, index) in cards"
@@ -135,9 +136,10 @@ export default {
   },
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.defaults({ ease: "none", duration: 5 });
+    // gsap.defaults({ ease: "none", duration: 5 });
     let cards = gsap.utils.toArray(".card");
-    const container = document.querySelector(".cards_div");
+    const container = document.querySelector(".rotate_sec");
+    console.log(container);
     const card1 = cards[0];
     const card2 = cards[1];
     const card3 = cards[2];
@@ -181,6 +183,19 @@ export default {
           y: 0,
           rotateZ: 0,
         });
+    });
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".line3", {
+      scrollTrigger: {
+        trigger: this.$refs.features,
+        toggleActions: "play complete reset",
+      },
+      scaleX: 0,
+      duration: 10,
+      repeat: -1,
+      transformOrigin: "left center",
+      ease: "none",
     });
     this.$store.animate.refs.push(this.$refs);
   },
@@ -232,7 +247,7 @@ export default {
   font-weight: 400;
   font-size: 18px;
   line-height: 190%;
-  text-align: justify;
+  text-align: left;
   text-transform: capitalize;
   color: #ffffff;
 }

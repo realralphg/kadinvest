@@ -10,7 +10,7 @@
           <h2 class="about">The Summit</h2>
         </div>
 
-        <div class="line"></div>
+        <div class="line line1"></div>
       </header>
       <div class="paragraphs">
         <div class="left">
@@ -75,11 +75,26 @@
 </template>
 
 <script>
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 export default {
   mounted() {
     this.$store.animate.refs.push(this.$refs);
-    console.log(this.$store.animate.refs);
+    // console.log(this.$store.animate.refs);
     // console.log(this.$refs.about);
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".line1", {
+      scrollTrigger: {
+        trigger: this.$refs.about,
+        toggleActions: "play complete reset",
+      },
+      scaleX: 0,
+      duration: 10,
+      repeat: -1,
+      transformOrigin: "left center",
+      ease: "none",
+    });
   },
 };
 </script>
@@ -125,7 +140,7 @@ export default {
   font-weight: 400;
   font-size: 18px;
   line-height: 190%;
-  text-align: justify;
+  text-align: left;
   text-transform: capitalize;
   color: #ffffff;
 }
@@ -197,7 +212,7 @@ export default {
   gap: 1rem;
   margin-left: 0.5rem;
   width: 65%;
-  height: 79%;
+  height: 82%;
   position: absolute;
   top: 8%;
   left: 16.4%;
@@ -229,6 +244,10 @@ export default {
   z-index: 500;
   transform: rotate(-13deg);
   scale: 1.1;
+}
+
+.download_div {
+  transform: scale(1.1);
 }
 
 .link {
@@ -301,6 +320,11 @@ export default {
     bottom: 20%;
     right: -5%;
     z-index: 9;
+  }
+
+  .download_div {
+    left: 13%;
+    top: 6%;
   }
 }
 @media (max-width: 1281px) {

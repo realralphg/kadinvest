@@ -3,7 +3,7 @@
     <div class="hold">
       <div class="grid">
         <div class="left">
-          <img src="/images/gol5.png" alt="" />
+          <img class="reveal-image" src="/images/gol5.png" alt="" />
         </div>
         <div class="right">
           <div class="left_div">
@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="right">
-          <img src="/images/new1.png" alt="" />
+          <img class="reveal-image" src="/images/new1.png" alt="" />
         </div>
       </div>
       <div class="center_next">
@@ -51,7 +51,7 @@
     <div class="hold">
       <div class="grid">
         <div class="left">
-          <img src="/images/gol3.png" alt="" />
+          <img class="reveal-image" src="/images/gol3.png" alt="" />
         </div>
         <div class="right">
           <div class="left_div">
@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="right">
-          <img src="/images/new2.png" alt="" />
+          <img class="reveal-image" src="/images/new2.png" alt="" />
         </div>
       </div>
       <div class="center_next">
@@ -98,7 +98,7 @@
     <div class="hold">
       <div class="grid">
         <div class="left">
-          <img src="/images/gol6.png" alt="" />
+          <img class="reveal-image" src="/images/gol6.png" alt="" />
         </div>
         <div class="right">
           <div class="left_div">
@@ -124,7 +124,36 @@
 </template>
 
 <script>
-export default {};
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+export default {
+  mounted() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const revealContainers = gsap.utils.toArray(".reveal-image");
+    gsap.set(revealContainers, { autoAlpha: 1 });
+
+    revealContainers.forEach((container, i) => {
+      let image = container.querySelector(".reveal-image");
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          toggleActions: "restart reverse complete reset",
+        },
+      });
+
+      tl.from([container, image], {
+        duration: 1,
+        xPercent:
+          i % 2 === 0
+            ? gsap.utils.wrap([-100, 100])
+            : gsap.utils.wrap([100, -100]),
+        ease: "power4",
+      });
+    });
+  },
+};
 </script>
 
 <style scoped>

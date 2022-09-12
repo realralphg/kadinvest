@@ -186,7 +186,7 @@ export default {
   font-weight: 400;
   font-size: 18px;
   line-height: 190%;
-  text-align: justify;
+  text-align: left;
   text-transform: capitalize;
   color: #ffffff;
 }

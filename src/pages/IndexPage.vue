@@ -52,33 +52,6 @@ export default defineComponent({
   },
   mounted() {
     this.$store.animate.refs.push(this.$refs);
-    // gsap.registerPlugin(ScrollTrigger);
-    // let sections = gsap.utils.toArray(".section");
-    // console.log(sections);
-
-    // sections.forEach((section) => {
-    //   let title = section.querySelector(".about");
-    //   let text = section.querySelector(".line");
-    //   gsap
-    //     .timeline({
-    //       scrollTrigger: {
-    //         trigger: title,
-    //         start: " top center",
-    //         end: "+=400",
-    //         scrub: true,
-    //         markers: false,
-    //       },
-    //     })
-
-    //     .from(text, {
-    //       opacity: 0,
-    //       x: 500,
-    //     })
-
-    //     .from(title, {
-    //       xPercent: -120,
-    //     });
-    // });
   },
 });
 </script>

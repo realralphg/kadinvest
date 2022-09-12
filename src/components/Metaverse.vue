@@ -242,6 +242,11 @@ h3.heading {
   padding: 1rem;
 }
 
+@media (min-width: 1024px) {
+  .top_card {
+    justify-content: center;
+  }
+}
 @media (max-width: 1024px) {
   .info_main,
   h3.heading {

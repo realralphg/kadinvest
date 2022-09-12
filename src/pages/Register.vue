@@ -3,16 +3,28 @@
     <div class="hold">
       <div class="left">
         <h1>Sign up</h1>
-        <form action="">
+        <!-- {{ business_expo }}
+        {{ individual }} -->
+        <form
+          action=""
+          ref="appformm"
+          enctype="multipart/form-data"
+          id="appForm"
+          @submit.prevent="submit"
+        >
           <div class="choose">
             <p>Which events do you want to attend?</p>
 
             <div class="register">
               <div class="register_checkbox">
-                <q-checkbox label="Summit" v-model="val" />
+                <q-checkbox name="summit" label="Summit" v-model="summit" />
               </div>
               <div class="register_checkbox">
-                <q-checkbox label="Business Expo" v-model="val" />
+                <q-checkbox
+                  name="business_expo"
+                  label="Business Expo"
+                  v-model="business_expo"
+                />
               </div>
             </div>
           </div>
@@ -21,12 +33,18 @@
 
           <div class="input_wrap">
             <label for="name">Full Name</label> <br />
-            <input type="text" placeholder="Firstname Lastname" />
+            <input
+              v-model="fullname"
+              type="text"
+              name="fullname"
+              placeholder="Firstname Lastname"
+            />
           </div>
           <div class="input_wrap">
             <label for="email">Email</label> <br />
             <input
               type="email"
+              v-model="email"
               name="email"
               placeholder="Enter email here..."
             />
@@ -35,32 +53,49 @@
             <label for="PhoneNumer">Phone Numer</label> <br />
             <input
               type="text"
-              name="PhoneNumer"
+              name="phone_number"
+              v-model="phone_number"
               placeholder="Enter phone number here..."
             />
           </div>
           <div class="input_wrap">
             <label for="CompanyName">Company Name</label> <br />
-            <input type="text" name="CompanyName" placeholder="" />
+            <input v-model="company_name" placeholder="" />
           </div>
           <div class="input_wrap">
             <label for="Designation">Designation</label> <br />
-            <input type="text" name="Designation" placeholder="" />
+            <input
+              type="text"
+              v-model="designation"
+              name="designation"
+              placeholder=""
+            />
           </div>
 
           <div class="who">
             <div class="attending_as">Who are you attending as?</div>
             <div class="q-py-md">
               <div class="q-gutter-sm">
-                <q-radio v-model="shape" val="MSME" label="MSME" />
-                <q-radio v-model="shape" val="Investor" label="Investor" />
+                <q-radio v-model="msme" val="msme" name="msme" label="MSME" />
                 <q-radio
-                  v-model="shape"
-                  val="ellipse"
+                  v-model="investor"
+                  val="investor"
+                  name="investor"
+                  label="Investor"
+                />
+                <q-radio
+                  v-model="government_official"
+                  val="government_official"
+                  name="government_official"
                   label="Government Official"
                 />
-                <q-radio v-model="shape" val="polygon" label="Individual" />
-                <q-radio v-model="shape" val="polygon" label="Others" />
+                <q-radio
+                  name="individual"
+                  v-model="individual"
+                  val="individual"
+                  label="Individual"
+                />
+                <q-radio v-model="others" val="others" label="Others" />
               </div>
             </div>
           </div>
@@ -70,11 +105,22 @@
             </div>
             <div class="q-py-md">
               <div class="q-gutter-sm">
-                <q-radio v-model="shape" val="line" label="Virtual" />
-                <q-radio v-model="shape" val="rectangle" label="Physical" />
                 <q-radio
-                  v-model="shape"
-                  val="ellipse"
+                  name="virtual"
+                  v-model="virtual"
+                  val="virtual"
+                  label="Virtual"
+                />
+                <q-radio
+                  name="physical"
+                  v-model="physical"
+                  val="physical"
+                  label="Physical"
+                />
+                <q-radio
+                  v-model="in_the_metaverse"
+                  name="in_the_metaverse"
+                  val="in_the_metaverse"
                   label="In the Metaverse"
                 />
               </div>
@@ -86,20 +132,36 @@
             </div>
             <div class="q-py-md">
               <div class="q-gutter-sm">
-                <q-radio v-model="shape" val="line" label="Agriculture" />
-                <q-radio v-model="shape" val="ellipse" label="Solid Minerals" />
                 <q-radio
-                  v-model="shape"
-                  val="rectangle"
+                  v-model="agriculture"
+                  name="agriculture"
+                  val="agriculture"
+                  label="Agriculture"
+                />
+                <q-radio
+                  v-model="solid_minerals"
+                  name="solid_minerals"
+                  val="solid_minerals"
+                  label="Solid Minerals"
+                />
+                <q-radio
+                  v-model="infrastructure"
+                  val="infrastructure"
+                  name="infrastructure"
                   label="Infrastructure"
                 />
 
-                <q-radio v-model="shape" val="polygon" label="Technology" />
+                <q-radio
+                  name="technology"
+                  v-model="technology"
+                  val="technology"
+                  label="Technology"
+                />
               </div>
             </div>
           </div>
 
-          <q-btn class="sign"> Sign up </q-btn>
+          <q-btn :loading="false" type="submit" class="sign"> Sign up </q-btn>
         </form>
       </div>
 
@@ -115,17 +177,112 @@
 
 <script>
 import Ourstaff from "../components/Ourstaff.vue";
-import Speakers from "../components/Speakers.vue";
+// import Speakers from "../components/Speakers.vue";
 export default {
   components: {
     Ourstaff,
-    Speakers,
   },
   data() {
     return {
-      shape: false,
-      val: false,
+      loading: false,
+      fullname: "",
+      business_expo: false,
+      summit: false,
+      msme: false,
+      individual: false,
+      investor: true,
+      government_official: true,
+      virtual: false,
+      physical: false,
+      in_the_metaverse: false,
+      designation: "",
+      technology: false,
+      agriculture: false,
+      solid_minerals: false,
+      infrastructure: false,
+      others: false,
+      email: "",
+      phone_number: "",
+      company_name: "",
     };
+  },
+
+  methods: {
+    submit() {
+      let technology = this.technology;
+      let fullname = this.fullname;
+      let designation = this.designation;
+      let solid_minerals = this.solid_minerals;
+      let agriculture = this.agriculture;
+      let email = this.email;
+      let phone_number = this.phone_number;
+      let company_name = this.company_name;
+      let infrastructure = this.infrastructure;
+      let virtual = this.virtual;
+      let physical = this.physical;
+      let individual = this.individual;
+      let investor = this.investor;
+      let government_official = this.government_official;
+      let in_the_metaverse = this.in_the_metaverse;
+      let business_expo = this.business_expo;
+      let summit = this.summit;
+      let msme = this.msme;
+      let others = this.others;
+
+      const formData = new FormData();
+      formData.append("data[technology]", technology);
+      formData.append("data[msme]", msme);
+      formData.append("data[summit]", summit);
+      formData.append("data[business_expo]", business_expo);
+      formData.append("data[in_the_metaverse]", in_the_metaverse);
+      formData.append("data[government_official]", government_official);
+      formData.append("data[investor]", investor);
+      formData.append("data[individual]", individual);
+      formData.append("data[physical]", physical);
+      formData.append("data[virtual]", virtual);
+      formData.append("data[infrastructure]", infrastructure);
+      formData.append("data[company_name]", company_name);
+      formData.append("data[email]", email);
+      formData.append("data[phone_number]", phone_number);
+      formData.append("data[agriculture]", agriculture);
+      formData.append("data[solid_minerals]", solid_minerals);
+      formData.append("data[designation]", designation);
+      formData.append("data[fullname]", fullname);
+      formData.append("data[others]", others);
+
+      this.$q.loading.show();
+      this.loading = true;
+      this.$api
+        .post("get/form-data/1", formData)
+        .then((resp) => {
+          this.$q.loading.hide();
+
+          console.log(resp);
+          this.$q.notify({
+            message: "Submission Successful",
+            color: "green",
+            position: "top",
+            timeout: 3000,
+          });
+          this.responseModal = true;
+
+          document.getElementById("appForm").reset();
+        })
+        .catch(({ response }) => {
+          this.$q.loading.hide();
+          this.errors = response.data.errors;
+          // this.errorMsg = response.data.message;
+          this.$q.notify({
+            message: response.data.message,
+            color: "red",
+            position: "top",
+          });
+          setTimeout(() => {
+            this.errors = [];
+          }, 12000);
+          console.log(response);
+        });
+    },
   },
 };
 </script>

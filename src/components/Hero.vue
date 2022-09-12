@@ -3,7 +3,14 @@
     <div class="hold">
       <img src="/images/logoc.png" alt="" />
       <p class="small_spaced_text">SEPTEMBER 26TH - 28TH</p>
-      <h1 class="main_text">KADINVEST 7.0</h1>
+      <transition
+        appear
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @after-enter="afterEnter"
+      >
+        <h1 class="main_text">KADINVEST 7.0</h1>
+      </transition>
       <p class="smaller_text">KADUNA, KADUNA STATE</p>
       <h2 class="subtext">Building a resilient Economy</h2>
 
@@ -13,7 +20,34 @@
 </template>
 
 <script>
+import gsap from "gsap";
 export default {
+  setup() {
+    const beforeEnter = (el) => {
+      el.style.transform = "translateY(-60px)";
+      el.style.opacity = 0;
+    };
+    const enter = (el, done) => {
+      gsap.to(el, {
+        duration: 3,
+        y: 0,
+        opacity: 1,
+        ease: "bounce.out",
+        onComplete: done,
+        delay: 5,
+      });
+    };
+
+    const afterEnter = (el) => {
+      console.log("after enter");
+    };
+
+    return {
+      beforeEnter,
+      enter,
+      afterEnter,
+    };
+  },
   mounted() {
     this.$store.animate.refs.push(this.$refs);
   },

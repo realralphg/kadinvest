@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper section">
+  <div ref="sponsors" class="wrapper section">
     <div class="hold small_container">
       <header class="heading">
         <div class="abt">
@@ -7,7 +7,7 @@
           <h2 class="about">Sponsors</h2>
         </div>
 
-        <div class="line"></div>
+        <div class="line line5"></div>
       </header>
 
       <div class="sponsors">
@@ -19,7 +19,7 @@
           <img src="/images/sponsor5.png" alt="" />
         </div>
       </div>
-      <div class="become flex justify-end">
+      <div class="become q-mt-lg flex justify-end">
         <q-btn to="/sponsor" class="become_btn"> Become A Sponsor</q-btn>
       </div>
     </div>
@@ -27,7 +27,22 @@
 </template>
 
 <script>
-export default {};
+import gsap from "gsap";
+export default {
+  mounted() {
+    gsap.from(".line5", {
+      scrollTrigger: {
+        trigger: this.$refs.sponsors,
+        toggleActions: "play complete reset",
+      },
+      scaleX: 0,
+      duration: 10,
+      repeat: -1,
+      transformOrigin: "left center",
+      ease: "none",
+    });
+  },
+};
 </script>
 
 <style scoped>

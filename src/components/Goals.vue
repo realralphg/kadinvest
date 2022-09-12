@@ -7,7 +7,7 @@
           <h2 class="about">Goals</h2>
         </div>
 
-        <div class="line"></div>
+        <div class="line line2"></div>
       </header>
 
       <div class="small_section">
@@ -32,7 +32,8 @@
 
 <script>
 import Time from "../components/Time.vue";
-
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 export default {
   components: {
     Time,
@@ -40,6 +41,19 @@ export default {
 
   mounted() {
     this.$store.animate.refs.push(this.$refs);
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".line2", {
+      scrollTrigger: {
+        trigger: this.$refs.goals,
+        toggleActions: "play complete reset",
+      },
+      scaleX: 0,
+      duration: 10,
+      repeat: -1,
+      transformOrigin: "left center",
+      ease: "none",
+    });
   },
 };
 </script>

@@ -5,9 +5,9 @@
       <div class="navbar-container">
         <input type="checkbox" name="" id="" />
         <div class="hamburger-lines">
-          <span class="linee line1"></span>
-          <span class="linee line2"></span>
-          <span class="linee line3"></span>
+          <span class="linee menuline1"></span>
+          <span class="linee menuline2"></span>
+          <span class="linee menuline3"></span>
         </div>
         <ul class="menu-items">
           <li>
@@ -436,17 +436,17 @@ h1 {
     /* background: #333; */
   }
 
-  .navbar-container .hamburger-lines .line1 {
+  .navbar-container .hamburger-lines .menuline1 {
     transform-origin: 0% 0%;
     transition: transform 0.3s ease-in-out;
   }
 
-  .navbar-container .hamburger-lines .line2 {
+  .navbar-container .hamburger-lines .menuline2 {
     transition: transform 0.2s ease-in-out;
     width: 70%;
   }
 
-  .navbar-container .hamburger-lines .line3 {
+  .navbar-container .hamburger-lines .menuline3 {
     transform-origin: 0% 100%;
     transition: transform 0.3s ease-in-out;
     width: 90%;
@@ -484,15 +484,24 @@ h1 {
     transform: translateX(0);
   }
 
-  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  .navbar-container
+    input[type="checkbox"]:checked
+    ~ .hamburger-lines
+    .menuline1 {
     transform: rotate(45deg);
   }
 
-  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  .navbar-container
+    input[type="checkbox"]:checked
+    ~ .hamburger-lines
+    .menuline2 {
     transform: scaleY(0);
   }
 
-  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  .navbar-container
+    input[type="checkbox"]:checked
+    ~ .hamburger-lines
+    .menuline3 {
     transform: rotate(-45deg);
   }
 }

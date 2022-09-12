@@ -50,6 +50,13 @@ module.exports = configure(function (ctx) {
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-build
     build: {
       vueRouterMode: 'hash', // available values: 'hash', 'history'
+      env: {
+        baseURL: 'https://multiverse.kadinvest.com.ng/api/v1/',
+        rootURL: 'https://multiverse.kadinvest.com.ng/api/v1/',
+        site_name: 'GreySoft Technologies',
+        description: 'GreySoft',
+        keywords: 'GreySoft',
+      },
 
       // transpile: false,
       // publicPath: '/',
