@@ -89,15 +89,18 @@
         </form>
       </div>
     </div>
-    <Footer />
+    <Table /> <Footer />
   </div>
 </template>
 
 <script>
 import Footer from "../components/Footer.vue";
+import Table from "../components/Table.vue";
+
 export default {
   components: {
     Footer,
+    Table,
   },
   data() {
     return {
@@ -428,6 +431,11 @@ label {
   line-height: 117%;
   text-align: center;
   color: #ffffff;
+}
+@media (min-width: 1300px) {
+  .other_cards {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 }
 @media (max-width: 800px) {
   .form_style {

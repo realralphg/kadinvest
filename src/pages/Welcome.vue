@@ -1,5 +1,9 @@
 <template>
-  <div :class="value ? 'bg_light wrapper' : 'wrapper bg_dark'">
+  <div
+    ref="welcome"
+    id="scrollable"
+    :class="value ? 'bg_light wrapper' : 'wrapper bg_dark'"
+  >
     <div class="hold welcome">
       <img v-show="value" src="/images/bulb.png" alt="" />
       <img v-show="!value" src="/images/bulb1.png" alt="" />
@@ -22,11 +26,13 @@
         label="Off"
       />
 
-      <div v-if="!show" class="q-mt-lg text-center">
-        <q-spinner-hourglass color="info" size="2em" />
+      <div v-show="!show" class="q-mt-lg text-center">
+        <!-- <q-spinner-hourglass color="info" size="2em" /> -->
         <h6
           :class="
-            value ? 'dark_color text-center' : 'light_color text-center welcome'
+            value
+              ? 'dark_color text-center welcome_text'
+              : 'light_color text-center welcome_text'
           "
         >
           Your experience would <br />
@@ -37,6 +43,7 @@
       </div>
     </div>
   </div>
+  <!-- <div class="addscroll"></div> -->
 </template>
 
 <script>
@@ -49,13 +56,56 @@ export default {
       show: true,
     };
   },
+  mounted() {
+    this.functiondisable();
+    // this.$store.animate.refs[5].wholePage.style.display = "0";
+    // console.log((this.$store.animate.refs[5].wholePage.style.opacity = "0"));
+  },
+  methods: {
+    preventScroll(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      return false;
+    },
+
+    functiondisable() {
+      document.querySelector("#scrollable").addEventListener("wheel", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      });
+    },
+    functionenable() {
+      document
+        .querySelector("#scrollable")
+        .removeEventListener("wheel", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          return false;
+        });
+      //   function preventScroll(e) {}
+      console.log("first");
+    },
+  },
   watch: {
     value: function () {
       if (this.value === true) {
         this.show = false;
         setTimeout(() => {
-          this.$router.replace("/home");
-        }, 5000);
+          this.functionenable();
+          //   this.PageUp();
+
+          window.scrollBy(0, 100);
+
+          //   this.$store.animate.refs[0].home.scrollIntoView({
+          //     behavior: "smooth",
+          //   });
+          document.querySelector("#scrollable").style.display = "none";
+
+          //   this.$router.replace("/home");
+        }, 2000);
       } else {
         console.log("not disabled");
       }
@@ -65,6 +115,9 @@ export default {
 </script>
 
 <style scoped>
+.addscroll {
+  height: 5000px;
+}
 img {
   height: 40vh;
   top: -20%;
@@ -75,6 +128,7 @@ p {
 }
 .wrapper {
   height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,6 +137,9 @@ p {
   width: 100vw;
   gap: 2rem;
   transition: all 0.7s ease-in-out;
+}
+.add_height {
+  height: 5000px !important;
 }
 .hold {
   max-width: 1440px;
@@ -101,12 +158,15 @@ h6 {
   margin-top: 1rem;
 }
 p,
-h1.dark_colorlight_color {
+h1.dark_colorlight_color,
+h6.dark_colorlight_color {
   color: #ffffff;
 }
 p.dark_color,
-h1.dark_color {
+h1.dark_color,
+h6.dark_color {
   color: #030303;
+  text-transform: capitalize;
 }
 p {
   font-style: normal;
@@ -118,6 +178,7 @@ p {
   text-transform: uppercase;
   transform: rotate(-90deg);
   position: absolute;
+  top: 45%;
   left: -25%;
   padding: 1rem;
 }
@@ -128,8 +189,17 @@ p {
   font-size: 50.3121px;
   line-height: 117%;
   text-align: center;
-  text-transform: lowercase;
+  text-transform: capitalize;
   color: #ffffff;
+}
+.welcome_text {
+  font-style: normal;
+  font-weight: 250;
+  font-size: 20.3121px;
+  line-height: 117%;
+  text-align: center;
+  text-transform: capitalize;
+  /* color: #ffffff; */
 }
 
 .kad {
@@ -162,6 +232,9 @@ p {
 @media (max-width: 600px) {
   .welcome {
     font-size: 30.3121px;
+  }
+  .hold {
+    padding-bottom: 4rem;
   }
 
   .kad {

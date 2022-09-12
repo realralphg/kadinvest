@@ -202,15 +202,14 @@ p.desc {
 } */
 .grid {
   position: relative;
-  /* margin: 0 auto; */
+
   padding: 1em 0 4em;
-  /* max-width: 1100px; */
+
   list-style: none;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 2fr; */
+
   align-items: center;
   gap: 1rem;
   z-index: 10;
@@ -236,7 +235,7 @@ p.desc {
   display: block;
   min-height: 100%;
   max-width: 100%;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   border-radius: 15px;
   width: 100%;
   height: 350px;
@@ -323,6 +322,12 @@ span.office {
   line-height: 13px;
 
   color: #ffffff;
+}
+figure.effect-sadie {
+  opacity: 1;
+}
+figure.effect-sadie:hover {
+  opacity: 0.9;
 }
 
 .grid figure h2,

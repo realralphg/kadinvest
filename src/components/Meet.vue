@@ -81,9 +81,7 @@ export default {
   gap: 2rem;
   margin-top: 3rem;
 }
-// .para_hold {
-//   padding-bottom: 30rem;
-// }
+
 .paragraphs p {
   font-style: normal;
   font-weight: 400;
@@ -95,12 +93,6 @@ export default {
 }
 .hold {
   position: relative;
-}
-
-.meet {
-  position: relative;
-  margin-top: -40%;
-  margin-bottom: 10%;
 }
 
 .card {
@@ -187,10 +179,20 @@ export default {
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.5);
 }
+.meet {
+  margin-top: -53%;
+  margin-bottom: 25%;
+}
 
 @media (min-width: 1300px) {
   .meet {
     margin-top: -43%;
+  }
+}
+@media (max-width: 1025px) {
+  .meet {
+    margin-top: -65%;
+    margin-bottom: 18%;
   }
 }
 @media (max-width: 950px) {

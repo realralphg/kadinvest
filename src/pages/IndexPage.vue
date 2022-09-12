@@ -1,14 +1,15 @@
 <template>
   <q-page class="">
-    <!-- <div class="section">heyy</div> -->
-    <Hero />
-    <About />
-    <Goals />
-    <Features />
-    <Meet /> <Attend />
-    <Metaverse />
-    <Sponsors />
-    <Footer />
+    <div ref="wholePage" class="section wholepage">
+      <Hero />
+      <About />
+      <Goals />
+      <Features />
+      <Meet /> <Attend />
+      <Metaverse />
+      <Sponsors />
+      <Footer />
+    </div>
   </q-page>
 </template>
 
@@ -50,9 +51,10 @@ export default defineComponent({
     Footer,
   },
   mounted() {
-    gsap.registerPlugin(ScrollTrigger);
-    let sections = gsap.utils.toArray(".section");
-    console.log(sections);
+    this.$store.animate.refs.push(this.$refs);
+    // gsap.registerPlugin(ScrollTrigger);
+    // let sections = gsap.utils.toArray(".section");
+    // console.log(sections);
 
     // sections.forEach((section) => {
     //   let title = section.querySelector(".about");
@@ -60,8 +62,8 @@ export default defineComponent({
     //   gsap
     //     .timeline({
     //       scrollTrigger: {
-    //         trigger: section,
-    //         start: "top center",
+    //         trigger: title,
+    //         start: " top center",
     //         end: "+=400",
     //         scrub: true,
     //         markers: false,

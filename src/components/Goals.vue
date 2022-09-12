@@ -1,6 +1,6 @@
 <template>
-  <div ref="goals" class="wrapper">
-    <div class="hold section small_container">
+  <div ref="goals" class="wrapper section">
+    <div class="hold small_container">
       <header class="heading">
         <div class="abt">
           <h2 class="about">KadInvest</h2>
@@ -37,6 +37,7 @@ export default {
   components: {
     Time,
   },
+
   mounted() {
     this.$store.animate.refs.push(this.$refs);
   },
@@ -126,7 +127,8 @@ export default {
   width: 100%;
   height: 30%;
   right: 0;
-  top: 50%;
+  top: 60%;
+  /* transform: rotate(-180deg); */
   background: url("/images/drop.png") no-repeat;
 }
 </style>

@@ -3,7 +3,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#fff" fill-opacity="1" d="M0,288L1440,32L1440,0L0,0Z"></path>
     </svg>
-    <div class="hold small_container">
+    <div class="hold rotate_sec small_container">
       <header class="heading">
         <div class="abt">
           <h2 class="about">Expected</h2>
@@ -44,7 +44,11 @@
               :modules="modules"
               class="mySwiper"
             >
-              <swiper-slide v-for="(card, index) in cards" :key="index">
+              <swiper-slide
+                class="card_cards"
+                v-for="(card, index) in cards"
+                :key="index"
+              >
                 <div :data-index="index" class="card">
                   <div class="top">
                     <h6 class="headerrr">{{ card.heading }}</h6>
@@ -122,21 +126,26 @@ export default {
           heading: "Expectation #3",
           body: "The results of key reforms in the last 7 years gaining international recognition should be brought to light and consolidated",
         },
-        {
-          heading: "Expectation #4",
-          body: "The results of key reforms in the last 7 years gaining international recognition should be brought to light and consolidated",
-        },
+        // {
+        //   heading: "Expectation #4",
+        //   body: "The results of key reforms in the last 7 years gaining international recognition should be brought to light and consolidated",
+        // },
       ],
     };
   },
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.defaults({ ease: "none", duration: 8 });
+    gsap.defaults({ ease: "none", duration: 5 });
     let cards = gsap.utils.toArray(".card");
     const container = document.querySelector(".cards_div");
-    console.log(container);
+    const card1 = cards[0];
+    const card2 = cards[1];
+    const card3 = cards[2];
+    // const card4 = cards[3];
+    console.log(card1);
+
     cards.forEach((card) => {
-      //   console.log(card.dataset);
+      //   console.log(card);
       gsap
         .timeline({
           scrollTrigger: {
@@ -145,18 +154,32 @@ export default {
             end: "+=4000",
             scrub: true,
             markers: false,
-            scrub: true,
+            // scrub: true,
             pin: true,
             anticipatePin: 1,
+            // snap: {
+            //   snapTo: "labels", // snap to the closest label in the timeline
+            //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+            //   delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+            //   ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+            // },
             // toggleActions: "restart pause reverse pause",
           },
         })
-
-        .to(card, {
-          rotate: -185,
-          x: 200,
-          y: -100,
-          delay: 8 * card.dataset.index,
+        .to(card1, {
+          x: 500,
+          y: -400,
+          rotateZ: -70,
+        })
+        .to(card2, {
+          x: 350,
+          y: -200,
+          rotateZ: -70,
+        })
+        .to(card3, {
+          x: 0,
+          y: 0,
+          rotateZ: 0,
         });
     });
     this.$store.animate.refs.push(this.$refs);
@@ -224,7 +247,8 @@ export default {
   background: #ffffff;
   box-shadow: 0px 13px 45px 13px rgba(0, 0, 0, 0.08);
   border-radius: 22.6933px;
-  height: 100%;
+  //   height: 100%;
+  min-height: 500px;
   padding: 1.5rem;
   position: absolute;
   display: flex;
@@ -302,6 +326,11 @@ export default {
   color: rgba(255, 255, 255, 0.5);
 }
 
+@media (max-width: 1025px) {
+  .card {
+    min-height: 450px;
+  }
+}
 @media (max-width: 800px) {
   .paragraphs {
     grid-template-columns: 1fr;
@@ -319,6 +348,11 @@ export default {
   }
 }
 
+@media (max-width: 500px) {
+  .card {
+    width: 300px;
+  }
+}
 @media (max-width: 380px) {
   .tap {
     padding: 5rem 0 4rem;

@@ -99,6 +99,10 @@ svg {
   font-size: 18px;
   line-height: 27px;
 }
+.swiper-3d .swiper-slide-shadow {
+  // background: rgba(0,0,0,.15);
+  background: none !important;
+}
 
 .nav_btns .q-btn {
   font-size: 12px;

@@ -1,5 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
+    <Welcome />
     <nav class="navbar">
       <div class="navbar-container">
         <input type="checkbox" name="" id="" />
@@ -229,12 +230,13 @@
 <script>
 import { defineComponent, ref } from "vue";
 import EssentialLink from "components/EssentialLink.vue";
-
+import Welcome from "../pages/Welcome.vue";
 export default defineComponent({
   name: "MainLayout",
 
   components: {
     EssentialLink,
+    Welcome,
   },
 
   setup() {
@@ -248,7 +250,7 @@ export default defineComponent({
     };
   },
   mounted() {
-    console.log(this.$store.animate.refs[3].features);
+    console.log(this.$store.animate.refs);
   },
 
   methods: {
@@ -379,7 +381,12 @@ h1 {
   color: #117964;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .menu-items li {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 830px) {
   .navbar {
     opacity: 0.95;
   }
@@ -504,7 +511,7 @@ h1 {
     display: none;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 830px) {
   .nav__toggler {
     display: flex;
   }

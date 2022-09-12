@@ -19,6 +19,9 @@
           <img src="/images/sponsor5.png" alt="" />
         </div>
       </div>
+      <div class="become flex justify-end">
+        <q-btn to="/sponsor" class="become_btn"> Become A Sponsor</q-btn>
+      </div>
     </div>
   </div>
 </template>
@@ -39,6 +42,14 @@ export default {};
   text-transform: capitalize;
   color: #2d25a6;
   margin: 0;
+}
+.become_btn {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  padding: 14px 10px;
+  background: #1f1b5e;
 }
 
 .line {

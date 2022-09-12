@@ -37,8 +37,12 @@
           </p>
         </div>
         <div class="right">
-          <img src="/images/tweet.png" alt="" />
-          <img src="/images/tweet.png" alt="" />
+          <div class="right_block">
+            <img class="tweet1" src="/images/tweet.png" alt="" />
+            <img class="tweet2" src="/images/tweet.png" alt="" />
+            <img class="tweet2" src="/images/tweet.png" alt="" />
+            <img class="tweet2" src="/images/tweet.png" alt="" />
+          </div>
         </div>
       </div>
 
@@ -47,9 +51,16 @@
           <img src="/images/khalil.png" class="im image1" alt="" />
           <div class="bgh">
             <img src="/images/ror.png" class="im image2" alt="" />
+            <div class="download download_div">
+              <a href="" class="link text-white q-pa-md"> Download Report</a>
+              <small> Download the report </small>
+              <h5>
+                KADINVEST <br />
+                1.0 - 1.6
+              </h5>
+            </div>
           </div>
           <img src="/images/mallam.png" class="im image3" alt="" />
-          <a href="" class="download text-white q-pa-md"> Download </a>
         </div>
       </div>
     </div>
@@ -106,7 +117,7 @@ export default {
 .paragraphs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 4rem;
   padding-bottom: 22rem;
 }
 .paragraphs p {
@@ -143,7 +154,6 @@ export default {
 .bottom_images .image2 {
   width: 100%;
   z-index: 10;
-  /* transform: rotate(-13deg); */
   position: relative;
   transition: all 0.5s ease-in-out;
 }
@@ -163,8 +173,9 @@ export default {
   transform: scale(1.1);
   cursor: pointer;
 }
-.bottom_images .image2:hover {
-  transform: rotate(13deg);
+.bgh {
+  transition: all 0.5s ease-in-out;
+  position: relative;
 }
 
 .bottom_images .image3 {
@@ -174,35 +185,124 @@ export default {
   right: -25%;
   z-index: 9;
 }
-.download {
+
+.download_div {
+  display: none;
+  /* opacity: 0; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1rem;
+  margin-left: 0.5rem;
+  width: 65%;
+  height: 79%;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  top: 8%;
+  left: 16.4%;
+  /* left: 50%; */
+  /* top: 50%; */
   transform: translate(-50%, -50%);
   z-index: 5;
   border-radius: 10px;
-  background: olive;
+  background: rgba(21, 15, 112, 0.75);
+}
+.bottom_images .bgh:hover {
+  scale: 1.1;
+  transform: rotate(13deg);
+  z-index: 300;
+  position: relative;
 }
 
-.bottom_images:hover .download {
+.download_div small {
+  letter-spacing: 0.4em;
+  color: #ffffff;
+}
+.download_div h5 {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.bgh:hover .download_div {
+  display: flex;
   z-index: 500;
-}
-.bottom_images .image2:hover .bgh {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  left: 16%;
-  transform: translateX(-50%);
-  width: 390px;
-  height: 600px;
-  cursor: pointer;
-  transform: scale(1.1);
-  background: rgba(45, 37, 166, 0.68);
   transform: rotate(-13deg);
-  z-index: 100;
+  scale: 1.1;
 }
 
+.link {
+  display: inline-block;
+  background: #00a250;
+  padding: 0.5rem;
+}
+
+/* in and out cards */
+.right {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.right_block {
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-name: slidedown;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.tweet1 {
+  width: 100%;
+  height: 220px;
+}
+.tweet2 {
+  animation-name: slideup;
+  width: 100%;
+  height: 220px;
+}
+@keyframes slidedown {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideup {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 1281px) {
+  .bottom_images .image2 {
+    width: 90%;
+    z-index: 10;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .bottom_images .image1 {
+    width: 65%;
+    position: absolute;
+    bottom: 20%;
+    left: -28%;
+    z-index: 9;
+  }
+
+  .bottom_images .image3 {
+    width: 45%;
+    position: absolute;
+    bottom: 20%;
+    right: -5%;
+    z-index: 9;
+  }
+}
 @media (max-width: 1281px) {
   .line {
     width: 50%;
@@ -223,7 +323,7 @@ export default {
     width: 45%;
     position: absolute;
     bottom: 20%;
-    right: 5%;
+    right: -12%;
     z-index: 9;
   }
 }
@@ -231,6 +331,13 @@ export default {
   .paragraphs {
     grid-template-columns: 1fr;
     padding-bottom: 15rem;
+  }
+  .right_block {
+    display: grid;
+  }
+  .download_div {
+    width: 71%;
+    left: 13.9%;
   }
   .heading {
     flex-wrap: wrap;
@@ -252,18 +359,16 @@ export default {
   }
 }
 
-/* @media (max-width: 800px) {
-  .paragraphs {
-    grid-template-columns: 1fr;
-    padding-bottom: 25rem;
-  }
-} */
 @media (max-width: 550px) {
   .paragraphs {
     padding-bottom: 7rem;
   }
   .right {
     margin-bottom: 10rem;
+  }
+  .download_div {
+    width: 71%;
+    left: 12.9%;
   }
 }
 
