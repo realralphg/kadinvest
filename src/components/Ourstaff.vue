@@ -157,6 +157,7 @@ export default {
   letter-spacing: 0.335em;
   text-transform: capitalize;
   color: #00a250;
+  margin-bottom: 1rem;
 }
 
 .delp img {

@@ -89,7 +89,8 @@
         </form>
       </div>
     </div>
-    <Table /> <Footer />
+    <!-- <Table /> -->
+    <Footer />
   </div>
 </template>
 

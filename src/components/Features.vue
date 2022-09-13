@@ -156,7 +156,6 @@ export default {
             end: "+=4000",
             scrub: true,
             markers: false,
-            // scrub: true,
             pin: true,
             anticipatePin: 1,
             // snap: {

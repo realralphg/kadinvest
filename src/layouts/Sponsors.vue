@@ -16,70 +16,11 @@
               class="text-dark nav_items"
               ripple
               no-caps
-              exact
-              @click="goHome"
-            />
-          </li>
-          <li>
-            <q-btn
-              class="text-dark nav_items"
-              label="About"
-              ripple
-              no-caps
-              exact
-              @click="gotoAbout"
-            />
-          </li>
-          <li>
-            <q-btn
-              label="Objectives "
-              class="text-dark nav_items"
-              ripple
-              no-caps
-              @click="gotoGoals"
+              to="/home"
               exact
             />
           </li>
-          <li>
-            <q-btn
-              class="text-dark nav_items"
-              label="Features"
-              ripple
-              no-caps
-              @click="gotoFeatures"
-              exact
-            />
-          </li>
-          <li>
-            <q-btn
-              class="text-dark nav_items"
-              label="Speakers"
-              ripple
-              no-caps
-              exact
-              @click="gotoSpeakers"
-            />
-          </li>
-          <li>
-            <q-btn
-              class="text-dark nav_items"
-              label="Metaverse"
-              ripple
-              no-caps
-              @click="gotoMetaverse"
-              exact
-            />
-          </li>
-          <li>
-            <q-btn
-              class="text-dark nav_items"
-              label="Register"
-              ripple
-              no-caps
-              to="/register"
-              exact
-            />
-          </li>
+
           <li>
             <q-btn
               class="text-dark sponsor nav_items"

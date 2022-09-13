@@ -139,7 +139,7 @@ export default {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: container,
-          toggleActions: "restart reverse complete reset",
+          toggleActions: "restart  complete ",
         },
       });
 

@@ -13,6 +13,12 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '/home', component: () => import('pages/IndexPage.vue') },
+    ]
+  },
+  {
+    path: '/spon',
+    component: () => import('layouts/Sponsors.vue'),
+    children: [
       { path: '/sponsor', component: () => import('pages/Sponsor.vue') },
     ]
   },
