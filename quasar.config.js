@@ -51,8 +51,8 @@ module.exports = configure(function (ctx) {
     build: {
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       env: {
-        baseURL: 'https://multiverse.kadinvest.com.ng/api/v1/',
-        rootURL: 'https://multiverse.kadinvest.com.ng/api/v1/',
+        baseURL: 'https://kadinvest-multiverse.greysoft.com.ng/api/v1/',
+        rootURL: 'https://kadinvest-multiverse.greysoft.com.ng/api/v1/',
         site_name: 'GreySoft Technologies',
         description: 'GreySoft',
         keywords: 'GreySoft',
@@ -106,7 +106,7 @@ module.exports = configure(function (ctx) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Loading', 'Dialog', 'Notify', 'Meta','AppFullscreen']
     },
 
     // animations: 'all', // --- includes all animations

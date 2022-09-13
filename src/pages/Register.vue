@@ -5,6 +5,7 @@
         <h1>Sign up</h1>
         <!-- {{ business_expo }}
         {{ individual }} -->
+        <!-- {{ fields }} -->
         <form
           action=""
           ref="appformm"
@@ -13,89 +14,159 @@
           @submit.prevent="submit"
         >
           <div class="choose">
-            <p>Which events do you want to attend?</p>
-
-            <div class="register">
-              <div class="register_checkbox">
-                <q-checkbox name="summit" label="Summit" v-model="summit" />
+            <div class="">
+              <div class="input_wrap">
+                <label class="q-pb-sm" for="name"
+                  >Which events do you want to attend?</label
+                >
+                <br />
+                <!-- <q-select multiple v-model="data.type.summit" name="" id="">
+                  <option value="summit">Summit</option>
+                  <option value="business_expo">Business Expo</option>
+                </q-select> -->
+                <q-select
+                  filled
+                  v-model="data.type"
+                  :options="options"
+                  label="Select"
+                  multiple
+                  emit-value
+                  map-options
+                  class="q-pt-sm"
+                >
+                  <template
+                    v-slot:option="{ itemProps, opt, selected, toggleOption }"
+                  >
+                    <q-item v-bind="itemProps">
+                      <q-item-section>
+                        <q-item-label v-html="opt.label" />
+                      </q-item-section>
+                      <q-item-section side>
+                        <q-toggle
+                          :model-value="selected"
+                          @update:model-value="toggleOption(opt)"
+                        />
+                      </q-item-section>
+                    </q-item>
+                  </template>
+                </q-select>
+                <div class="error" v-if="errors['data.type']">
+                  {{ errors["data.type"][0] }}
+                </div>
+              </div>
+              <!-- <div class="register_checkbox">
+                <q-checkbox
+                  name="type"
+                  label="Summit"
+                  v-model="data.type.summit"
+                />
               </div>
               <div class="register_checkbox">
                 <q-checkbox
-                  name="business_expo"
+                  name="type"
                   label="Business Expo"
-                  v-model="business_expo"
+                  v-model="data.type.business_expo"
                 />
-              </div>
+              </div> -->
             </div>
           </div>
+          <!-- {{ errors }} -->
 
           <div class="personal">Please Fill In Your Personal info</div>
 
           <div class="input_wrap">
             <label for="name">Full Name</label> <br />
             <input
-              v-model="fullname"
+              v-model="data.fullname"
               type="text"
               name="fullname"
               placeholder="Firstname Lastname"
             />
+            <div class="error" v-if="errors['data.fullname']">
+              {{ errors["data.fullname"][0] }}
+            </div>
           </div>
           <div class="input_wrap">
             <label for="email">Email</label> <br />
             <input
               type="email"
-              v-model="email"
+              v-model="data.email"
               name="email"
               placeholder="Enter email here..."
             />
+            <div class="error" v-if="errors['data.email']">
+              {{ errors["data.email"][0] }}
+            </div>
           </div>
           <div class="input_wrap">
-            <label for="PhoneNumer">Phone Numer</label> <br />
+            <label for="phone">Phone Numer</label> <br />
             <input
               type="text"
-              name="phone_number"
-              v-model="phone_number"
+              name="phone"
+              v-model="data.phone"
               placeholder="Enter phone number here..."
             />
+            <div class="error" v-if="errors['data.phone']">
+              {{ errors["data.phone"][0] }}
+            </div>
           </div>
           <div class="input_wrap">
-            <label for="CompanyName">Company Name</label> <br />
-            <input v-model="company_name" placeholder="" />
+            <label for="company">Company Name</label> <br />
+            <input v-model="data.company" name="company" placeholder="" />
+            <div class="error" v-if="errors['data.company']">
+              {{ errors["data.company"][0] }}
+            </div>
           </div>
           <div class="input_wrap">
             <label for="Designation">Designation</label> <br />
             <input
               type="text"
-              v-model="designation"
+              v-model="data.designation"
               name="designation"
               placeholder=""
             />
+            <div class="error" v-if="errors['data.designation']">
+              {{ errors["data.designation"][0] }}
+            </div>
           </div>
 
           <div class="who">
             <div class="attending_as">Who are you attending as?</div>
             <div class="q-py-md">
               <div class="q-gutter-sm">
-                <q-radio v-model="msme" val="msme" name="msme" label="MSME" />
                 <q-radio
-                  v-model="investor"
-                  val="investor"
-                  name="investor"
+                  v-model="data.attending_as"
+                  val="MSME"
+                  name="MSME"
+                  label="MSME"
+                />
+                <q-radio
+                  v-model="data.attending_as"
+                  val="Investor"
+                  name="attending_as"
                   label="Investor"
                 />
                 <q-radio
-                  v-model="government_official"
-                  val="government_official"
-                  name="government_official"
+                  v-model="data.attending_as"
+                  val="Government Official"
+                  name="attending_as"
                   label="Government Official"
                 />
                 <q-radio
-                  name="individual"
-                  v-model="individual"
-                  val="individual"
+                  name="attending_as"
+                  v-model="data.attending_as"
+                  val="Individual"
                   label="Individual"
                 />
-                <q-radio v-model="others" val="others" label="Others" />
+                <q-radio
+                  v-model="data.attending_as"
+                  val="Other"
+                  label="Other"
+                  name="attending_as"
+                />
+              </div>
+              <div class="error" v-if="errors['data.attending_as']">
+                {{ errors["data.attending_as"][0] }}
               </div>
             </div>
           </div>
@@ -106,23 +177,26 @@
             <div class="q-py-md">
               <div class="q-gutter-sm">
                 <q-radio
-                  name="virtual"
-                  v-model="virtual"
-                  val="virtual"
+                  name="attending_as"
+                  v-model="data.attending_via"
+                  val="Virtual"
                   label="Virtual"
                 />
                 <q-radio
-                  name="physical"
-                  v-model="physical"
-                  val="physical"
+                  name="attending_as"
+                  v-model="data.attending_via"
+                  val="Physical"
                   label="Physical"
                 />
                 <q-radio
-                  v-model="in_the_metaverse"
-                  name="in_the_metaverse"
-                  val="in_the_metaverse"
+                  v-model="data.attending_via"
+                  name="attending_as"
+                  val="Metaverse"
                   label="In the Metaverse"
                 />
+              </div>
+              <div class="error" v-if="errors['data.attending_via']">
+                {{ errors["data.attending_via"][0] }}
               </div>
             </div>
           </div>
@@ -133,30 +207,33 @@
             <div class="q-py-md">
               <div class="q-gutter-sm">
                 <q-radio
-                  v-model="agriculture"
-                  name="agriculture"
-                  val="agriculture"
+                  v-model="data.prefered_sector"
+                  name="prefered_sector"
+                  val="Agriculture"
                   label="Agriculture"
                 />
                 <q-radio
-                  v-model="solid_minerals"
-                  name="solid_minerals"
-                  val="solid_minerals"
+                  v-model="data.prefered_sector"
+                  name="prefered_sector"
+                  val="Solid Minerals"
                   label="Solid Minerals"
                 />
                 <q-radio
-                  v-model="infrastructure"
-                  val="infrastructure"
-                  name="infrastructure"
+                  v-model="data.prefered_sector"
+                  val="Infrastructure"
+                  name="prefered_sector"
                   label="Infrastructure"
                 />
 
                 <q-radio
-                  name="technology"
-                  v-model="technology"
-                  val="technology"
+                  name="prefered_sector"
+                  v-model="data.prefered_sector"
+                  val="Technology"
                   label="Technology"
                 />
+              </div>
+              <div class="error" v-if="errors['data.prefered_sector']">
+                {{ errors["data.prefered_sector"][0] }}
               </div>
             </div>
           </div>
@@ -178,82 +255,62 @@
 <script>
 import Ourstaff from "../components/Ourstaff.vue";
 // import Speakers from "../components/Speakers.vue";
+import { ref } from "vue";
 export default {
   components: {
     Ourstaff,
   },
   data() {
     return {
+      fields: [],
+      data: { type: ["summit"] },
       loading: false,
-      fullname: "",
-      business_expo: false,
-      summit: false,
-      msme: false,
-      individual: false,
-      investor: true,
-      government_official: true,
-      virtual: false,
-      physical: false,
-      in_the_metaverse: false,
-      designation: "",
-      technology: false,
-      agriculture: false,
-      solid_minerals: false,
-      infrastructure: false,
-      others: false,
-      email: "",
-      phone_number: "",
-      company_name: "",
+      errors: [],
+      model: ref([]),
+      options: [
+        {
+          label: "Summit",
+          value: "summit",
+        },
+        {
+          label: "Business Expo",
+          value: "business_expo",
+        },
+      ],
     };
   },
 
+  created() {
+    this.getfields();
+  },
+
   methods: {
+    getfields() {
+      this.$api
+        .get("get/form-fields")
+        .then((resp) => {
+          this.fields = resp.data.data;
+        })
+        .catch(({ response }) => {
+          this.$q.loading.hide();
+          this.$q.notify({
+            message: response.data.message,
+            color: "red",
+            position: "top",
+          });
+        });
+    },
     submit() {
-      let technology = this.technology;
-      let fullname = this.fullname;
-      let designation = this.designation;
-      let solid_minerals = this.solid_minerals;
-      let agriculture = this.agriculture;
-      let email = this.email;
-      let phone_number = this.phone_number;
-      let company_name = this.company_name;
-      let infrastructure = this.infrastructure;
-      let virtual = this.virtual;
-      let physical = this.physical;
-      let individual = this.individual;
-      let investor = this.investor;
-      let government_official = this.government_official;
-      let in_the_metaverse = this.in_the_metaverse;
-      let business_expo = this.business_expo;
-      let summit = this.summit;
-      let msme = this.msme;
-      let others = this.others;
+      // this.fields.map((field) => {
+      //   formData.append(`data[${this.field.name}]`, this.data[field.name]);
+      // });
 
-      const formData = new FormData();
-      formData.append("data[technology]", technology);
-      formData.append("data[msme]", msme);
-      formData.append("data[summit]", summit);
-      formData.append("data[business_expo]", business_expo);
-      formData.append("data[in_the_metaverse]", in_the_metaverse);
-      formData.append("data[government_official]", government_official);
-      formData.append("data[investor]", investor);
-      formData.append("data[individual]", individual);
-      formData.append("data[physical]", physical);
-      formData.append("data[virtual]", virtual);
-      formData.append("data[infrastructure]", infrastructure);
-      formData.append("data[company_name]", company_name);
-      formData.append("data[email]", email);
-      formData.append("data[phone_number]", phone_number);
-      formData.append("data[agriculture]", agriculture);
-      formData.append("data[solid_minerals]", solid_minerals);
-      formData.append("data[designation]", designation);
-      formData.append("data[fullname]", fullname);
-      formData.append("data[others]", others);
-
+      // const formData = new FormData();
       this.$q.loading.show();
       this.loading = true;
+
       this.$api
-        .post("get/form-data/1", formData)
+        .post("get/form-data/1", { data: this.data })
         .then((resp) => {
           this.$q.loading.hide();
 
@@ -264,14 +321,14 @@ export default {
             position: "top",
             timeout: 3000,
           });
-          this.responseModal = true;
+
+          this.data = {};
 
           document.getElementById("appForm").reset();
         })
         .catch(({ response }) => {
           this.$q.loading.hide();
           this.errors = response.data.errors;
-          // this.errorMsg = response.data.message;
           this.$q.notify({
             message: response.data.message,
             color: "red",
@@ -279,7 +336,7 @@ export default {
           });
           setTimeout(() => {
             this.errors = [];
-          }, 12000);
+          }, 8000);
           console.log(response);
         });
     },
@@ -297,7 +354,7 @@ h1 {
   line-height: 40px;
   color: #333333;
   padding: 0.5rem 0;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   text-align: left;
   padding-top: 2rem;
 }
@@ -350,7 +407,10 @@ img {
   line-height: 23px;
   color: #333333;
 }
-
+.error {
+  color: red;
+  font-size: 13px;
+}
 .choose {
   margin-bottom: 2rem;
 }
@@ -371,7 +431,8 @@ img {
   padding: 1rem;
 }
 
-.input_wrap input {
+.input_wrap input,
+select {
   background: #eeeeee;
   border: 1px solid #979797;
   border-radius: 8px;

@@ -20,10 +20,18 @@
 
           <div class="q-mt-lg">
             <div class="input_wrap">
-              <form action="">
-                <input type="text" placeholder="Enter your Email Here" />
-                <q-btn class="sub"> Subscribe </q-btn>
+              <form @submit.prevent="submit">
+                <input
+                  v-model="data.email"
+                  type="text"
+                  name="email"
+                  placeholder="Enter your Email Here"
+                />
+                <q-btn type="submit" class="sub"> Subscribe </q-btn>
               </form>
+              <div class="error" v-if="errors['data.email']">
+                {{ errors["data.email"][0] }}
+              </div>
             </div>
           </div>
           <div class="q-pt-xl">
@@ -33,12 +41,61 @@
           </div>
         </div>
       </div>
+      <div class="text-center q-mt-md">
+        <p class="text-center text-white">Powered by GreySoft Technologies</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      data: {},
+      loading: false,
+      errors: [],
+    };
+  },
+
+  methods: {
+    submit() {
+      this.$q.loading.show();
+      this.loading = true;
+
+      this.$api
+        .post("get/form-data/3", { data: this.data })
+        .then((resp) => {
+          this.$q.loading.hide();
+
+          console.log(resp);
+          this.$q.notify({
+            message: "Submission Successful",
+            color: "green",
+            position: "top",
+            timeout: 3000,
+          });
+
+          this.data = {};
+
+          document.getElementById("appForm").reset();
+        })
+        .catch(({ response }) => {
+          this.$q.loading.hide();
+          this.errors = response.data.errors;
+          this.$q.notify({
+            message: response.data.message,
+            color: "red",
+            position: "top",
+          });
+          setTimeout(() => {
+            this.errors = [];
+          }, 5000);
+          console.log(response);
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -95,6 +152,11 @@ export default {};
   font-size: 18px;
   line-height: 190%;
   color: #ffffff;
+}
+.error {
+  color: red;
+  font-size: 13px;
+  margin: 0.5rem 0;
 }
 input {
   width: 100%;

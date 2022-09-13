@@ -6,6 +6,10 @@ body {
   font-family: "Poppins", sans-serif;
   // background: url("/images/authbg.png") no-repeat center center/cover;
 }
+body.no_scroll {
+  height: 10vh;
+  overflow: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -136,7 +140,17 @@ svg {
   width: 65% !important;
   max-width: 100% !important;
 }
+.q-table th {
+  font-size: 18px;
+}
 
+.q-table tbody td {
+  font-size: 16px;
+}
+
+.scroll_table .q-table__bottom {
+  display: none;
+}
 @media (max-width: 1025px) {
   .about {
     font-size: 45px !important;
@@ -172,6 +186,9 @@ svg {
   .heading {
     padding: 4rem 0 0rem !important;
     flex-wrap: wrap !important;
+  }
+  .spon_det {
+    font-size: 34px;
   }
 }
 

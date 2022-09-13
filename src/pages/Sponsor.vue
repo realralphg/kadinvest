@@ -7,7 +7,7 @@
           <h1 class="main_text">MAIN SPONSOR</h1>
           <p class="price q-mt-xl">Price</p>
           <h2 class="amt q-mb-xl">N25,000,000</h2>
-          <p class="open">Open Package</p>
+          <p @click="toggleDialog" class="open">Open Package</p>
         </div>
         <p class="pack">There is a package for everyone</p>
         <h2 class="text-center head">
@@ -22,7 +22,7 @@
         <h1 class="Omain_text">{{ card.main }}</h1>
         <p class="Oprice q-mt-lg">{{ card.price }}</p>
         <h2 class="Oamt q-mb-lg">{{ card.amt }}</h2>
-        <p class="Open">Open Package</p>
+        <p @click="toggleDialog" class="Open">Open Package</p>
       </div>
     </div>
 
@@ -53,43 +53,112 @@
         <div class="form_img flex justify-center">
           <img src="/images/logo.png" alt="" />
         </div>
-        <form action="">
-          <div class="input_wrap">
-            <label for=""> Name: </label>
-            <input type="text" placeholder="John Doe" />
+        <form @submit.prevent="submit" action="">
+          <div class="q-my-md">
+            <div class="input_wrap">
+              <label for="name"> Name: </label>
+              <input
+                v-model="data.name"
+                name="name"
+                type="text"
+                placeholder="John Doe"
+              />
+            </div>
+            <div class="error" v-if="errors['data.name']">
+              {{ errors["data.name"][0] }}
+            </div>
           </div>
-          <div class="input_wrap">
-            <label for=""> Company: </label>
-            <input type="text" placeholder="John Doe and sons" />
-          </div>
-          <div class="input_wrap">
-            <label for=""> Email: </label>
-            <input type="text" placeholder="johndoe@yourmail.com" />
-          </div>
-          <div class="input_wrap">
-            <label for=""> Select Plan: </label>
-            <select type="text" placeholder="John Doe">
-              <option value="">Select Your Sponsorship Package</option>
-              <option value="">Platinum</option>
-              <option value="">Gold</option>
-            </select>
-          </div>
-          <div class="input_wrap">
-            <label for=""> Phone Number: </label>
-            <input type="text" placeholder="John Doe" />
-          </div>
-          <div class="input_wrap">
-            <textarea name="" id="" placeholder="Type Your Message Here...">
-            </textarea>
+          <div class="q-my-md">
+            <div class="input_wrap">
+              <label for="company"> Company: </label>
+              <input
+                v-model="data.company"
+                type="text"
+                name="company"
+                placeholder="John Doe and sons"
+              />
+            </div>
+            <div class="error" v-if="errors['data.company']">
+              {{ errors["data.company"][0] }}
+            </div>
           </div>
 
-          <div class="flex justify-end">
-            <q-btn class="btnn"> Send Message</q-btn>
+          <div class="q-my-md">
+            <div class="input_wrap">
+              <label for="email"> Email: </label>
+              <input
+                v-model="data.email"
+                type="text"
+                name="email"
+                placeholder="johndoe@yourmail.com"
+              />
+            </div>
+            <div class="error" v-if="errors['data.email']">
+              {{ errors["data.email"][0] }}
+            </div>
+          </div>
+
+          <div class="q-my-md">
+            <div class="input_wrap">
+              <label for="plan"> Select Plan: </label>
+              <select v-model="data.plan" name="plan" placeholder="John Doe">
+                <option>Select Your Sponsorship Package</option>
+                <option value="Diamond">Diamond</option>
+                <option value="Platinum">Platinum</option>
+                <option value="Gold">Gold</option>
+                <option value="Silver">Silver</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Submit Network">Submit Network</option>
+              </select>
+            </div>
+            <div class="error" v-if="errors['data.plan']">
+              {{ errors["data.plan"][0] }}
+            </div>
+          </div>
+
+          <div class="q-my-md">
+            <div class="input_wrap">
+              <label for="phone"> Phone Number: </label>
+              <input
+                v-model="data.phone"
+                name="phone"
+                type="text"
+                placeholder="00000000"
+              />
+            </div>
+            <div class="error" v-if="errors['data.phone']">
+              {{ errors["data.phone"][0] }}
+            </div>
+          </div>
+          <div class="q-my-md">
+            <div class="input_wrap">
+              <textarea
+                v-model="data.message"
+                name="message"
+                id=""
+                placeholder="Type Your Message Here..."
+              >
+              </textarea>
+            </div>
+            <div class="error" v-if="errors['data.message']">
+              {{ errors["data.message"][0] }}
+            </div>
+          </div>
+
+          <div class="flex q-my-lg justify-end">
+            <q-btn type="submit" class="btnn"> Send Message</q-btn>
           </div>
         </form>
       </div>
     </div>
-    <!-- <Table /> -->
+    <q-dialog full-width v-model="dialog">
+      <q-card style="height: 80%; width: 80%" class="dialog_wid q-pa-md">
+        <div class="delp">
+          <Table />
+        </div>
+      </q-card>
+    </q-dialog>
+
     <Footer />
   </div>
 </template>
@@ -105,6 +174,10 @@ export default {
   },
   data() {
     return {
+      dialog: false,
+      plan: [],
+      data: {},
+      errors: [],
       cards: [
         {
           main: "DIAMOND",
@@ -138,6 +211,46 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    toggleDialog(plan) {
+      this.dialog = true;
+      this.plan = plan;
+    },
+
+    submit() {
+      this.$q.loading.show();
+      this.loading = true;
+
+      this.$api
+        .post("get/form-data/2", { data: this.data })
+        .then((resp) => {
+          this.$q.loading.hide();
+          console.log(resp);
+          this.$q.notify({
+            message: "Submission Successful",
+            color: "green",
+            position: "top",
+            timeout: 3000,
+          });
+
+          this.data = {};
+
+          document.getElementById("appForm").reset();
+        })
+        .catch(({ response }) => {
+          this.$q.loading.hide();
+          this.errors = response.data.errors;
+          this.$q.notify({
+            message: response.data.message,
+            color: "red",
+            position: "top",
+          });
+          setTimeout(() => {
+            this.errors = [];
+          }, 5000);
+        });
+    },
   },
 };
 </script>
@@ -226,6 +339,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.error {
+  color: red;
+  font-size: 13px;
+  text-align: right;
+  margin: 0.5rem 0;
 }
 
 .price {
@@ -382,7 +501,7 @@ h2.head {
 }
 
 .input_wrap {
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
   display: flex;
   align-items: center;
   gap: 3rem;
@@ -457,6 +576,9 @@ label {
     width: 90%;
     padding: 1rem;
     max-width: 90%;
+  }
+  .wrapperr {
+    padding: 12rem 0 0rem;
   }
 }
 </style>

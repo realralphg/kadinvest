@@ -61,12 +61,11 @@
                 </div>
               </swiper-slide>
             </swiper>
+            <div class="tap">
+              <img src="/images/vec.png" alt="" />
+              <q-btn class="btnn"> Tap on the cards </q-btn>
+            </div>
           </div>
-        </div>
-
-        <div class="tap">
-          <img src="/images/vec.png" alt="" />
-          <q-btn class="btnn"> Tap on the cards </q-btn>
         </div>
       </div>
     </div>
@@ -117,15 +116,31 @@ export default {
       cards: [
         {
           heading: "Expectation #1",
-          body: "The results of key reforms in the last 7 years gaining international recognition should be brought to light and consolidated",
+          body: "The results of key reforms in the last 7 years gaining international recognition should be brought to light and consolidated.",
         },
         {
           heading: "Expectation #2",
-          body: "The results of key reforms in the last 7 years gaining international recognition should be brought to light and consolidated",
+          body: "Showcasing the commitment of Kaduna State towards creating jobs and all- round economic empowerment of its youthful population.",
         },
         {
           heading: "Expectation #3",
-          body: "The results of key reforms in the last 7 years gaining international recognition should be brought to light and consolidated",
+          body: "Exposing priority sectors to even more innovation and potential investors, particularly in manufacturing, ICT, textiles and agriculture",
+        },
+        {
+          heading: "Expectation #4",
+          body: "Greater insight into methods that make Kaduna the preferred investment destination and the number 1 in the World Bank Ease of Doing Business Subnational Rankings",
+        },
+        {
+          heading: "Expectation #5",
+          body: "Greater awareness of the benets of innovation which will trigger highly expanded engagements and opportunities for the state",
+        },
+        {
+          heading: "Expectation #6",
+          body: "Comprehensive educational discussions leading to greater enlightenment on design, implementation and sustenance of a viable investment strategy",
+        },
+        {
+          heading: "Expectation #7",
+          body: "Build a resilient and diversied economic structure for a better sustainable Kaduna State and accomplishment of the SDP 2021-2025.",
         },
         // {
         //   heading: "Expectation #4",
@@ -143,6 +158,10 @@ export default {
     const card1 = cards[0];
     const card2 = cards[1];
     const card3 = cards[2];
+    const card4 = cards[3];
+    const card5 = cards[4];
+    const card6 = cards[5];
+    const card7 = cards[6];
     // const card4 = cards[3];
     console.log(card1);
 
@@ -168,16 +187,36 @@ export default {
           },
         })
         .to(card1, {
-          x: 500,
+          x: 1200,
+          y: -1000,
+          rotateZ: -400,
+        })
+        .to(card2, {
+          x: 1000,
+          y: -800,
+          rotateZ: -200,
+        })
+        .to(card3, {
+          x: 800,
+          y: -600,
+          rotateZ: -100,
+        })
+        .to(card4, {
+          x: 600,
           y: -400,
           rotateZ: -70,
         })
-        .to(card2, {
-          x: 350,
+        .to(card5, {
+          x: 400,
           y: -200,
-          rotateZ: -70,
+          rotateZ: -50,
         })
-        .to(card3, {
+        .to(card4, {
+          x: 200,
+          y: -50,
+          rotateZ: -20,
+        })
+        .to(card7, {
           x: 0,
           y: 0,
           rotateZ: 0,
@@ -239,7 +278,7 @@ export default {
   margin-top: 3rem;
 }
 .para_hold {
-  padding-bottom: 15rem;
+  padding-bottom: 13rem;
 }
 .paragraphs p {
   font-style: normal;
@@ -325,7 +364,7 @@ export default {
   align-items: center;
   flex-direction: row-reverse;
   position: relative;
-  padding: 5rem 0 25rem;
+  padding: 5rem 0 22rem;
   gap: 2rem;
 }
 .tap img {
@@ -349,6 +388,8 @@ export default {
   .paragraphs {
     grid-template-columns: 1fr;
     padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .heading {
     flex-wrap: wrap;
@@ -358,7 +399,10 @@ export default {
     padding-bottom: 24rem;
   }
   .tap {
-    padding: 5rem 0 15rem;
+    padding: 5rem 0 4rem;
+  }
+  .paragraphs p {
+    padding: 5rem 0 6rem;
   }
 }
 
@@ -366,10 +410,16 @@ export default {
   .card {
     width: 300px;
   }
+  .swiper-slide {
+    width: 300px !important;
+  }
 }
 @media (max-width: 380px) {
   .tap {
     padding: 5rem 0 4rem;
+  }
+  .paragraphs p {
+    padding: 3rem 0 4rem;
   }
 }
 @media (max-width: 320px) {

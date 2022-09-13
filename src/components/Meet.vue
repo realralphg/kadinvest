@@ -11,6 +11,10 @@
           <div class="line line4"></div>
         </header>
         <div class="speakers"><Ourstaff /></div>
+
+        <div class="view text-center">
+          <q-btn class="bg-accent text-white"> View More</q-btn>
+        </div>
       </div>
     </div>
   </div>
@@ -192,12 +196,13 @@ export default {
 }
 .meet {
   margin-top: -53%;
-  margin-bottom: 25%;
+  margin-bottom: 20%;
 }
 
 @media (min-width: 1300px) {
   .meet {
     margin-top: -43%;
+    margin-bottom: 13%;
   }
 }
 @media (max-width: 1025px) {

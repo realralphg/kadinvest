@@ -369,9 +369,9 @@ export default {
   .right {
     margin-bottom: 20rem;
   }
-  .right img {
+  /* .right img {
     width: 70%;
-  }
+  } */
   .bottom_images {
     width: 90%;
   }

@@ -16,7 +16,7 @@
               class="text-dark nav_items"
               ripple
               no-caps
-              to="/home"
+              to="/"
               exact
             />
           </li>

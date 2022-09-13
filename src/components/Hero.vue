@@ -2,7 +2,7 @@
   <div ref="home" class="wrapper main_we">
     <div class="hold">
       <img src="/images/logoc.png" alt="" />
-      <p class="small_spaced_text">SEPTEMBER 26TH - 28TH</p>
+      <p class="small_spaced_text">OCTOBER 13TH - 15TH, 2022</p>
       <transition
         appear
         @before-enter="beforeEnter"

@@ -28,7 +28,7 @@
         v-show="show"
         unchecked-icon="lightbulb"
         checked-icon="check"
-        size="xl"
+        size="md"
         ref="btn"
         color="white"
         v-model="value"
@@ -88,7 +88,10 @@ export default {
     };
   },
   mounted() {
-    this.functiondisable();
+    // this.functiondisable();
+
+    console.log(document.querySelector("body"));
+    document.querySelector("body").classList.add("no_scroll");
     // this.$store.animate.refs[5].wholePage.style.display = "0";
     // console.log((this.$store.animate.refs[5].wholePage.style.opacity = "0"));
   },
@@ -101,28 +104,42 @@ export default {
     },
 
     functiondisable() {
-      document.querySelector("#scrollable").addEventListener("wheel", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
+      // window.scrollTo(0, 0);
+      document.querySelector("#scrollable").addEventListener("scroll", (e) => {
+        window.addEventListener("scroll", () => {
+          window.scrollTo(0, 0);
+        });
       });
+      // document.querySelector("#scrollable").addEventListener("wheel", (e) => {
+      //   e.preventDefault();
+      //   e.stopPropagation();
+      //   return false;
+      // });
     },
     functionenable() {
       document
         .querySelector("#scrollable")
-        .removeEventListener("wheel", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
+        .removeEventListener("scroll", () => {
+          window.scrollTo(0, 0);
         });
-      console.log("first");
     },
+    // functionenable() {
+    //   document
+    //     .querySelector("#scrollable")
+    //     .removeEventListener("wheel", (e) => {
+    //       e.preventDefault();
+    //       e.stopPropagation();
+    //       return false;
+    //     });
+    // },
   },
   watch: {
     value: function () {
       if (this.value === true) {
         this.show = false;
         setTimeout(() => {
-          this.functionenable();
+          document.querySelector("body").classList.remove("no_scroll");
+          // this.functionenable();
           window.scrollBy(0, 100);
           document.querySelector("#scrollable").style.display = "none";
 
@@ -159,7 +176,7 @@ p {
 }
 .wrapper {
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,11 +186,11 @@ p {
   gap: 2rem;
   transition: all 0.7s ease-in-out;
 }
-.add_height {
+/* .add_height {
   height: 5000px !important;
-}
+} */
 .hold {
-  max-width: 1440px;
+  overflow: hidden !important;
 }
 .bg_dark {
   background: #05031b;
@@ -263,13 +280,15 @@ p {
 @media (max-width: 600px) {
   .welcome {
     font-size: 30.3121px;
+    margin: 0.5rem;
   }
   .hold {
-    padding-bottom: 4rem;
+    padding-bottom: 10rem;
   }
 
   .kad {
     font-size: 36.947px;
+    margin-bottom: 0.4rem;
   }
 }
 
@@ -278,6 +297,7 @@ p {
     transform: rotate(0);
     position: relative;
     left: unset;
+    /* padding-bottom: 4rem; */
   }
 }
 </style>
