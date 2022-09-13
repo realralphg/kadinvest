@@ -187,34 +187,34 @@ export default {
           },
         })
         .to(card1, {
-          x: 1200,
-          y: -1000,
-          rotateZ: -400,
-        })
-        .to(card2, {
-          x: 1000,
-          y: -800,
-          rotateZ: -200,
-        })
-        .to(card3, {
-          x: 800,
-          y: -600,
+          x: 500,
+          y: -500,
           rotateZ: -100,
         })
-        .to(card4, {
-          x: 600,
-          y: -400,
-          rotateZ: -70,
-        })
-        .to(card5, {
+        .to(card2, {
           x: 400,
-          y: -200,
-          rotateZ: -50,
+          y: -400,
+          rotateZ: -80,
+        })
+        .to(card3, {
+          x: 300,
+          y: -350,
+          rotateZ: -60,
         })
         .to(card4, {
           x: 200,
-          y: -50,
+          y: -310,
+          rotateZ: -40,
+        })
+        .to(card5, {
+          x: 200,
+          y: -280,
           rotateZ: -20,
+        })
+        .to(card6, {
+          x: 100,
+          y: -200,
+          rotateZ: -10,
         })
         .to(card7, {
           x: 0,

@@ -71,7 +71,7 @@ export default {
       speakerDialog: false,
       speakers: [
         {
-          img: "/images/speaker1.png",
+          img: "/images/el.png",
 
           title: "HIS EXCELLENCY",
           name: "Mallam Nasir El Rufai",
@@ -80,14 +80,14 @@ export default {
             "Malam Nasir Ahmad El-Rufai is the 22nd executive Governor of Kaduna State, Nigeria. Before then, he had served the country in different capacities. First, he served as the Director General of Bureau of Public Enterprises. He also served as the Head of Privatisation agency in Nigeria. See Also: Biography, Net Worth And Career Of Seyi Makinde, the 28th Governor Of Oyo State El-Rufai Backgroun.El-Rufai was born on February 16, 1960 in Daudawa of Faskari Local Government Area in Katsina State. Sadly, El-Rufai lost his father when he was just 8 years old. Luckily, he got sponsored to school by an uncle in Kaduna. This is why he sites Kaduna state as his state of origin.",
         },
 
-        // {
-        //   img: "/images/speaker6.png",
-        //   title: "HIS HIGHNESS",
-        //   name: "Muhammadu Sanusi II",
-        //   office: "Vice Chairman, KADIPA",
-        //   profile:
-        //     "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
-        // },
+        {
+          img: "/images/white.jpeg",
+          title: "HIS HIGHNESS",
+          name: "Alok Gupta",
+          office: "Vice Chairman, KADIPA",
+          profile:
+            "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
+        },
 
         {
           img: "/images/nur.png",
@@ -98,30 +98,22 @@ export default {
           profile:
             "He has experience in public investment policy, promotion, and facilitation space at the subnational level. He passionate about economic development for Africa, and he has spent the last 3 years helping to grow Kaduna State's economy via dedicated efforts of improving the business environment to attract private sector capital. This deliberate and coordinated effort culminated in Kaduna State being ranked number 1 in the World Bank's 2018 sub-national Doing Business in Nigeria report with over $2 billion dollars worth of investments attracted. He is a voracious reader and a major exponent of the teachings of complex adaptive systems and heterodox approaches towards the field of economics and finance. He is fascinated by the opportunities cryptography, digital assets and web3 technologies provide to enable us to remodel the entire global financial architecture.",
         },
-        // {
-        //   img: "/images/speaker3.png",
-        //   title: "HIS EXCELLENCY",
-        //   name: "Muhammadu Sanusi II",
-        //   office: "Executive Governor, Kaduna State",
-        //   profile:
-        //     "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
-        // },
-        // {
-        //   img: "/images/speaker4.png",
-        //   title: "HIS EXCELLENCY",
-        //   name: "Muhammadu Sanusi II",
-        //   office: "Executive Governor, Kaduna State",
-        //   profile:
-        //     "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
-        // },
-        // {
-        //   img: "/images/speaker5.png",
-        //   title: "HIS EXCELLENCY",
-        //   name: "Muhammadu Sanusi II",
-        //   office: "Executive Governor, Kaduna State",
-        //   profile:
-        //     "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
-        // },
+        {
+          img: "/images/zainab.jpeg",
+          title: "HIS EXCELLENCY",
+          name: "Zainab Usman",
+          office: "Executive Governor, Kaduna State",
+          profile:
+            "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
+        },
+        {
+          img: "/images/hau.jpeg",
+          title: "HIS EXCELLENCY",
+          name: "Senator Uba Sani",
+          office: "Executive Governor, Kaduna State",
+          profile:
+            "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
+        },
       ],
     };
   },
