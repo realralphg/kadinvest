@@ -203,17 +203,17 @@ export default {
         })
         .to(card4, {
           x: 200,
-          y: -310,
+          y: -330,
           rotateZ: -40,
         })
         .to(card5, {
           x: 200,
-          y: -280,
+          y: -300,
           rotateZ: -20,
         })
         .to(card6, {
-          x: 100,
-          y: -200,
+          x: 180,
+          y: -250,
           rotateZ: -10,
         })
         .to(card7, {
@@ -396,7 +396,7 @@ export default {
   }
 
   .para_hold {
-    padding-bottom: 24rem;
+    padding-bottom: 22rem;
   }
   .tap {
     padding: 5rem 0 4rem;

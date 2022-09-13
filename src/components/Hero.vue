@@ -134,6 +134,10 @@ export default {
   .subtext {
     font-size: 30px;
   }
+  .small_spaced_text {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
 }
 @media (max-width: 320px) {
   .hold {
