@@ -15,6 +15,35 @@
           <img src="/images/maima.jpeg" alt="" />
           <img src="/images/ocp.png" alt="" />
           <img src="/images/bank.jpeg" alt="" />
+          <img
+            src="https://kkkingdom.com/wp-content/uploads/2021/07/logo.jpg"
+            alt=""
+          />
+
+          <img
+            src="https://desk.zoho.com/DocsDisplay?zgId=4763768&mode=inline&blockId=f99hp7d629615b3de49228417d302be8cc055"
+            alt=""
+          />
+          <img
+            src="https://i0.wp.com/insidebusiness.ng/wp-content/uploads/2017/08/pwc.jpg?fit=640%2C360&ssl=1"
+            alt=""
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/86/NESG_Official_Logo.png"
+            alt=""
+          />
+          <img
+            src="https://play-lh.googleusercontent.com/Rvr_Z24TXfc1iBkcX-3ENupW7ZI92-3WoumuTRgvb1x2jYjBLhq-5YArjgXoTNWtFJ0"
+            alt=""
+          />
+          <img
+            src="https://sunnewsonline.com/wp-content/uploads/2020/12/Zenith-bank.jpg"
+            alt=""
+          />
+          <img
+            src="https://storage.googleapis.com/bubble-finder/$0pYwTFUuHeVEKaA6Xw7dvdvn3hprJNNqS3ai8hFLaEgfrGkjcuXAVe"
+            alt=""
+          />
         </div>
       </div>
       <div class="become q-mt-lg flex justify-end">
