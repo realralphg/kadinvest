@@ -152,7 +152,7 @@ export default {
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
     let cards = gsap.utils.toArray(".card");
-    const container = document.querySelector(".cards_div");
+    const container = document.querySelector(".rotate_sec");
     const card1 = cards[0];
     const card2 = cards[1];
     const card3 = cards[2];

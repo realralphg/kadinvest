@@ -12,18 +12,28 @@
 
       <div class="sponsors">
         <div class="sponsors_wrap">
-          <img src="/images/maima.jpeg" alt="" />
-          <img src="/images/ocp.png" alt="" />
-          <img src="/images/bank.jpeg" alt="" />
           <img
+            class="bigger"
             src="https://kkkingdom.com/wp-content/uploads/2021/07/logo.jpg"
             alt=""
           />
-
           <img
-            src="https://desk.zoho.com/DocsDisplay?zgId=4763768&mode=inline&blockId=f99hp7d629615b3de49228417d302be8cc055"
+            class="bigger"
+            src="https://pbs.twimg.com/profile_images/1351875712110755840/dXISVR3y_400x400.jpg"
             alt=""
           />
+          <img
+            style="width: 60px; margin: 0 auto"
+            src="/images/maima.jpeg"
+            alt=""
+          />
+          <img
+            style="width: 60px; margin: 0 auto"
+            src="/images/ocp.png"
+            alt=""
+          />
+          <img src="/images/bank.jpeg" alt="" />
+
           <img
             src="https://i0.wp.com/insidebusiness.ng/wp-content/uploads/2017/08/pwc.jpg?fit=640%2C360&ssl=1"
             alt=""
@@ -42,6 +52,11 @@
           />
           <img
             src="https://storage.googleapis.com/bubble-finder/$0pYwTFUuHeVEKaA6Xw7dvdvn3hprJNNqS3ai8hFLaEgfrGkjcuXAVe"
+            alt=""
+          />
+          <img src="https://cdn1.vc4a.com/media/2017/08/Logo-25.png" alt="" />
+          <img
+            src="https://media.premiumtimesng.com/wp-content/files/2022/02/Nigerian-Breweries.jpg"
             alt=""
           />
         </div>
@@ -87,7 +102,7 @@ export default {
 }
 .become_btn {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 27px;
   color: #ffffff;
   padding: 14px 10px;
@@ -111,7 +126,7 @@ export default {
 
 .sponsors_wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   align-items: center;
   gap: 1rem;
 }
@@ -120,6 +135,10 @@ export default {
   width: 100px;
   opacity: 0.7;
   transition: all 0.5s ease-in-out;
+}
+
+.bigger {
+  width: 200px !important;
 }
 .sponsors_wrap img:hover {
   opacity: 1;

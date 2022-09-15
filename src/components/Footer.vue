@@ -36,7 +36,7 @@
           </div>
           <div class="q-pt-xl">
             <p class="location">
-              <i class="ri-map-pin-3-line q-mr-sm"></i>KADUNA, KADUNA STATE
+              <i class="ri-map-pin-3-line q-mr-sm"></i> KADUNA STATE
             </p>
           </div>
         </div>
