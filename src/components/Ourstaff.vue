@@ -5,6 +5,31 @@
       <!-- <p class="desc">Our tranined staff</p> -->
       <div class="grid">
         <figure
+          v-for="(host, index) in hosts"
+          :key="index"
+          class="effect-sadie"
+        >
+          <img :src="host.img" alt="img02" />
+          <figcaption>
+            <h2>
+              <span class="title"> {{ host.title }}</span> <br />
+              <span class="name"> {{ host.name }}</span> <br />
+              <span class="office">
+                {{ host.office }}
+              </span>
+            </h2>
+            <p @click="toggleBio(host)">Read Bio</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <header class="headingg">
+        <div class="abt">
+          <h2 class="about">Meet the Speakers</h2>
+        </div>
+      </header>
+      <div class="grid">
+        <figure
           v-for="(speaker, index) in speakers"
           :key="index"
           class="effect-sadie"
@@ -19,6 +44,30 @@
               </span>
             </h2>
             <p @click="toggleBio(speaker)">Read Bio</p>
+          </figcaption>
+        </figure>
+      </div>
+      <header class="headingg">
+        <div class="abt">
+          <h2 class="about">Meet the Special Guests</h2>
+        </div>
+      </header>
+      <div class="grid">
+        <figure
+          v-for="(guest, index) in guests"
+          :key="index"
+          class="effect-sadie"
+        >
+          <img :src="guest.img" alt="img02" />
+          <figcaption>
+            <h2>
+              <span class="title"> {{ guest.title }}</span> <br />
+              <span class="name"> {{ guest.name }}</span> <br />
+              <span class="office">
+                {{ guest.office }}
+              </span>
+            </h2>
+            <p @click="toggleBio(guest)">Read Bio</p>
           </figcaption>
         </figure>
       </div>
@@ -72,7 +121,7 @@ export default {
     return {
       profile: [],
       speakerDialog: false,
-      speakers: [
+      hosts: [
         {
           img: "/images/el.png",
 
@@ -91,15 +140,8 @@ export default {
           profile:
             "The Kaduna state deputy governor, Hadiza Sabuwa Balarabe was born 1966, to the family of alhaji abubakar balarabe, sanga local government in Kaduna state, had a secondary school education in girls college soba. Further studied medicine in University of maiduguri. Dr. Hadiza have Masters in public health.She worked as senior Registerar at the Ahmadu Bello University Teaching Hospital, when she proceeded to Federal Capital Territory in 2014 where she served as Director of the public health, she was executive secretary of the kaduna state primary health care development agency.Hadiza balarabe, a mother of four children for one husband, has been very active in governance, she is a good leader which have paved way into politics for women, Dr. Hadiza who is the first Deputy governor of Kaduna state. ",
         },
-
-        {
-          img: "/images/king.jpeg",
-          title: "HIS HIGHNESS KHALIFA",
-          name: "Muhammad Sanusi II",
-          office: "Vice chairman, KADIPA board",
-          profile:
-            "His Highness Muhammad Sanusi II was the 14th Fulani Emir of Kano, Nigeria from 2014 - 2019. His Highness studied at King’s College Lagos, then earned Bachelor’s and Master’s degrees in Economics at Ahmadu Bello University, Zaria, where he later also taught Economics. In 1985, he launched a distinguished banking career, becoming Group Managing Director of First Bank Nigeria in 2009. His Highness was appointed Governor of the Central Bank of Nigeria in 2009 at a time when the world saw the worst financial crisis since the Great Depression. He pursued a campaign against high level governmental corruption in Nigeria and pioneered the introduction of Islamic banking into the Nigerian banking sector. Alongside this work in the financial industry, His Highness pursued his scholarship in Islamic history, thought, and law. After years of private study under the tutorial of a number of learned ulama', he enrolled in the Africa International University in Khartoum, Sudan, where he earned a degree in Islamic studies and fiqh in 1997.",
-        },
+      ],
+      speakers: [
         {
           img: "/images/white.jpeg",
           // title: "HIS HIGHNESS",
@@ -108,7 +150,6 @@ export default {
           profile:
             "Alok Gupta, currently, serves as Senior Associate Dean of Faculty, Research and Administration at the Carlson School of Management, University of Minnesota.  He holds Curtis L. Carlson Schoolwide Chair in Information Management.  He is responsible for school’s $120 MM budget, faculty hiring, review and evaluations, research infrastructure, IT infrastructure, facility and classroom management, and academic programs management and scheduling.  He is also serving in his second term as Editor-in-Chief for Information Systems Research, a top journal in the area of information systems since January 2017.  From 2006 to 2014, he served as the Department Chair of Information and Decision Sciences department at Carlson School.  He started his academic career in 1996 as a visiting Assistant Professor at Dept. of OPIM, University of Connecticut. He received his Ph.D. in Management Science and Information from the University of Texas, Austin in 1996.  His research focuses on Economic Engineering of systems – where system design explicitly considers incentives of participants – as applied to a variety of transactional systems from Internet, real-time databases, B2B systems to e-commerce. ",
         },
-
         {
           img: "/images/zainab.jpeg",
           // title: "HIS EXCELLENCY",
@@ -118,6 +159,17 @@ export default {
           profile:
             "Zainab Usman is a senior fellow and director of the Africa Program at the Carnegie Endowment for International Peace in Washington, D.C. Her fields of expertise include institutions, economic policy, energy policy, and emerging economies in Africa. Prior to Carnegie, Usman was at the World Bank initially as part of the prestigious Young Professionals Program and later as a public sector specialist. At the World Bank, she worked on social sustainability, policy reforms, natural resources management, and disruptive technologies. She has worked on these issues in Cote d’Ivoire, Morocco, Nigeria, Papua New Guinea, the Republic of Congo, Serbia, Tanzania, and Uzbekistan. She has also worked at the Blavatnik School of Government at the University of Oxford and has consulted for the Department of International Development (DfID) and the Office of the National Security Adviser (ONSA) in Nigeria.",
         },
+      ],
+      guests: [
+        {
+          img: "/images/king.jpeg",
+          title: "HIS HIGHNESS KHALIFA",
+          name: "Muhammad Sanusi II",
+          office: "Vice chairman, KADIPA board",
+          profile:
+            "His Highness Muhammad Sanusi II was the 14th Fulani Emir of Kano, Nigeria from 2014 - 2019. His Highness studied at King’s College Lagos, then earned Bachelor’s and Master’s degrees in Economics at Ahmadu Bello University, Zaria, where he later also taught Economics. In 1985, he launched a distinguished banking career, becoming Group Managing Director of First Bank Nigeria in 2009. His Highness was appointed Governor of the Central Bank of Nigeria in 2009 at a time when the world saw the worst financial crisis since the Great Depression. He pursued a campaign against high level governmental corruption in Nigeria and pioneered the introduction of Islamic banking into the Nigerian banking sector. Alongside this work in the financial industry, His Highness pursued his scholarship in Islamic history, thought, and law. After years of private study under the tutorial of a number of learned ulama', he enrolled in the Africa International University in Khartoum, Sudan, where he earned a degree in Islamic studies and fiqh in 1997.",
+        },
+
         {
           img: "/images/hau.jpeg",
           // title: "HIS EXCELLENCY",
@@ -185,7 +237,21 @@ p.desc {
 .team {
   position: relative;
 }
+.about {
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 26px !important;
+  line-height: 1.3 !important;
+  text-transform: none;
+  color: #fff;
+  text-align: left !important;
+  margin: 0;
+  color: #150f70 !important;
+}
 
+.headingg {
+  padding: 0rem 0 1rem;
+}
 /* .team::before {
   content: "";
   position: absolute;
@@ -209,7 +275,7 @@ p.desc {
 .grid {
   position: relative;
 
-  padding: 1em 0 4em;
+  padding: 1em 0 2em;
 
   list-style: none;
   text-align: center;

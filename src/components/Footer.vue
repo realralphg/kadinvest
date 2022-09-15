@@ -10,9 +10,9 @@
             <i class="ri-instagram-line"></i>
             <i class="ri-facebook-circle-line"></i>
             <i class="ri-youtube-line"></i>
-            <span>@kadinvest</span>
+            <span>@investkaduna</span>
           </p>
-          <p class="gmail">info@kadinvest.gov.ng</p>
+          <p class="gmail">kadinvest@kdsg.gov.ng</p>
         </div>
 
         <div class="right col-md-6 col-sm-12 col-xs-12">
@@ -110,7 +110,7 @@ export default {
   font-size: 27.4131px;
   line-height: 108.5%;
   /* text-align: center; */
-  text-transform: capitalize;
+  text-transform: none;
   color: #fefefe;
 }
 .logo {

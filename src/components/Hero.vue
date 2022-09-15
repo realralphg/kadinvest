@@ -11,7 +11,7 @@
       >
         <h1 class="main_text">KADINVEST 7.0</h1>
       </transition>
-      <p class="smaller_text">KADUNA, KADUNA STATE</p>
+      <p class="smaller_text">KADUNA STATE</p>
       <h2 class="subtext">Building a resilient Economy</h2>
 
       <q-btn to="/register" class="register"> Register Now </q-btn>
@@ -103,7 +103,7 @@ export default {
 }
 
 .subtext {
-  font-style: normal;
+  font-style: italic;
   font-weight: 700;
   font-size: 40.8774px;
   line-height: 117%;

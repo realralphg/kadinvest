@@ -3,7 +3,7 @@
     <div class="hold small_container">
       <header class="heading">
         <div class="abt">
-          <h2 class="about">KadInvest</h2>
+          <h2 class="about">KADINVEST 7.0</h2>
           <h2 class="about">Goals</h2>
         </div>
 
@@ -12,12 +12,11 @@
 
       <div class="small_section">
         <div class="img">
-          <img src="/images/kha.png" alt="" />
+          <img src="/images/had.jpeg" alt="" />
         </div>
-        <p class="name">Khalil Nur Khalil</p>
-        <p class="text-center grey_text">
-          Executive Secrectary Kaduna Investment and Promotion Agency
-        </p>
+        <p class="title">Her Excellency</p>
+        <p class="name">Dr. Hadiza Sabuwa Balarabe</p>
+        <p class="text-center grey_text">Chairman KADIPA Board</p>
         <p class="desc">
           KADINVEST 7.0 is a curtain raise towards “building a resilient
           economy” in Kaduna State. Some key objectives of the summit will
@@ -76,7 +75,7 @@ export default {
 .line {
   height: 7px;
   background: #2d25a6;
-  width: 60%;
+  width: 40%;
   margin-bottom: 1.5rem;
 }
 
@@ -93,10 +92,21 @@ export default {
   font-weight: 700;
   font-size: 20px;
   line-height: 117%;
+  margin-bottom: 0.5rem;
   text-align: center;
   color: #00a250;
 }
+.title {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 117%;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin: 0.5rem 0;
 
+  color: #00a250;
+}
 .grey_text {
   font-style: normal;
   font-weight: 300;
@@ -115,7 +125,8 @@ export default {
 }
 
 .img img {
-  width: 100px;
+  width: 300px;
+  border-radius: 10px;
 }
 .small_section {
   display: flex;

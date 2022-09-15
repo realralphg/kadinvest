@@ -3,16 +3,16 @@
     <div class="hold">
       <div class="grid">
         <div class="left">
-          <img class="reveal-image" src="/images/gol5.png" alt="" />
+          <img class="reveal-image" src="/images/gol1.jpg" alt="" />
         </div>
         <div class="right">
           <div class="left_div">
-            <h6>Establishing the State as a Knowledge Based Economy</h6>
+            <h6>Establishing the State as a Knowledge-based Economy</h6>
             <p>
               Leveraging on the urgent need to diversify and the increased
               prioritization of key sectors such as ICT and services, which
               accounts for 52% of the National GDP, key discussions will revolve
-              around the ttransformation of Kaduna State into a Knowledge-based
+              around the transformation of Kaduna State into a Knowledge-based
               economy in line with the State Development Plan (SDP) 2021-2025.
             </p>
           </div>
@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="right">
-          <img class="reveal-image" src="/images/new1.png" alt="" />
+          <img class="reveal-image" src="/images/gol2.jpg" alt="" />
         </div>
       </div>
       <div class="center_next">
@@ -51,15 +51,15 @@
     <div class="hold">
       <div class="grid">
         <div class="left">
-          <img class="reveal-image" src="/images/gol3.png" alt="" />
+          <img class="reveal-image" src="/images/gol3.jpg" alt="" />
         </div>
         <div class="right">
           <div class="left_div">
             <h6>Enhance Job Creation & Employment Opportunities</h6>
             <p>
               Acceleration of economic growth through diversification and
-              development of new opportunities; we believe that that we can
-              harness the skills and talents of our youths with the jobs and
+              development of new opportunities; we believe that we can harness
+              the skills and talents of our youths with the jobs and
               opportunities of the modern age by tapping into the growth
               potentials of the digital economy and the fourth industrial
               revolution.
@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="right">
-          <img class="reveal-image" src="/images/new2.png" alt="" />
+          <img class="reveal-image" src="/images/gol4.jpg" alt="" />
         </div>
       </div>
       <div class="center_next">
@@ -98,7 +98,7 @@
     <div class="hold">
       <div class="grid">
         <div class="left">
-          <img class="reveal-image" src="/images/gol6.png" alt="" />
+          <img class="reveal-image" src="/images/gol5.jpg" alt="" />
         </div>
         <div class="right">
           <div class="left_div">
@@ -164,6 +164,7 @@ export default {
 }
 img {
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .timeline h6 {

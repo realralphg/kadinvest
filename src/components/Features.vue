@@ -16,14 +16,14 @@
         <div class="paragraphs">
           <div class="left">
             <p class="">
-              Participants will have a close-up experience of Kaduna's famed
-              effective facilitation processes and the internationally acclaimed
-              innovative business environment. This should precipitate a slew of
-              fresh international and domestic investors, creating a ripple
-              effect which will cause a considerable increase in capital
+              Participants will have a close-up experience of Kaduna's efficient
+              investment facilitation processes and the internationally
+              acclaimed innovative business environment. This should precipitate
+              a slew of fresh international and domestic investors, creating a
+              ripple effect which will cause a considerable increase in capital
               investments in Kaduna State over the coming years. Increased local
               interest is also expected, cementing Kaduna's status as the
-              agship state for investments in Nigeria and the following:
+              flagship state for investments in Nigeria.
             </p>
           </div>
 
@@ -132,7 +132,7 @@ export default {
         },
         {
           heading: "Expectation #5",
-          body: "Greater awareness of the benets of innovation which will trigger highly expanded engagements and opportunities for the state",
+          body: "Greater awareness of the benefits of innovation which will trigger highly expanded engagements and opportunities for the state",
         },
         {
           heading: "Expectation #6",
@@ -140,7 +140,7 @@ export default {
         },
         {
           heading: "Expectation #7",
-          body: "Build a resilient and diversied economic structure for a better sustainable Kaduna State and accomplishment of the SDP 2021-2025.",
+          body: "Build a resilient and diversified economic structure to create jobs for Kaduna State residents in line with SDP 2021-2025.",
         },
         // {
         //   heading: "Expectation #4",
@@ -240,7 +240,7 @@ export default {
   font-weight: 700;
   font-size: 60px;
   line-height: 108.5%;
-  text-transform: capitalize;
+  text-transform: none;
   color: #fff;
   margin: 0;
 }
@@ -263,7 +263,7 @@ export default {
 .paragraphs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 4rem;
   margin-top: 3rem;
 }
 .para_hold {
@@ -275,7 +275,7 @@ export default {
   font-size: 18px;
   line-height: 190%;
   text-align: left;
-  text-transform: capitalize;
+  text-transform: none;
   color: #ffffff;
 }
 .hold {
@@ -363,7 +363,7 @@ export default {
   font-weight: 500;
   font-size: 16px;
   line-height: 108.5%;
-  text-transform: capitalize;
+  text-transform: none;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -394,7 +394,7 @@ export default {
     padding: 5rem 0 4rem;
   }
   .paragraphs p {
-    padding: 5rem 0 6rem;
+    padding: 0rem 0 7rem;
   }
 }
 
@@ -404,6 +404,14 @@ export default {
   }
   .swiper-slide {
     width: 300px !important;
+  }
+  .swiper {
+    width: 420px;
+    height: 420px;
+  }
+  .tap {
+    justify-content: flex-end;
+    gap: 0rem;
   }
 }
 @media (max-width: 380px) {
@@ -429,6 +437,19 @@ export default {
   .tap img {
     width: 70px;
     transform: rotate(-20deg);
+  }
+  .card {
+    padding: 1rem;
+    width: 270px;
+    min-height: 350px;
+  }
+
+  .swiper {
+    width: 350px;
+  }
+
+  .swiper-slide {
+    width: 250px !important;
   }
 }
 </style>

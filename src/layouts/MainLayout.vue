@@ -365,11 +365,11 @@ h1 {
 }
 
 .sponsor {
-  padding: 14px 10px;
+  padding: 10px 8px;
   background: #1f1b5e;
   border-radius: 4px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 27px;
   color: #ffffff !important;
 }
@@ -420,6 +420,14 @@ h1 {
 @media (max-width: 1024px) {
   .menu-items li {
     margin-left: 1rem;
+  }
+}
+@media (max-width: 950px) {
+  .sponsor {
+    padding: 10px 5px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: unset;
   }
 }
 @media (max-width: 830px) {

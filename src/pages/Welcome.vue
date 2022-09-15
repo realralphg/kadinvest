@@ -246,7 +246,7 @@ p {
   font-size: 20.3121px;
   line-height: 117%;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: none;
   /* color: #ffffff; */
 }
 

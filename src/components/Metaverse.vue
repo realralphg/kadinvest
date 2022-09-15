@@ -10,7 +10,7 @@
             <p class="des">KADUNA, KADUNA STATE</p>
           </div>
           <div class="right">
-            <p class="date">SEPTEMBER 26TH - 28TH</p>
+            <p class="date">OCTOBER 13TH - 15TH, 2022</p>
             <h3 class="heading reducepad">
               Building a resilient <br />
               Economy
@@ -18,7 +18,7 @@
 
             <div class="btns">
               <q-btn class="join"> Join us live </q-btn>
-              <q-btn class="submit"> Submit programme </q-btn>
+              <q-btn class="submit"> Summit programme </q-btn>
             </div>
           </div>
         </div>
@@ -33,12 +33,12 @@
         </div>
 
         <div class="info">
-          <p class="info_date">SEPTEMBER 28TH</p>
+          <p class="info_date">OCTOBER 13TH</p>
           <h3 class="info_main">
             Experience KADINVEST <br />
             in the metaverse
           </h3>
-          <q-btn class="enter"> ENTER THE METAVERSE </q-btn>
+          <q-btn class="enter"> Coming soon </q-btn>
         </div>
       </div>
     </div>
@@ -114,7 +114,7 @@ p.meta {
   font-size: 27.4131px;
   line-height: 108.5%;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: none;
   color: #fefefe;
 }
 
@@ -123,7 +123,7 @@ p.des {
   font-weight: 600;
   font-size: 10px;
   line-height: 110%;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.2em;
   color: #ffffff;
 }
 

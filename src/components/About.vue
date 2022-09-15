@@ -36,14 +36,14 @@
             cluster remote workers for efficiency gains in the sector.
           </p>
         </div>
-        <div class="right">
+        <!-- <div class="right">
           <div class="right_block">
             <img class="tweet1" src="/images/tweet.png" alt="" />
             <img class="tweet2" src="/images/tweet.png" alt="" />
             <img class="tweet2" src="/images/tweet.png" alt="" />
             <img class="tweet2" src="/images/tweet.png" alt="" />
           </div>
-        </div>
+        </div> -->
       </div>
 
       <div class="imgs">
@@ -52,12 +52,9 @@
           <div class="bgh">
             <img src="/images/ror.png" class="im image2" alt="" />
             <div class="download download_div">
-              <a href="" class="link text-white q-pa-md"> Download Report</a>
-              <small> Download the report </small>
-              <h5>
-                KADINVEST <br />
-                1.0 - 1.6
-              </h5>
+              <a href="" class="link text-white q-pa-md"> Download</a>
+              <small> Download the Concept Note </small>
+              <h5>KADINVEST 7.0</h5>
             </div>
           </div>
           <img src="/images/mallam.png" class="im image3" alt="" />
@@ -109,7 +106,7 @@ export default {
   font-weight: 700;
   font-size: 50px;
   line-height: 108.5%;
-  text-transform: capitalize;
+  text-transform: none;
   color: #ffffff;
   margin: 0;
 }
@@ -131,7 +128,7 @@ export default {
 
 .paragraphs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
   gap: 4rem;
   padding-bottom: 22rem;
 }
@@ -141,7 +138,7 @@ export default {
   font-size: 18px;
   line-height: 190%;
   text-align: left;
-  text-transform: capitalize;
+  text-transform: none;
   color: #ffffff;
 }
 .right {
@@ -393,6 +390,9 @@ export default {
   .download_div {
     width: 71%;
     left: 12.9%;
+  }
+  .paragraphs p {
+    margin-bottom: 8rem;
   }
 }
 

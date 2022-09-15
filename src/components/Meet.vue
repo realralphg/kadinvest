@@ -5,7 +5,7 @@
         <header class="heading">
           <div class="abt">
             <h2 class="about">Meet the</h2>
-            <h2 class="about">Speakers</h2>
+            <h2 class="about">Hosts</h2>
           </div>
 
           <div class="line line4"></div>
@@ -70,7 +70,7 @@ export default {
   font-weight: 700;
   font-size: 60px;
   line-height: 108.5%;
-  text-transform: capitalize;
+  text-transform: none;
   color: #fff;
   margin: 0;
 }
@@ -103,7 +103,7 @@ export default {
   font-size: 18px;
   line-height: 190%;
   text-align: left;
-  text-transform: capitalize;
+  text-transform: none;
   color: #ffffff;
 }
 .hold {
@@ -191,7 +191,7 @@ export default {
   font-weight: 500;
   font-size: 20px;
   line-height: 108.5%;
-  text-transform: capitalize;
+  text-transform: none;
   color: rgba(255, 255, 255, 0.5);
 }
 .meet {
