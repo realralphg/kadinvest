@@ -24,7 +24,7 @@
                   <option value="summit">Summit</option>
                   <option value="business_expo">Business Expo</option>
                 </q-select> -->
-                <q-select
+                <!-- <q-select
                   filled
                   v-model="data.type"
                   :options="options"
@@ -49,7 +49,21 @@
                       </q-item-section>
                     </q-item>
                   </template>
-                </q-select>
+                </q-select> -->
+                <div class="q-gutter-sm">
+                  <q-checkbox
+                    v-model="data.type"
+                    val="summit"
+                    label="Summit"
+                    color="teal"
+                  />
+                  <q-checkbox
+                    v-model="data.type"
+                    val="sector_expo"
+                    label="Business Expo"
+                    color="orange"
+                  />
+                </div>
                 <div class="error" v-if="errors['data.type']">
                   {{ errors["data.type"][0] }}
                 </div>
@@ -446,7 +460,7 @@ img {
 }
 
 .icon img {
-  width: 100px;
+  width: 80px;
 }
 
 .hold {
