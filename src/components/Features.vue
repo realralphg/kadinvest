@@ -63,7 +63,7 @@
             </swiper>
             <div class="tap">
               <img src="/images/vec.png" alt="" />
-              <q-btn class="btnn"> Tap on the cards </q-btn>
+              <q-btn class="btnn"> Swipe between the cards </q-btn>
             </div>
           </div>
         </div>
@@ -365,7 +365,7 @@ export default {
 .btnn {
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 108.5%;
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.5);
@@ -408,10 +408,17 @@ export default {
 }
 @media (max-width: 380px) {
   .tap {
-    padding: 5rem 0 4rem;
+    padding: 5rem 0 1rem;
   }
   .paragraphs p {
     padding: 3rem 0 4rem;
+  }
+  .btnn {
+    font-size: 12px;
+  }
+
+  .tap img {
+    width: 100px;
   }
 }
 @media (max-width: 320px) {
@@ -419,9 +426,6 @@ export default {
     padding-bottom: 18rem;
   }
 
-  .btnn {
-    font-size: 12px;
-  }
   .tap img {
     width: 70px;
     transform: rotate(-20deg);

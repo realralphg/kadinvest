@@ -12,6 +12,7 @@
       <p :class="value ? 'dark_color side' : 'light_color side'">
         BUILDING A RESILIENT ECONOMY
       </p>
+      <!-- <i class="fa-duotone fa-lock"></i> -->
       <h1 :class="value ? 'dark_color welcome' : 'light_color welcome'">
         Welcome to
       </h1>
@@ -280,7 +281,7 @@ p {
 @media (max-width: 600px) {
   .welcome {
     font-size: 30.3121px;
-    margin: 0.5rem;
+    /* margin: 0.5rem; */
   }
   .hold {
     padding-bottom: 10rem;
@@ -289,6 +290,10 @@ p {
   .kad {
     font-size: 36.947px;
     margin-bottom: 0.4rem;
+  }
+
+  .welcome_text {
+    font-size: 14.3121px;
   }
 }
 

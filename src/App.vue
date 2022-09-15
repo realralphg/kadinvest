@@ -3,9 +3,14 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'App'
-})
+  name: "App",
+  mounted() {
+    let script = document.createElement("script");
+    script.src = "/icons.js";
+    document.head.append(script);
+  },
+});
 </script>
