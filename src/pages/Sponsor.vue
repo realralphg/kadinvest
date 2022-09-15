@@ -152,7 +152,7 @@
       </div>
     </div>
     <q-dialog full-width v-model="dialog">
-      <q-card style="height: 80%; width: 80%" class="dialog_wid q-pa-md">
+      <q-card style="height: 60%; width: 80%" class="dialog_wid q-pa-md">
         <div class="delp">
           <Table />
         </div>
