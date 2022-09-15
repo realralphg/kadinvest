@@ -219,7 +219,7 @@
     <q-page-container>
       <router-view v-slot="{ Component }">
         <transition name="route" mode="out-in">
-          <component :is="Component"> </component>
+          <component :is="Component" class="component-wrapper"> </component>
         </transition>
       </router-view>
     </q-page-container>
@@ -240,8 +240,43 @@ export default defineComponent({
 
   setup() {
     const leftDrawerOpen = ref(false);
+    const beforeEnter = (el) => {
+      console.log("before enter");
+      el.style.transform = "translateY(-100vh)";
+    };
 
+    const enter = (el) => {
+      console.log("enter");
+
+      gsap.to(el, {
+        duration: 1,
+        opacity: 1,
+        translateY: "0vh",
+        ease: "power1.inOut",
+      });
+    };
+
+    const beforeLeave = (el) => {
+      console.log("before leave");
+      el.style.transform = "translateY(0vh)";
+    };
+
+    const leave = (el, done) => {
+      console.log("leave");
+
+      gsap.to(el, {
+        duration: 1,
+        opacity: 1,
+        translateY: "100vh",
+        ease: "power1.inOut",
+        onComplete: done,
+      });
+    };
     return {
+      beforeEnter,
+      enter,
+      beforeLeave,
+      leave,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
@@ -255,7 +290,7 @@ export default defineComponent({
 
   methods: {
     goHome() {
-      this.$store.animate.refs[0].home.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("home").scrollIntoView({ behavior: "smooth" });
     },
     gotoAbout() {
       document.getElementById("about").scrollIntoView({ behavior: "smooth" });

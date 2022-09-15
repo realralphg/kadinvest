@@ -216,17 +216,17 @@ export default {
           rotateZ: 0,
         });
     });
-    gsap.from(".line3", {
-      scrollTrigger: {
-        trigger: this.$refs.features,
-        toggleActions: "play complete reset",
-      },
-      scaleX: 0,
-      duration: 10,
-      repeat: -1,
-      transformOrigin: "left center",
-      ease: "none",
-    });
+    // gsap.from(".line3", {
+    //   scrollTrigger: {
+    //     trigger: this.$refs.features,
+    //     toggleActions: "play complete reset",
+    //   },
+    //   scaleX: 0,
+    //   duration: 10,
+    //   repeat: -1,
+    //   transformOrigin: "left center",
+    //   ease: "none",
+    // });
     this.$store.animate.refs.push(this.$refs);
   },
 };
