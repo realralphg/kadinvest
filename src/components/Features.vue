@@ -177,6 +177,7 @@ export default {
             markers: false,
             pin: true,
             anticipatePin: 1,
+            normalizeScroll: true,
           },
         })
         .to(card1, {
@@ -215,8 +216,6 @@ export default {
           rotateZ: 0,
         });
     });
-    gsap.registerPlugin(ScrollTrigger);
-
     gsap.from(".line3", {
       scrollTrigger: {
         trigger: this.$refs.features,
@@ -371,9 +370,9 @@ export default {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.btnn:before {
-  box-shadow: none;
-}
+// .btnn:before {
+//   box-shadow: none;
+// }
 
 @media (max-width: 1025px) {
   .card {
