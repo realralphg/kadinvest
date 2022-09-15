@@ -47,7 +47,7 @@ export default {
   },
   mounted() {
     this.$store.animate.refs.push(this.$refs);
-    console.log(this.$store.animate.refs);
+    // console.log(this.$store.animate.refs);
     // console.log(this.$refs.about);
     gsap.from(".line4", {
       scrollTrigger: {

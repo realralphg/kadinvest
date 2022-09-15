@@ -1,13 +1,13 @@
 <template>
   <q-page class="">
     <div ref="wholePage" class="section wholepage">
-      <Hero />
-      <About />
-      <Goals />
-      <Features />
-      <Meet /> <Attend />
-      <Metaverse />
-      <Sponsors />
+      <Hero id="home" />
+      <About id="about" />
+      <Goals id="goals" />
+      <Features id="features" />
+      <Meet id="meet" /> <Attend id="attend" />
+      <Metaverse id="metaverse" />
+      <Sponsors id="sponsors" />
       <Footer />
     </div>
   </q-page>
@@ -33,7 +33,6 @@ export default defineComponent({
   name: "IndexPage",
   setup() {
     const about = ref("");
-
     return {
       about,
       autoplay: ref(true),
@@ -50,8 +49,12 @@ export default defineComponent({
     Sponsors,
     Footer,
   },
+  created() {
+    this.$store.animate.refs.push(this.$refs);
+  },
   mounted() {
     this.$store.animate.refs.push(this.$refs);
+    // window.location.reload();
   },
 });
 </script>

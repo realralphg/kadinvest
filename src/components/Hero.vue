@@ -40,7 +40,7 @@ export default {
     };
 
     const afterEnter = (el) => {
-      console.log("after enter");
+      // console.log("after enter");
     };
 
     return {

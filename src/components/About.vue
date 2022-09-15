@@ -1,5 +1,5 @@
 <template>
-  <div ref="about" class="wrapper section">
+  <div ref="about" id="about" class="wrapper section">
     <!-- <p class="text-white">
       {{ this.$store.animate.refs }}
     </p> -->

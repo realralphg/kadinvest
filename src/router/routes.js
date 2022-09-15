@@ -1,18 +1,18 @@
 
 const routes = [
   {
-    path: '/auth',
+    path: '/',
     component: () => import('layouts/plain.vue'),
     children: [
-      // { path: '/', component: () => import('pages/Welcome.vue') },
+      { path: '/', component: () => import('pages/Welcome.vue') },
       { path: '/register', component: () => import('pages/Register.vue') },
     ]
   },
   {
-    path: '/',
+    path: '/homepage',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '/', component: () => import('pages/IndexPage.vue') },
+      { path: '/home', component: () => import('pages/IndexPage.vue') },
     ]
   },
   {

@@ -187,27 +187,27 @@ export default {
         {
           main: "PLATIUM",
           price: "PRICE",
-          amt: "15,000,000",
+          amt: "10,000,000",
         },
         {
           main: "GOLD",
           price: "PRICE",
-          amt: "15,000,000",
+          amt: "5,000,000",
         },
         {
           main: "SILVER",
           price: "PRICE",
-          amt: "15,000,000",
+          amt: "1,000,000",
         },
         {
           main: "BRONZE",
           price: "PRICE",
-          amt: "15,000,000",
+          amt: "2,000,000",
         },
         {
           main: "SUMMIT NETWORK",
           price: "PRICE",
-          amt: "15,000,000",
+          amt: "Service in kind",
         },
       ],
     };

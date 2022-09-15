@@ -78,7 +78,7 @@ export default {
     };
 
     const afterEnter = (el) => {
-      console.log("after enter");
+      // console.log("after enter");
     };
     return {
       beforeEnter,
@@ -90,9 +90,8 @@ export default {
   },
   mounted() {
     // this.functiondisable();
-
-    console.log(document.querySelector("body"));
-    document.querySelector("body").classList.add("no_scroll");
+    // console.log(document.querySelector("body"));
+    // document.querySelector("body").classList.add("no_scroll");
     // this.$store.animate.refs[5].wholePage.style.display = "0";
     // console.log((this.$store.animate.refs[5].wholePage.style.opacity = "0"));
   },
@@ -106,11 +105,11 @@ export default {
 
     functiondisable() {
       // window.scrollTo(0, 0);
-      document.querySelector("#scrollable").addEventListener("scroll", (e) => {
-        window.addEventListener("scroll", () => {
-          window.scrollTo(0, 0);
-        });
-      });
+      // document.querySelector("#scrollable").addEventListener("scroll", (e) => {
+      //   window.addEventListener("scroll", () => {
+      //     window.scrollTo(0, 0);
+      //   });
+      // });
       // document.querySelector("#scrollable").addEventListener("wheel", (e) => {
       //   e.preventDefault();
       //   e.stopPropagation();
@@ -139,13 +138,13 @@ export default {
       if (this.value === true) {
         this.show = false;
         setTimeout(() => {
-          document.querySelector("body").classList.remove("no_scroll");
+          // document.querySelector("body").classList.remove("no_scroll");
           // this.functionenable();
-          window.scrollBy(0, 100);
-          document.querySelector("#scrollable").style.display = "none";
+          // window.scrollBy(0, 100);
+          // document.querySelector("#scrollable").style.display = "none";
 
-          //   this.$router.replace("/home");
-        }, 2000);
+          this.$router.replace("/home");
+        }, 3000);
       } else {
         console.log("not disabled");
       }

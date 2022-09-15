@@ -63,7 +63,7 @@
             </swiper>
             <div class="tap">
               <img src="/images/vec.png" alt="" />
-              <q-btn class="btnn"> Swipe between the cards </q-btn>
+              <q-btn class="btnn"> Flip to see cards or scroll page</q-btn>
             </div>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default {
     // gsap.defaults({ ease: "none", duration: 5 });
     let cards = gsap.utils.toArray(".card");
     const container = document.querySelector(".cards_div");
-    console.log(container);
+    // console.log(container);
     const card1 = cards[0];
     const card2 = cards[1];
     const card3 = cards[2];
@@ -163,7 +163,7 @@ export default {
     const card6 = cards[5];
     const card7 = cards[6];
     // const card4 = cards[3];
-    console.log(card1);
+    // console.log(card1);
 
     cards.forEach((card) => {
       //   console.log(card);
@@ -369,6 +369,10 @@ export default {
   line-height: 108.5%;
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.btnn:before {
+  box-shadow: none;
 }
 
 @media (max-width: 1025px) {

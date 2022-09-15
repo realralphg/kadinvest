@@ -12,11 +12,9 @@
 
       <div class="sponsors">
         <div class="sponsors_wrap">
-          <img src="/images/sponsor1.png" alt="" />
-          <img src="/images/sponsor2.png" alt="" />
-          <img src="/images/sponsor6.png" alt="" />
-          <img src="/images/sponsor4.png" alt="" />
-          <img src="/images/sponsor5.png" alt="" />
+          <img src="/images/maima.jpeg" alt="" />
+          <img src="/images/ocp.png" alt="" />
+          <img src="/images/bank.jpeg" alt="" />
         </div>
       </div>
       <div class="become q-mt-lg flex justify-end">

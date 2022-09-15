@@ -283,7 +283,8 @@
               <img :src="personData.qr" alt="" />
             </div>
             <code class="q-mt-xs" style="font-style: italic">
-              You would need this QR code to verify your registration</code
+              You would need this QR code to verify your entry during the
+              event.</code
             >
           </div>
 

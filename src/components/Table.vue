@@ -429,7 +429,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .my-sticky-virtscroll-table
   /* height or max-height is important */
   height: 410px

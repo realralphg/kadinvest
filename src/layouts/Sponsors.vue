@@ -1,6 +1,5 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <Welcome />
     <nav class="navbar">
       <div class="navbar-container">
         <input type="checkbox" name="" id="" />
@@ -16,7 +15,7 @@
               class="text-dark nav_items"
               ripple
               no-caps
-              to="/"
+              to="/home"
               exact
             />
           </li>

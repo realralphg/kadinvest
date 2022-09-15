@@ -179,6 +179,16 @@ svg {
   .dialog_wid {
     overflow: scroll;
   }
+  .dialog_wid::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  .dialog_wid::-webkit-scrollbar-thumb {
+    background: #00a250;
+  }
+  .dialog_wid::-webkit-scrollbar {
+    width: 0.5rem;
+  }
 }
 @media (max-width: 600px) {
   .nav .q-toolbar {

@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <Welcome />
+    <!-- <Welcome /> -->
     <nav class="navbar">
       <div class="navbar-container">
         <input type="checkbox" name="" id="" />
@@ -250,6 +250,7 @@ export default defineComponent({
   },
   mounted() {
     console.log(this.$store.animate.refs);
+    console.log(document.getElementById("goals"));
   },
 
   methods: {
@@ -257,23 +258,24 @@ export default defineComponent({
       this.$store.animate.refs[0].home.scrollIntoView({ behavior: "smooth" });
     },
     gotoAbout() {
-      this.$store.animate.refs[1].about.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+      // this.$store.animate.refs[1].about.scrollIntoView({ behavior: "smooth" });
     },
     gotoGoals() {
-      this.$store.animate.refs[2].goals.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("goals").scrollIntoView({ behavior: "smooth" });
     },
     gotoFeatures() {
-      this.$store.animate.refs[3].features.scrollIntoView({
+      document.getElementById("features").scrollIntoView({
         behavior: "smooth",
       });
     },
     gotoSpeakers() {
-      this.$store.animate.refs[4].speakers.scrollIntoView({
+      document.getElementById("meet").scrollIntoView({
         behavior: "smooth",
       });
     },
     gotoMetaverse() {
-      this.$store.animate.refs[5].metaverse.scrollIntoView({
+      document.getElementById("metaverse").scrollIntoView({
         behavior: "smooth",
       });
     },
