@@ -52,7 +52,13 @@
           <div class="bgh">
             <img src="/images/ror.png" class="im image2" alt="" />
             <div class="download download_div">
-              <a href="" class="link text-white q-pa-md"> Download</a>
+              <a
+                href="/images/KADINVEST7.0.pdf"
+                download="Concept Note"
+                class="link text-white q-pa-md"
+              >
+                Download</a
+              >
               <small> Download the Concept Note </small>
               <h5>KADINVEST 7.0</h5>
             </div>
