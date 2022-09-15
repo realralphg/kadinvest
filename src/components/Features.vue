@@ -151,10 +151,8 @@ export default {
   },
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
-    // gsap.defaults({ ease: "none", duration: 5 });
     let cards = gsap.utils.toArray(".card");
     const container = document.querySelector(".cards_div");
-    // console.log(container);
     const card1 = cards[0];
     const card2 = cards[1];
     const card3 = cards[2];
@@ -162,60 +160,59 @@ export default {
     const card5 = cards[4];
     const card6 = cards[5];
     const card7 = cards[6];
-    // const card4 = cards[3];
-    // console.log(card1);
 
-    cards.forEach((card) => {
-      //   console.log(card);
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            end: "+=4000",
-            scrub: true,
-            markers: false,
-            pin: true,
-            anticipatePin: 1,
-            normalizeScroll: true,
-          },
-        })
-        .to(card1, {
-          x: 500,
-          y: -500,
-          rotateZ: -100,
-        })
-        .to(card2, {
-          x: 400,
-          y: -400,
-          rotateZ: -80,
-        })
-        .to(card3, {
-          x: 300,
-          y: -350,
-          rotateZ: -60,
-        })
-        .to(card4, {
-          x: 280,
-          y: -330,
-          rotateZ: -40,
-        })
-        .to(card5, {
-          x: 260,
-          y: -300,
-          rotateZ: -20,
-        })
-        .to(card6, {
-          x: 240,
-          y: -280,
-          rotateZ: -10,
-        })
-        .to(card7, {
-          x: 0,
-          y: 0,
-          rotateZ: 0,
-        });
-    });
+    if (!this.$q.platform.is.ios) {
+      cards.forEach((card) => {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: container,
+              start: "top top",
+              end: "+=4000",
+              scrub: true,
+              markers: false,
+              pin: true,
+              anticipatePin: 1,
+              normalizeScroll: true,
+            },
+          })
+          .to(card1, {
+            x: 500,
+            y: -500,
+            rotateZ: -100,
+          })
+          .to(card2, {
+            x: 400,
+            y: -400,
+            rotateZ: -80,
+          })
+          .to(card3, {
+            x: 300,
+            y: -350,
+            rotateZ: -60,
+          })
+          .to(card4, {
+            x: 280,
+            y: -330,
+            rotateZ: -40,
+          })
+          .to(card5, {
+            x: 260,
+            y: -300,
+            rotateZ: -20,
+          })
+          .to(card6, {
+            x: 240,
+            y: -280,
+            rotateZ: -10,
+          })
+          .to(card7, {
+            x: 0,
+            y: 0,
+            rotateZ: 0,
+          });
+      });
+    }
     // gsap.from(".line3", {
     //   scrollTrigger: {
     //     trigger: this.$refs.features,
