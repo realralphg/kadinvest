@@ -122,6 +122,12 @@ h6.small_text {
     width: 40%;
   }
 }
+@media (max-width: 500px) {
+  .emoji,
+  .emoji2 {
+    width: 40px;
+  }
+}
 @media (max-width: 320px) {
   .images_hold .img .emoji {
     width: 50px;
