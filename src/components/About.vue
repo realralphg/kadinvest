@@ -57,7 +57,7 @@
                 download="Concept Note"
                 class="link text-white q-pa-md"
               >
-                Download</a
+                <button class="dwn">Download</button></a
               >
               <small> Download the Concept Note </small>
               <h5>KADINVEST 7.0</h5>
@@ -273,7 +273,11 @@ export default {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
-
+.dwn {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+}
 .tweet1 {
   width: 100%;
   height: 220px;
