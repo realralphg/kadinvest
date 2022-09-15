@@ -23,15 +23,12 @@
             alt=""
           />
           <img
-            style="width: 60px; margin: 0 auto"
+            style="width: 60px"
+            class="small"
             src="/images/maima.jpeg"
             alt=""
           />
-          <img
-            style="width: 60px; margin: 0 auto"
-            src="/images/ocp.png"
-            alt=""
-          />
+          <img style="width: 60px" class="small" src="/images/ocp.png" alt="" />
           <img src="/images/bank.jpeg" alt="" />
 
           <img
@@ -137,6 +134,10 @@ export default {
   transition: all 0.5s ease-in-out;
 }
 
+.small {
+  margin: 0 auto !important;
+}
+
 .bigger {
   width: 200px !important;
 }
@@ -150,6 +151,11 @@ export default {
   }
   .wrapper {
     margin-top: 3rem;
+  }
+}
+@media (max-width: 400px) {
+  .small {
+    margin: 0 !important;
   }
 }
 </style>

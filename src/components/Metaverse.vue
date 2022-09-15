@@ -7,7 +7,7 @@
           <div class="left">
             <img class="logo" src="/images/logo.png" alt="" />
             <p class="meta">KADINVEST 7.0</p>
-            <p class="des">KADUNA, KADUNA STATE</p>
+            <p class="des">KADUNA STATE</p>
           </div>
           <div class="right">
             <p class="date">OCTOBER 13TH - 15TH, 2022</p>
