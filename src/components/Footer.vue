@@ -70,7 +70,7 @@ export default {
 
           console.log(resp);
           this.$q.notify({
-            message: "Submission Successful",
+            message: "Subscription Successful",
             color: "green",
             position: "top",
             timeout: 3000,
