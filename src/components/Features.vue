@@ -177,13 +177,6 @@ export default {
             markers: false,
             pin: true,
             anticipatePin: 1,
-            // snap: {
-            //   snapTo: "labels", // snap to the closest label in the timeline
-            //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-            //   delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-            //   ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
-            // },
-            // toggleActions: "restart pause reverse pause",
           },
         })
         .to(card1, {
@@ -202,18 +195,18 @@ export default {
           rotateZ: -60,
         })
         .to(card4, {
-          x: 200,
+          x: 280,
           y: -330,
           rotateZ: -40,
         })
         .to(card5, {
-          x: 200,
+          x: 260,
           y: -300,
           rotateZ: -20,
         })
         .to(card6, {
-          x: 180,
-          y: -250,
+          x: 240,
+          y: -280,
           rotateZ: -10,
         })
         .to(card7, {
@@ -300,7 +293,6 @@ export default {
   background: #ffffff;
   box-shadow: 0px 13px 45px 13px rgba(0, 0, 0, 0.08);
   border-radius: 22.6933px;
-  //   height: 100%;
   min-height: 500px;
   padding: 1.5rem;
   position: absolute;
@@ -342,7 +334,7 @@ export default {
 
 // swiper
 .swiper {
-  width: 350px;
+  width: 320px;
   height: 420px;
   //   width: 240px;
   //   height: 320px;

@@ -1,6 +1,6 @@
 // app global css in SCSS form
 // app global css in SCSS form
-// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;1,700&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 body {
   font-family: "Poppins", sans-serif;
@@ -16,10 +16,10 @@ body.no_scroll {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
-}
+// html {
+//   scroll-behavior: smooth;
+//   scroll-padding-top: 5rem;
+// }
 
 html::-webkit-scrollbar {
   width: 1rem;
@@ -134,10 +134,11 @@ svg {
 }
 
 .dialog_wid {
-  width: 65% !important;
+  width: 85% !important;
+  overflow: hidden;
 }
 .q-dialog__inner--fullwidth > div {
-  width: 65% !important;
+  width: 85% !important;
   max-width: 100% !important;
 }
 .q-table th {
@@ -176,6 +177,9 @@ svg {
   }
   .small_container {
     width: 90%;
+  }
+  .dialog_wid {
+    overflow: scroll;
   }
 }
 @media (max-width: 600px) {

@@ -24,11 +24,11 @@
       </div>
     </div>
     <q-dialog full-width v-model="speakerDialog">
-      <q-card style="height: 50%; width: 70%" class="dialog_wid">
+      <q-card style="height: 500px; width: 100%" class="dialog_wid">
         <div class="delp row">
           <div class="img col-md-6 col-sm-12 col-xs-12">
             <q-card-section>
-              <img :src="profile.img" alt="" class="imgg" />
+              <q-img height="500px" :src="profile.img" alt="" class="imgg" />
             </q-card-section>
           </div>
 
@@ -38,16 +38,19 @@
               <div class="detr">
                 <h5 class="text-weight-bold">{{ profile.name }}</h5>
               </div>
-              <p class="mk-lead">
-                {{ profile.profile }}
-              </p>
+
+              <q-scroll-area style="height: 400px">
+                <p class="mk-lead">
+                  {{ profile.profile }}
+                </p>
+              </q-scroll-area>
             </q-card-section>
           </div>
         </div>
 
         <!-- <q-separator /> -->
 
-        <q-card-actions align="right">
+        <q-card-actions class="absolute-bottom" align="right">
           <!-- <q-btn flat label="Decline" color="primary" v-close-popup /> -->
           <q-btn
             class="bg-dark white q-pa-sm text-white"
@@ -74,45 +77,55 @@ export default {
           img: "/images/el.png",
 
           title: "HIS EXCELLENCY",
-          name: "Mallam Nasir El Rufai",
-          office: "Executive Governor, Kaduna State",
+          name: "Mallam Nasir Ahmad El Rufai,OFR",
+          office: "Governor of Kaduna State",
           profile:
             "Malam Nasir Ahmad El-Rufai is the 22nd executive Governor of Kaduna State, Nigeria. Before then, he had served the country in different capacities. First, he served as the Director General of Bureau of Public Enterprises. He also served as the Head of Privatisation agency in Nigeria. See Also: Biography, Net Worth And Career Of Seyi Makinde, the 28th Governor Of Oyo State El-Rufai Backgroun.El-Rufai was born on February 16, 1960 in Daudawa of Faskari Local Government Area in Katsina State. Sadly, El-Rufai lost his father when he was just 8 years old. Luckily, he got sponsored to school by an uncle in Kaduna. This is why he sites Kaduna state as his state of origin.",
         },
+        {
+          img: "/images/had.jpeg",
 
+          // title: "HIS EXCELLENCY",
+          name: "DR. Hadiza Sabuwa Balarabe",
+          office: "Deputy Governor, Kaduna State",
+          profile:
+            "The Kaduna state deputy governor, Hadiza Sabuwa Balarabe was born 1966, to the family of alhaji abubakar balarabe, sanga local government in Kaduna state, had a secondary school education in girls college soba. Further studied medicine in University of maiduguri. Dr. Hadiza have Masters in public health.She worked as senior Registerar at the Ahmadu Bello University Teaching Hospital, when she proceeded to Federal Capital Territory in 2014 where she served as Director of the public health, she was executive secretary of the kaduna state primary health care development agency.Hadiza balarabe, a mother of four children for one husband, has been very active in governance, she is a good leader which have paved way into politics for women, Dr. Hadiza who is the first Deputy governor of Kaduna state. ",
+        },
+
+        {
+          img: "/images/king.jpeg",
+          title: "HIS HIGHNESS KHALIFA",
+          name: "Muhammad Sanusi II",
+          office: "Vice chairman, KADIPA board",
+          profile:
+            "His Highness Muhammad Sanusi II was the 14th Fulani Emir of Kano, Nigeria from 2014 - 2019. His Highness studied at King’s College Lagos, then earned Bachelor’s and Master’s degrees in Economics at Ahmadu Bello University, Zaria, where he later also taught Economics. In 1985, he launched a distinguished banking career, becoming Group Managing Director of First Bank Nigeria in 2009. His Highness was appointed Governor of the Central Bank of Nigeria in 2009 at a time when the world saw the worst financial crisis since the Great Depression. He pursued a campaign against high level governmental corruption in Nigeria and pioneered the introduction of Islamic banking into the Nigerian banking sector. Alongside this work in the financial industry, His Highness pursued his scholarship in Islamic history, thought, and law. After years of private study under the tutorial of a number of learned ulama', he enrolled in the Africa International University in Khartoum, Sudan, where he earned a degree in Islamic studies and fiqh in 1997.",
+        },
         {
           img: "/images/white.jpeg",
-          title: "HIS HIGHNESS",
+          // title: "HIS HIGHNESS",
           name: "Alok Gupta",
-          office: "Vice Chairman, KADIPA",
+          office: "Group Managing Director, African Industries Group",
           profile:
-            "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
+            "Alok Gupta, currently, serves as Senior Associate Dean of Faculty, Research and Administration at the Carlson School of Management, University of Minnesota.  He holds Curtis L. Carlson Schoolwide Chair in Information Management.  He is responsible for school’s $120 MM budget, faculty hiring, review and evaluations, research infrastructure, IT infrastructure, facility and classroom management, and academic programs management and scheduling.  He is also serving in his second term as Editor-in-Chief for Information Systems Research, a top journal in the area of information systems since January 2017.  From 2006 to 2014, he served as the Department Chair of Information and Decision Sciences department at Carlson School.  He started his academic career in 1996 as a visiting Assistant Professor at Dept. of OPIM, University of Connecticut. He received his Ph.D. in Management Science and Information from the University of Texas, Austin in 1996.  His research focuses on Economic Engineering of systems – where system design explicitly considers incentives of participants – as applied to a variety of transactional systems from Internet, real-time databases, B2B systems to e-commerce. ",
         },
 
-        {
-          img: "/images/nur.png",
-          title: "HIS EXCELLENCY",
-          name: "Khalil Nur Khalil",
-          office: "Executive Secretary, KADIPA",
-
-          profile:
-            "He has experience in public investment policy, promotion, and facilitation space at the subnational level. He passionate about economic development for Africa, and he has spent the last 3 years helping to grow Kaduna State's economy via dedicated efforts of improving the business environment to attract private sector capital. This deliberate and coordinated effort culminated in Kaduna State being ranked number 1 in the World Bank's 2018 sub-national Doing Business in Nigeria report with over $2 billion dollars worth of investments attracted. He is a voracious reader and a major exponent of the teachings of complex adaptive systems and heterodox approaches towards the field of economics and finance. He is fascinated by the opportunities cryptography, digital assets and web3 technologies provide to enable us to remodel the entire global financial architecture.",
-        },
         {
           img: "/images/zainab.jpeg",
-          title: "HIS EXCELLENCY",
+          // title: "HIS EXCELLENCY",
           name: "Zainab Usman",
-          office: "Executive Governor, Kaduna State",
+          office:
+            "Director of the African program at the Carnegie Endowment for International Peace",
           profile:
-            "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
+            "Zainab Usman is a senior fellow and director of the Africa Program at the Carnegie Endowment for International Peace in Washington, D.C. Her fields of expertise include institutions, economic policy, energy policy, and emerging economies in Africa. Prior to Carnegie, Usman was at the World Bank initially as part of the prestigious Young Professionals Program and later as a public sector specialist. At the World Bank, she worked on social sustainability, policy reforms, natural resources management, and disruptive technologies. She has worked on these issues in Cote d’Ivoire, Morocco, Nigeria, Papua New Guinea, the Republic of Congo, Serbia, Tanzania, and Uzbekistan. She has also worked at the Blavatnik School of Government at the University of Oxford and has consulted for the Department of International Development (DfID) and the Office of the National Security Adviser (ONSA) in Nigeria.",
         },
         {
           img: "/images/hau.jpeg",
-          title: "HIS EXCELLENCY",
+          // title: "HIS EXCELLENCY",
           name: "Senator Uba Sani",
-          office: "Executive Governor, Kaduna State",
+          office:
+            "Senator, Kaduna Central, Kaduna State APC, Gubernatorial Candidate",
           profile:
-            "Yomi Jemibewon is a Managing Director at CCA and brings to the role close to two decades of experience from a background in investing and management consulting. Prior to CCA, Yomi co-founded CardinalStone Partners, and led the Principal Investments Division. Before this, he was a Vice President at Avante Capital in Lagos, and a strategy consultant with Bain & Company in New York. Yomi holds an MBA from The Wharton School of the University of Pennsylvania, and a B.Sc. and M.Sc. in Electrical Engineering from Virginia Tech.",
+            "Uba Sani (born 31 December 1970) is a Nigerian polician and the incumbent senator for Kaduna Central senatorial district of Kaduna State at the National Assembly Abuja, Nigeria.[1] He was elected on 23 February 2019 Nigerian general elections, under the platform of the All Progressive Congress (APC).[2] He defeated the incumbent senator Shehu Sani of the PRP. Uba Sani was born on December 31, 1970 in Zaria local government area of Kaduna State. After completing his early childhood and secondary education, he went to Kaduna Polytechnic where he studied mechanical engineering HND and University of Abuja for a post graduate Diploma in Business Administration and done a Masters Degree in finance at the University of Calabar in Cross River State, Nigeria. Uba Sani joined into politics after the return of Democracy in Nigeria in 1999 and supported the then president chief Olusegun Obasanjo's candidacy, after winning the presidential election, Sani was appointed Special advisor on public affairs to the president. He later worked at the federal ministry of the FCT on some advisory roles, and the Kaduna state ministry of housing and works. In 2011 Sani contested in the People's Democratic Party primaries for the Kaduna Central Senatorial seat but was defeated by Alhaji Hamisu Abubakar, and in 2015 he was appointed by the Kaduna state governor Malam Nasir Ahmad el-Rufai as the Special Assistant political and intergovernmental affairs. However in 2019, Uba Sani shone interest and contested the second time for the Kaduna Central senatorial seat under the ruling political party APC and was successfully elected senator during the February 2019 Nigeria general elections.",
         },
       ],
     };
@@ -260,7 +273,7 @@ span.office {
   text-align: center;
   text-transform: capitalize;
   color: #ffffff;
-  letter-spacing: 0.0635em;
+  letter-spacing: 0.135em;
   font-style: italic !important;
 }
 

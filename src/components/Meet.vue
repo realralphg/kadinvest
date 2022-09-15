@@ -12,9 +12,9 @@
         </header>
         <div class="speakers"><Ourstaff /></div>
 
-        <div class="view text-center">
+        <!-- <div class="view text-center">
           <q-btn class="bg-accent text-white"> View More</q-btn>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

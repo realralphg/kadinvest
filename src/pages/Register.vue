@@ -245,6 +245,46 @@
       <div class="right">
         <img src="/images/register.png" alt="" />
       </div>
+
+      <q-dialog v-model="responseModal" persistent>
+        <div class="hold_dia">
+          <div class="top">
+            <!-- <div class="icon">
+                    <i class="ri-check-double-fill"></i>
+                  </div> -->
+            <div class="icon">
+              <img src="/images/logo.png" alt="" />
+            </div>
+            <!-- <p>Send us an email</p> -->
+            <!-- <h4 class="text-weight-bold">Your entry was successful</h4> -->
+            <p class="text-subtitle6 text-green">
+              Dear {{ personData.name }} you have successfully registered for
+              KADINVEST 7.0
+            </p>
+            <small class="q-mt-xs" style="font-style: italic">
+              TAGGED: Building a resilient economy</small
+            >
+
+            <div class="qr">
+              <img :src="personData.qr" alt="" />
+            </div>
+            <code class="q-mt-xs" style="font-style: italic">
+              You would need this QR code to verify your registration</code
+            >
+          </div>
+
+          <q-card-actions align="center">
+            <q-btn
+              style="border-radius: 8px"
+              class="bg-accent q-px-lg q-pt-xl q-pb-md text-white"
+              flat
+              to="/"
+              label="Go home"
+              color="primary"
+            />
+          </q-card-actions>
+        </div>
+      </q-dialog>
     </div>
   </div>
 
@@ -267,6 +307,8 @@ export default {
       loading: false,
       errors: [],
       model: ref([]),
+      responseModal: false,
+      personData: [],
       options: [
         {
           label: "Summit",
@@ -325,6 +367,8 @@ export default {
           this.data = {};
 
           document.getElementById("appForm").reset();
+          this.personData = resp.data.data;
+          this.responseModal = true;
         })
         .catch(({ response }) => {
           this.$q.loading.hide();
@@ -371,6 +415,39 @@ img {
   height: 100%;
   object-fit: cover;
 }
+.hold_dia {
+  background: white;
+  padding: 1rem;
+}
+.hold_dia i {
+  font-size: 3rem;
+  color: #4bb543;
+}
+
+.hold_dia h4 {
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #4bb543;
+}
+
+.hold_dia .top {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.qr {
+  margin-top: 1.5rem;
+}
+
+.qr img {
+  width: 150px;
+}
+
+.icon img {
+  width: 100px;
+}
 
 .hold {
   display: grid;
@@ -383,12 +460,17 @@ img {
   line-height: 40px;
   color: #333333;
   padding: 0 1rem;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .left p {
   font-size: 14px;
   line-height: 23px;
   color: #333333;
+}
+.right {
+  height: 100vh;
 }
 
 .register {
@@ -429,6 +511,7 @@ img {
   color: #1f1b5e;
   width: 100%;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .input_wrap input,
