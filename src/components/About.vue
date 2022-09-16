@@ -54,7 +54,7 @@
             <div class="download download_div">
               <a
                 href="/images/KADINVEST7.0.pdf"
-                download="Concept Note"
+                download="KADINVEST 7.0"
                 class="link text-white q-pa-md"
               >
                 <button class="dwn">Download</button></a
