@@ -12,7 +12,7 @@
         <h1 class="main_text">KADINVEST 7.0</h1>
       </transition>
       <p class="smaller_text">KADUNA STATE</p>
-      <h2 class="subtext">Building a resilient Economy</h2>
+      <h2 class="subtext"><q>Building a Resilient Economy</q></h2>
 
       <q-btn to="/register" class="register"> Register Now </q-btn>
     </div>
@@ -108,7 +108,7 @@ export default {
   font-size: 40.8774px;
   line-height: 117%;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: none;
   color: #00a250;
 }
 

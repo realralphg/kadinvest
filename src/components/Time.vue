@@ -182,7 +182,7 @@ img {
   font-size: 18px;
   line-height: 148%;
   color: #000000;
-  text-align: left;
+  text-align: justify;
 }
 
 .grid {

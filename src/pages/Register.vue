@@ -200,7 +200,7 @@
                   name="attending_as"
                   v-model="data.attending_via"
                   val="Physical"
-                  label="Physical"
+                  label="Physical(limited)"
                 />
                 <q-radio
                   v-model="data.attending_via"

@@ -126,7 +126,7 @@ export default {
           img: "/images/el.png",
 
           title: "HIS EXCELLENCY",
-          name: "Mallam Nasir Ahmad El Rufai,OFR",
+          name: "Malam Nasir Ahmad El Rufai,OFR",
           office: "Governor of Kaduna State",
           profile:
             "Malam Nasir Ahmad El-Rufai is the 22nd executive Governor of Kaduna State, Nigeria. Before then, he had served the country in different capacities. First, he served as the Director General of Bureau of Public Enterprises. He also served as the Head of Privatisation agency in Nigeria. See Also: Biography, Net Worth And Career Of Seyi Makinde, the 28th Governor Of Oyo State El-Rufai Backgroun.El-Rufai was born on February 16, 1960 in Daudawa of Faskari Local Government Area in Katsina State. Sadly, El-Rufai lost his father when he was just 8 years old. Luckily, he got sponsored to school by an uncle in Kaduna. This is why he sites Kaduna state as his state of origin.",
@@ -135,7 +135,7 @@ export default {
           img: "/images/had.jpeg",
 
           // title: "HIS EXCELLENCY",
-          name: "DR. Hadiza Sabuwa Balarabe",
+          name: "Dr. Hadiza Sabuwa Balarabe",
           office: "Deputy Governor, Kaduna State",
           profile:
             "The Kaduna state deputy governor, Hadiza Sabuwa Balarabe was born 1966, to the family of alhaji abubakar balarabe, sanga local government in Kaduna state, had a secondary school education in girls college soba. Further studied medicine in University of maiduguri. Dr. Hadiza have Masters in public health.She worked as senior Registerar at the Ahmadu Bello University Teaching Hospital, when she proceeded to Federal Capital Territory in 2014 where she served as Director of the public health, she was executive secretary of the kaduna state primary health care development agency.Hadiza balarabe, a mother of four children for one husband, has been very active in governance, she is a good leader which have paved way into politics for women, Dr. Hadiza who is the first Deputy governor of Kaduna state. ",

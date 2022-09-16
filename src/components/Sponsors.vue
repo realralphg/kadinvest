@@ -35,22 +35,22 @@
             src="https://i0.wp.com/insidebusiness.ng/wp-content/uploads/2017/08/pwc.jpg?fit=640%2C360&ssl=1"
             alt=""
           />
-          <img
+          <!-- <img
             src="https://upload.wikimedia.org/wikipedia/commons/8/86/NESG_Official_Logo.png"
             alt=""
-          />
-          <img
+          /> -->
+          <!-- <img
             src="https://play-lh.googleusercontent.com/Rvr_Z24TXfc1iBkcX-3ENupW7ZI92-3WoumuTRgvb1x2jYjBLhq-5YArjgXoTNWtFJ0"
             alt=""
-          />
+          /> -->
           <img
             src="https://sunnewsonline.com/wp-content/uploads/2020/12/Zenith-bank.jpg"
             alt=""
           />
-          <img
+          <!-- <img
             src="https://storage.googleapis.com/bubble-finder/$0pYwTFUuHeVEKaA6Xw7dvdvn3hprJNNqS3ai8hFLaEgfrGkjcuXAVe"
             alt=""
-          />
+          /> -->
           <img src="https://cdn1.vc4a.com/media/2017/08/Logo-25.png" alt="" />
           <img
             src="https://media.premiumtimesng.com/wp-content/files/2022/02/Nigerian-Breweries.jpg"

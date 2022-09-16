@@ -143,7 +143,7 @@ export default {
   font-weight: 400;
   font-size: 18px;
   line-height: 190%;
-  text-align: left;
+  text-align: justify;
   text-transform: none;
   color: #ffffff;
 }

@@ -42,7 +42,12 @@
         </div>
       </div>
       <div class="text-center q-mt-md">
-        <p class="text-center text-white">Powered by GreySoft Technologies</p>
+        <a
+          href="https://greysoft.ng/#/"
+          target="_blank"
+          class="text-center grey text-white"
+          >Powered by GreySoft Technologies</a
+        >
       </div>
     </div>
   </div>
@@ -203,6 +208,10 @@ form {
   text-align: center;
   letter-spacing: 0.34em;
   color: #ffffff;
+}
+
+.grey {
+  text-decoration: underline;
 }
 
 @media (max-width: 400px) {
