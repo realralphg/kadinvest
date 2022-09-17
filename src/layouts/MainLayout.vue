@@ -257,12 +257,12 @@ export default defineComponent({
     };
 
     const beforeLeave = (el) => {
-      console.log("before leave");
+      // console.log("before leave");
       el.style.transform = "translateY(0vh)";
     };
 
     const leave = (el, done) => {
-      console.log("leave");
+      // console.log("leave");
 
       gsap.to(el, {
         duration: 1,
@@ -284,8 +284,8 @@ export default defineComponent({
     };
   },
   mounted() {
-    console.log(this.$store.animate.refs);
-    console.log(document.getElementById("goals"));
+    // console.log(this.$store.animate.refs);
+    // console.log(document.getElementById("goals"));
   },
 
   methods: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="q-py-lg">
     <h1 class="spon_det q-mt-xl">SPONSORSHIP DETAILS</h1>
     <q-table
       class="my-sticky-virtscroll-table scroll_table"
