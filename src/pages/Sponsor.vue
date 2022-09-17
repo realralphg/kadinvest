@@ -6,7 +6,7 @@
           <img src="/images/logo.png" alt="" />
           <h1 class="main_text">MAIN SPONSOR</h1>
           <p class="price q-mt-xl">Price</p>
-          <h2 class="amt q-mb-xl">N25,000,000</h2>
+          <h2 class="amt q-mb-xl">₦25,000,000</h2>
           <p @click="toggleDialog" class="open">Open Package</p>
         </div>
         <p class="pack">There is a package for everyone</p>
@@ -185,27 +185,27 @@ export default {
         {
           main: "DIAMOND",
           price: "PRICE",
-          amt: "15,000,000",
+          amt: "₦15,000,000",
         },
         {
           main: "PLATIUM",
           price: "PRICE",
-          amt: "10,000,000",
+          amt: "₦10,000,000",
         },
         {
           main: "GOLD",
           price: "PRICE",
-          amt: "5,000,000",
+          amt: "₦5,000,000",
         },
         {
           main: "SILVER",
           price: "PRICE",
-          amt: "1,000,000",
+          amt: "₦2,000,000",
         },
         {
           main: "BRONZE",
           price: "PRICE",
-          amt: "2,000,000",
+          amt: "₦1,000,000",
         },
         {
           main: "SUMMIT NETWORK",
