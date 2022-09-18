@@ -123,7 +123,7 @@ export default {
       speakerDialog: false,
       hosts: [
         {
-          img: "/images/el.png",
+          img: "/images/gov.jpeg",
 
           title: "HIS EXCELLENCY",
           name: "Malam Nasir Ahmad El Rufai,OFR",
@@ -132,7 +132,7 @@ export default {
             "Malam Nasir Ahmad El-Rufai is the 22nd executive Governor of Kaduna State, Nigeria. Before then, he had served the country in different capacities. First, he served as the Director General of Bureau of Public Enterprises. He also served as the Head of Privatisation agency in Nigeria. See Also: Biography, Net Worth And Career Of Seyi Makinde, the 28th Governor Of Oyo State El-Rufai Backgroun.El-Rufai was born on February 16, 1960 in Daudawa of Faskari Local Government Area in Katsina State. Sadly, El-Rufai lost his father when he was just 8 years old. Luckily, he got sponsored to school by an uncle in Kaduna. This is why he sites Kaduna state as his state of origin.",
         },
         {
-          img: "/images/had.jpeg",
+          img: "/images/vice.jpeg",
 
           // title: "HIS EXCELLENCY",
           name: "Dr. Hadiza Sabuwa Balarabe",
