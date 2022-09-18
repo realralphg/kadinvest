@@ -325,7 +325,7 @@ export default {
   font-size: 18.2437px;
   line-height: 36px;
   /* or 195% */
-  text-align: left;
+  text-align: left !important;
 
   color: #233042;
 }

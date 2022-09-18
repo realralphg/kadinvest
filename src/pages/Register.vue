@@ -217,6 +217,7 @@
           <div class="who">
             <div class="attending_as">
               Choose the Sectors you are interested in
+              <span>(You must have selected the Business Expo summit)</span>
             </div>
             <div class="q-py-md">
               <div class="q-gutter-sm">
@@ -226,14 +227,18 @@
                     val="Agriculture"
                     label="Agriculture"
                     color="teal"
+                    :disable="disable"
                     name="prefered_sector"
+                    :size="disable ? '30px' : '40px'"
                   />
                   <q-checkbox
                     v-model="data.prefered_sector"
                     val="Solid Minerals"
                     label="Solid Minerals"
                     color="orange"
+                    :disable="disable"
                     name="Solid Minerals"
+                    :size="disable ? '30px' : '40px'"
                   />
                   <!-- <q-checkbox
                     v-model="data.prefered_sector"
@@ -246,6 +251,8 @@
                     v-model="data.prefered_sector"
                     val="Infrastructure"
                     label="Infrastructure"
+                    :disable="disable"
+                    :size="disable ? '30px' : '40px'"
                     color="orange"
                     name="prefered_sector"
                   />
@@ -253,8 +260,10 @@
                     v-model="data.prefered_sector"
                     val="Technology"
                     label="Technology"
+                    :disable="disable"
                     color="orange"
                     name="prefered_sector"
+                    :size="disable ? '30px' : '40px'"
                   />
                 </div>
                 <!-- <q-radio
@@ -358,6 +367,7 @@ export default {
       data: { type: ["summit"], prefered_sector: [] },
       loading: false,
       errors: [],
+      disable: true,
       model: ref([]),
       responseModal: false,
       personData: [],
@@ -372,6 +382,28 @@ export default {
         },
       ],
     };
+  },
+
+  watch: {
+    "data.type": function (newVal) {
+      // let sector = newVal.includes("sector_expo");
+      let sector = newVal.find((ele) => {
+        if (ele === "sector_expo") {
+          this.disable = false;
+        } else {
+          this.disable = true;
+          this.data.prefered_sector = [];
+        }
+      });
+
+      // console.log(sector);
+      // if (sector) {
+      //   this.disable = false;
+      // } else {
+      //   this.disable = true;
+      //   this.data.prefered_sector = [];
+      // }
+    },
   },
 
   created() {
@@ -416,7 +448,7 @@ export default {
             timeout: 3000,
           });
 
-          this.data = {};
+          // this.data = {};
 
           document.getElementById("appForm").reset();
           this.personData = resp.data.data;
@@ -553,6 +585,10 @@ img {
   font-size: 20px;
   line-height: 23px;
   color: #333333;
+}
+
+.attending_as span {
+  font-size: 15px;
 }
 .sign {
   font-weight: 400;

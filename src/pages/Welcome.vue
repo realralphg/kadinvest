@@ -34,6 +34,7 @@
         color="white"
         v-model="value"
         label="Off"
+        class="pulse"
       />
 
       <div v-show="!show" class="q-my-lg text-center">
@@ -45,7 +46,7 @@
               : 'light_color text-center welcome_text'
           "
         >
-          Your experience would <br />
+          Your experience will <br />
           begin soon!
         </h6>
 
@@ -265,6 +266,26 @@ p {
 }
 .spinn h6 {
   flex: 2;
+}
+
+.pulse {
+  animation: zoom 2s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 #1f1b5e;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 0.6rem rgba(253, 87, 191, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 #00a250;
+  }
 }
 
 @media (min-width: 1020px) {

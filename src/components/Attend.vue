@@ -9,8 +9,8 @@
 
       <div class="images_sec">
         <div class="images_hold">
-          <div class="img">
-            <img src="/images/gov.png" alt="" />
+          <div class="img mal_meta">
+            <img class="gov" src="/images/malmeta.jpeg" alt="" />
             <img class="emoji emoji1" src="/images/emoji1.png" alt="" />
           </div>
           <div></div>
@@ -99,6 +99,11 @@ h6.small_text {
   z-index: 10;
 }
 
+.mal_meta img.gov {
+  object-fit: cover;
+  height: 147px;
+  border-radius: 5px;
+}
 @media (max-width: 1025px) {
   .images_sec {
     width: 100%;
