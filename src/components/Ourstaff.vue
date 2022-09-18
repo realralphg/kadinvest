@@ -148,7 +148,7 @@ export default {
           name: "Alok Gupta",
           office: "Group Managing Director, African Industries Group",
           profile:
-            "Alok Gupta, currently, serves as Senior Associate Dean of Faculty, Research and Administration at the Carlson School of Management, University of Minnesota.  He holds Curtis L. Carlson Schoolwide Chair in Information Management.  He is responsible for school’s $120 MM budget, faculty hiring, review and evaluations, research infrastructure, IT infrastructure, facility and classroom management, and academic programs management and scheduling.  He is also serving in his second term as Editor-in-Chief for Information Systems Research, a top journal in the area of information systems since January 2017.  From 2006 to 2014, he served as the Department Chair of Information and Decision Sciences department at Carlson School.  He started his academic career in 1996 as a visiting Assistant Professor at Dept. of OPIM, University of Connecticut. He received his Ph.D. in Management Science and Information from the University of Texas, Austin in 1996.  His research focuses on Economic Engineering of systems – where system design explicitly considers incentives of participants – as applied to a variety of transactional systems from Internet, real-time databases, B2B systems to e-commerce. ",
+            " Mr. Alok Gupta is the Managing Director of African Industries Group Company Nigeria’s biggest non-oil Foreign Direct Investment (FDI). He said the new plant would boost the nation’s economy and lead to the mining of 5.4 million tonnes of Iron Ore in the country. He also said about 36 megawatts power plant will be constructed from the waste heat recovered from the plant, which will be partly used for captive consumption. Gupta made the disclosures when the Minister of Mines and Steel Development, Mr. Olamilekan Adegbite visited the project site in Kagarko in Kaduna State.He said the firm would inaugurate Phase 1 of the plant by December 2020. He said: “We expect to commission the Phase I of the project by end December 2020. We will be mining 5.4 million tons of Iron Ore, beneficiate the ore to produce high grade concentrate followed by making into pellets and then finally into Directly Reduced Iron (DRI). “The DRI will be used to make steel billets and will avoid our need to import the same. We are also building a 36 MW Power Plant from the waste heat recovered in the process, which will be partly used for captive consumption. “Let me also highlight the key benefits of the project at this stage: About $600 million investment will be Nigeria’s biggest non-oil FDI, will serve as a catalyst for development of solid minerals sector by attracting other serious investors following our example in downstream processing.",
         },
         {
           img: "/images/zainab.jpeg",
@@ -221,6 +221,9 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+p {
+  font-size: 26px !important;
 }
 p.desc {
   font-style: normal;

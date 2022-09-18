@@ -17,7 +17,7 @@
             </h3>
 
             <div class="btns">
-              <q-btn class="join"> Join us live </q-btn>
+              <q-btn to="/join" class="join"> Join us live </q-btn>
               <q-btn class="submit"> Summit programme </q-btn>
             </div>
           </div>
@@ -38,7 +38,7 @@
             Experience KADINVEST <br />
             in the metaverse
           </h3>
-          <q-btn class="enter"> Coming soon </q-btn>
+          <q-btn to="/join" class="enter"> Coming soon </q-btn>
         </div>
       </div>
     </div>

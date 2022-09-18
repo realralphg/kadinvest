@@ -19,6 +19,16 @@
               exact
             />
           </li>
+          <li>
+            <q-btn
+              class="text-dark nav_items"
+              label="Register"
+              ripple
+              no-caps
+              to="/register"
+              exact
+            />
+          </li>
 
           <li>
             <q-btn

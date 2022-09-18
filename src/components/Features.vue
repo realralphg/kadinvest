@@ -43,8 +43,6 @@
               :modules="modules"
               class="mySwiper"
             >
-              <div class="trig"></div>
-
               <swiper-slide
                 class="card_cards"
                 v-for="(card, index) in cards"
@@ -65,6 +63,7 @@
               <img src="/images/vec.png" alt="" />
               <q-btn class="btnn"> Flip to see cards or scroll page</q-btn>
             </div>
+            <!-- <Swipercards /> -->
           </div>
         </div>
       </div>
@@ -74,6 +73,7 @@
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
+import Swipercards from "../components/Swipercards.vue";
 import Ourstaff from "../components/Ourstaff.vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -109,6 +109,7 @@ export default {
     Swiper,
     SwiperSlide,
     Ourstaff,
+    Swipercards,
   },
 
   data() {
@@ -124,19 +125,19 @@ export default {
         },
         {
           heading: "Expectation #3",
-          body: "Exposing priority sectors to even more innovation and potential investors, particularly in manufacturing, ICT, textiles and agriculture",
+          body: "Exposing priority sectors to even more innovation and potential investors, particularly in manufacturing, ICT, textiles and agriculture.",
         },
         {
           heading: "Expectation #4",
-          body: "Greater insight into methods that make Kaduna the preferred investment destination and the number 1 in the World Bank Ease of Doing Business Subnational Rankings",
+          body: "Greater insight into methods that make Kaduna the preferred investment destination and the number 1 in the World Bank Ease of Doing Business Subnational Rankings.",
         },
         {
           heading: "Expectation #5",
-          body: "Greater awareness of the benefits of innovation which will trigger highly expanded engagements and opportunities for the state",
+          body: "Greater awareness of the benefits of innovation which will trigger highly expanded engagements and opportunities for the state.",
         },
         {
           heading: "Expectation #6",
-          body: "Comprehensive educational discussions leading to greater enlightenment on design, implementation and sustenance of a viable investment strategy",
+          body: "Comprehensive educational discussions leading to greater enlightenment on design, implementation and sustenance of a viable investment strategy.",
         },
         {
           heading: "Expectation #7",
@@ -324,6 +325,7 @@ export default {
   font-size: 18.2437px;
   line-height: 36px;
   /* or 195% */
+  text-align: left;
 
   color: #233042;
 }
@@ -339,7 +341,7 @@ export default {
 .swiper-slide {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border-radius: 18px;
   font-size: 22px;
   font-weight: bold;
@@ -402,9 +404,9 @@ export default {
   .card {
     width: 300px;
   }
-  .swiper-slide {
-    width: 300px !important;
-  }
+  // .swiper-slide {
+  //   width: 300px !important;
+  // }
   .swiper {
     width: 420px;
     height: 420px;
@@ -444,9 +446,9 @@ export default {
     min-height: 350px;
   }
 
-  .swiper {
-    width: 350px;
-  }
+  // .swiper {
+  //   width: 350px;
+  // }
 
   .swiper-slide {
     width: 250px !important;

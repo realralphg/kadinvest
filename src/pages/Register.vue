@@ -17,7 +17,7 @@
             <div class="">
               <div class="input_wrap">
                 <label class="q-pb-sm" for="name"
-                  >Which events do you want to attend?</label
+                  >Which summit do you want to attend?</label
                 >
                 <br />
                 <!-- <q-select multiple v-model="data.type.summit" name="" id="">
@@ -220,7 +220,44 @@
             </div>
             <div class="q-py-md">
               <div class="q-gutter-sm">
-                <q-radio
+                <div class="q-gutter-sm">
+                  <q-checkbox
+                    v-model="data.prefered_sector"
+                    val="Agriculture"
+                    label="Agriculture"
+                    color="teal"
+                    name="prefered_sector"
+                  />
+                  <q-checkbox
+                    v-model="data.prefered_sector"
+                    val="Solid Minerals"
+                    label="Solid Minerals"
+                    color="orange"
+                    name="Solid Minerals"
+                  />
+                  <!-- <q-checkbox
+                    v-model="data.prefered_sector"
+                    val="Solid Minerals"
+                    label="Solid Minerals"
+                    color="orange"
+                    name="prefered_sector"
+                  /> -->
+                  <q-checkbox
+                    v-model="data.prefered_sector"
+                    val="Infrastructure"
+                    label="Infrastructure"
+                    color="orange"
+                    name="prefered_sector"
+                  />
+                  <q-checkbox
+                    v-model="data.prefered_sector"
+                    val="Technology"
+                    label="Technology"
+                    color="orange"
+                    name="prefered_sector"
+                  />
+                </div>
+                <!-- <q-radio
                   v-model="data.prefered_sector"
                   name="prefered_sector"
                   val="Agriculture"
@@ -244,7 +281,7 @@
                   v-model="data.prefered_sector"
                   val="Technology"
                   label="Technology"
-                />
+                /> -->
               </div>
               <div class="error" v-if="errors['data.prefered_sector']">
                 {{ errors["data.prefered_sector"][0] }}
@@ -284,7 +321,7 @@
             </div>
             <code class="q-mt-xs" style="font-style: italic">
               You would need this QR code to verify your entry during the
-              event.</code
+              summit.</code
             >
           </div>
 
@@ -293,7 +330,7 @@
               style="border-radius: 8px"
               class="bg-accent q-px-lg q-pt-xl q-pb-md text-white"
               flat
-              to="/"
+              to="/home"
               label="Go home"
               color="primary"
             />
@@ -318,7 +355,7 @@ export default {
   data() {
     return {
       fields: [],
-      data: { type: ["summit"] },
+      data: { type: ["summit"], prefered_sector: [] },
       loading: false,
       errors: [],
       model: ref([]),

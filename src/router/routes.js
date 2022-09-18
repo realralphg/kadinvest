@@ -16,10 +16,11 @@ const routes = [
     ]
   },
   {
-    path: '/spon',
+    path: '/otherpages',
     component: () => import('layouts/Sponsors.vue'),
     children: [
       { path: '/sponsor', component: () => import('pages/Sponsor.vue') },
+      { path: '/join', component: () => import('pages/Join.vue') },
     ]
   },
 

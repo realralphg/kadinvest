@@ -27,7 +27,7 @@
       <div class="grid flexer">
         <div class="left">
           <div class="right_div">
-            <h6>Showcase investment opportunities in Kaduna State</h6>
+            <h6>Showcasing investment opportunities in Kaduna State</h6>
             <p>
               The event is intended to showcase strategic investment
               opportunities in Kaduna State and consolidate its existing
@@ -55,7 +55,7 @@
         </div>
         <div class="right">
           <div class="left_div">
-            <h6>Enhance Job Creation & Employment Opportunities</h6>
+            <h6>Enhancing Job Creation & Employment Opportunities</h6>
             <p>
               Acceleration of economic growth through diversification and
               development of new opportunities; we believe that we can harness
