@@ -8,6 +8,7 @@
           <p class="price q-mt-xl">Price</p>
           <h2 class="amt q-mb-xl">₦25,000,000</h2>
           <p @click="toggleDialog" class="open">Open Package</p>
+          <p @click="getPackage" class="open">Get Package</p>
         </div>
         <p class="pack">There is a package for everyone</p>
         <h2 class="text-center head">
@@ -23,6 +24,7 @@
         <p class="Oprice q-mt-lg">{{ card.price }}</p>
         <h2 class="Oamt q-mb-lg">{{ card.amt }}</h2>
         <p @click="toggleDialog" class="Open">Open Package</p>
+        <p @click="getPackage" class="Open">Get Package</p>
       </div>
     </div>
 
@@ -31,7 +33,7 @@
         <header class="heading">
           <div class="abt">
             <h2 class="about">Become</h2>
-            <h2 class="about">A Sponsors</h2>
+            <h2 class="about">A Sponsor</h2>
           </div>
 
           <div class="line"></div>
@@ -46,7 +48,7 @@
         ></path>
       </svg>
     </div>
-    <div class="form_area">
+    <div id="sponsorPackages" class="form_area">
       <h6>Select your prefered package</h6>
 
       <div class="form_style">
@@ -220,6 +222,11 @@ export default {
       this.dialog = true;
       this.plan = plan;
     },
+    getPackage() {
+      document
+        .getElementById("sponsorPackages")
+        .scrollIntoView({ behavior: "smooth" });
+    },
 
     submit() {
       this.$q.loading.show();
@@ -374,6 +381,7 @@ p.open {
   text-align: center;
   text-decoration-line: underline;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .pack {

@@ -214,7 +214,7 @@
               </div>
             </div>
           </div>
-          <div class="who">
+          <div v-show="hide_preferred" class="who">
             <div class="attending_as">
               Choose the Sectors you are interested in
               <span>(You must have selected the Business Expo summit)</span>
@@ -324,14 +324,25 @@
             <small class="q-mt-xs" style="font-style: italic">
               TAGGED: Building a resilient economy</small
             >
+            <div v-show="hideImg" class="showQr">
+              <div class="qr">
+                <img :src="personData.qr" alt="" />
+              </div>
 
-            <div class="qr">
-              <img :src="personData.qr" alt="" />
+              <a
+                :href="personData.qr"
+                target="_blank"
+                download="KADINVEST 7.0 QR code"
+                class="link text-white q-pa-md"
+              >
+                <button class="dwn">Download</button></a
+              >
+              <br />
+              <code class="q-mt-xs" style="font-style: italic">
+                You would need this QR code to verify your entry during the
+                Business Expo.</code
+              >
             </div>
-            <code class="q-mt-xs" style="font-style: italic">
-              You would need this QR code to verify your entry during the
-              summit.</code
-            >
           </div>
 
           <q-card-actions align="center">
@@ -367,6 +378,8 @@ export default {
       data: { type: ["summit"], prefered_sector: [] },
       loading: false,
       errors: [],
+      hideImg: false,
+      hide_preferred: false,
       disable: true,
       model: ref([]),
       responseModal: false,
@@ -386,7 +399,15 @@ export default {
 
   watch: {
     "data.type": function (newVal) {
-      // let sector = newVal.includes("sector_expo");
+      let sector_expo = newVal.includes("sector_expo");
+      if (sector_expo) {
+        this.hideImg = true;
+        this.hide_preferred = true;
+      } else {
+        this.hideImg = false;
+        this.hide_preferred = false;
+      }
+
       let sector = newVal.find((ele) => {
         if (ele === "sector_expo") {
           this.disable = false;
@@ -531,6 +552,21 @@ img {
 
 .icon img {
   width: 80px;
+}
+
+.link {
+  display: inline-block;
+  background: #00a250;
+  padding: 0.5rem;
+  width: fit-content;
+  margin: 0.7rem auto;
+  border-radius: 5px;
+}
+
+.dwn {
+  border: none;
+  background: transparent;
+  color: #ffffff;
 }
 
 .hold {
