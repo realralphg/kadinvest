@@ -4,9 +4,8 @@
 
     <q-table
       title="Submissions"
-      :rows="items"
-      :hide-header="mode === 'grid'"
       :columns="columns"
+      :rows="items"
       row-key="id"
       :filter="filter"
       :loading="loading"
@@ -14,74 +13,12 @@
       :pagination="initialPagination"
       id="contentContainer"
     >
-      <template v-slot:top-right="props">
-        <!-- <div class="entries">
-          <div class="data row justify-between">
-            <span>Total Entries:</span>
-            <span class="text-weight-bold">{{ dataUsers.length }}</span>
-          </div>
-
-          <p class="hidden q-pa-md bg-black text-white">st: {{ getSt }}</p>
-        </div> -->
-        <q-input
-          outlined
-          dense
-          debounce="300"
-          v-model="filter"
-          placeholder="Search"
-          class="q-ml-md"
-        >
-          <template v-slot:append>
-            <q-icon name="search" />
-          </template>
-        </q-input>
-
-        <q-btn
-          flat
-          round
-          dense
-          :icon="props.inFullscreen ? 'fullscreen_exit' : 'fullscreen'"
-          @click="props.toggleFullscreen"
-          v-if="mode === 'list'"
-        >
-          <q-tooltip :disable="$q.platform.is.mobile">
-            {{ props.inFullscreen ? "Exit Fullscreen" : "Toggle Fullscreen" }}
-          </q-tooltip>
-        </q-btn>
-
-        <q-btn
-          flat
-          round
-          dense
-          :icon="mode === 'grid' ? 'list' : 'grid_on'"
-          @click="
-            mode = mode === 'grid' ? 'list' : 'grid';
-            separator = mode === 'grid' ? 'none' : 'horizontal';
-          "
-          v-if="!props.inFullscreen"
-        >
-          <q-tooltip :disable="$q.platform.is.mobile">{{
-            mode === "grid" ? "List" : "Grid"
-          }}</q-tooltip>
-        </q-btn>
-
-        <q-btn
-          color="primary"
-          icon-right="archive"
-          label="Export to csv"
-          no-caps
-          padding="xs"
-          v-if="rows.length"
-          @click="exportTable"
-        />
-      </template>
-
-      <template v-slot:body-cell-prefered_sector="props">
+      <!-- <template v-slot:body-cell-prefered_sector="props">
         <q-td :props="props">
           <p v-if="props.row.prefered_sector === '[]'">None</p>
           <p v-else>{{ props.row.prefered_sector }}</p>
         </q-td>
-      </template>
+      </template> -->
 
       <template v-slot:no-data="{ icon, message, filter }">
         <div class="full-width row flex-center text-negative q-gutter-sm">
@@ -107,7 +44,7 @@
 <script>
 import { ref } from "vue";
 import TPagination from "../components/TPagination.vue";
-import { exportFile, useMeta } from "quasar";
+import { useMeta } from "quasar";
 const columns = [
   {
     name: "id",
@@ -142,14 +79,14 @@ const columns = [
     sortable: true,
   },
 
-  // {
-  //   name: "designation",
-  //   required: true,
-  //   label: "Designation",
-  //   align: "left",
-  //   field: "designation",
-  //   sortable: true,
-  // },
+  {
+    name: "designation",
+    required: true,
+    label: "Designation",
+    align: "left",
+    field: "designation",
+    sortable: true,
+  },
   {
     name: "type",
     required: true,
@@ -158,22 +95,22 @@ const columns = [
     field: "type",
     sortable: true,
   },
-  // {
-  //   name: "attending_as",
-  //   required: true,
-  //   label: "Attending as",
-  //   align: "left",
-  //   field: "attending_as",
-  //   sortable: true,
-  // },
-  // {
-  //   name: "attending_via",
-  //   required: true,
-  //   label: "Attending via",
-  //   align: "left",
-  //   field: "attending_via",
-  //   sortable: true,
-  // },
+  {
+    name: "attending_as",
+    required: true,
+    label: "Attending as",
+    align: "left",
+    field: "attending_as",
+    sortable: true,
+  },
+  {
+    name: "attending_via",
+    required: true,
+    label: "Attending via",
+    align: "left",
+    field: "attending_via",
+    sortable: true,
+  },
 
   {
     name: "prefered_sector",
@@ -184,19 +121,16 @@ const columns = [
     sortable: true,
   },
 ];
-function wrapCsvValue(val, formatFn) {
-  let formatted = formatFn !== void 0 ? formatFn(val) : val;
-  formatted =
-    formatted === void 0 || formatted === null ? "" : String(formatted);
-  formatted = formatted.split('"').join('""');
-  return `"${formatted}"`;
-}
+
 export default {
   setup() {
     useMeta({
       title: "Admin Dashboard",
     });
     return {
+      columns,
+      rows: [],
+
       initialPagination: {
         sortBy: "desc",
         descending: false,
@@ -211,15 +145,8 @@ export default {
   },
   data() {
     return {
-      columns,
-      dataUsers: [],
-      category: null,
-      categories: [],
-      rows: [],
       errors: [],
-      meta: "",
       filter: "",
-      curl: "",
       separator: "",
       mode: "list",
       loadingMore: false,
@@ -232,29 +159,27 @@ export default {
   },
 
   mounted() {
-    this.onRequest({
-      // filter: undefined,
-    });
+    this.onRequest();
   },
+  // mounted() {
+  //   this.onRequest({
+  //     filter: undefined,
+  //   });
+  // },
 
   methods: {
-    reload() {
-      location.reload();
-    },
     onRequest(props) {
       this.loading = true;
       const url = `manage/form-data/1`;
-      this.curl = url;
       this.$api
         .get(url)
         .then((response) => {
           console.log(response);
           this.loading = false;
-          // this.rows = response.data.data;
+          this.rows = response.data.data;
           this.items = response.data.data;
           this.links = response.data.links;
           this.meta = response.data.meta;
-          // this.dataUsers = response.data.data;
         })
         .catch(({ response }) => {
           // console.log(response);
@@ -262,52 +187,6 @@ export default {
           this.loading = false;
           this.rows = [];
         });
-    },
-
-    refreshPage() {
-      if (this.curl !== "") {
-        this.loading = true;
-        this.$api
-          .get(this.curl)
-          .then((response) => {
-            this.loading = false;
-            // this.rows = response.data.data;
-          })
-          .catch(({ response }) => {
-            console.log(response);
-            this.message = response.data.message;
-            this.loading = false;
-            this.rows = [];
-          });
-      }
-    },
-
-    exportTable() {
-      // naive encoding to csv format
-      const content = [this.columns.map((col) => wrapCsvValue(col.label))]
-        .concat(
-          this.rows.map((row) =>
-            this.columns
-              .map((col) =>
-                wrapCsvValue(
-                  typeof col.field === "function"
-                    ? col.field(row)
-                    : row[col.field === void 0 ? col.name : col.field],
-                  col.format
-                )
-              )
-              .join(",")
-          )
-        )
-        .join("\r\n");
-      const status = exportFile("fruitbay-management.csv", content, "text/csv");
-      if (status !== true) {
-        this.$q.notify({
-          message: "Browser denied file download...",
-          color: "negative",
-          icon: "warning",
-        });
-      }
     },
   },
 };

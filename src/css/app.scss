@@ -60,6 +60,10 @@ img {
   max-width: 1440px;
 }
 
+.chips .q-chip__content {
+  flex-direction: column;
+}
+
 .welcome .q-toggle__label {
   color: #fff;
   font-size: 12px;

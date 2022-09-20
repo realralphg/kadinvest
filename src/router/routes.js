@@ -24,6 +24,7 @@ const routes = [
     children: [
       { path: '/sponsor', component: () => import('pages/Sponsor.vue') },
       { path: '/join', component: () => import('pages/Join.vue') },
+      { path: '/boot', component: () => import('pages/Boot.vue') },
     ]
   },
 
