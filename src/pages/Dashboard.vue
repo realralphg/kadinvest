@@ -8,24 +8,21 @@
       :hide-header="mode === 'grid'"
       :columns="columns"
       row-key="id"
-      :grid="mode == 'grid'"
       :filter="filter"
       :loading="loading"
-      selection="multiple"
-      v-model:selected="selected"
       @request="onRequest"
       :pagination="initialPagination"
       id="contentContainer"
     >
       <template v-slot:top-right="props">
-        <div class="entries">
+        <!-- <div class="entries">
           <div class="data row justify-between">
             <span>Total Entries:</span>
             <span class="text-weight-bold">{{ dataUsers.length }}</span>
           </div>
 
-          <!-- <p class="hidden q-pa-md bg-black text-white">st: {{ getSt }}</p> -->
-        </div>
+          <p class="hidden q-pa-md bg-black text-white">st: {{ getSt }}</p>
+        </div> -->
         <q-input
           outlined
           dense
@@ -81,7 +78,6 @@
 
       <template v-slot:body-cell-prefered_sector="props">
         <q-td :props="props">
-          <!-- {{ props.row.prefered_sector }} -->
           <p v-if="props.row.prefered_sector === '[]'">None</p>
           <p v-else>{{ props.row.prefered_sector }}</p>
         </q-td>
@@ -146,14 +142,14 @@ const columns = [
     sortable: true,
   },
 
-  {
-    name: "designation",
-    required: true,
-    label: "Designation",
-    align: "left",
-    field: "designation",
-    sortable: true,
-  },
+  // {
+  //   name: "designation",
+  //   required: true,
+  //   label: "Designation",
+  //   align: "left",
+  //   field: "designation",
+  //   sortable: true,
+  // },
   {
     name: "type",
     required: true,
@@ -162,22 +158,22 @@ const columns = [
     field: "type",
     sortable: true,
   },
-  {
-    name: "attending_as",
-    required: true,
-    label: "Attending as",
-    align: "left",
-    field: "attending_as",
-    sortable: true,
-  },
-  {
-    name: "attending_via",
-    required: true,
-    label: "Attending via",
-    align: "left",
-    field: "attending_via",
-    sortable: true,
-  },
+  // {
+  //   name: "attending_as",
+  //   required: true,
+  //   label: "Attending as",
+  //   align: "left",
+  //   field: "attending_as",
+  //   sortable: true,
+  // },
+  // {
+  //   name: "attending_via",
+  //   required: true,
+  //   label: "Attending via",
+  //   align: "left",
+  //   field: "attending_via",
+  //   sortable: true,
+  // },
 
   {
     name: "prefered_sector",
@@ -216,15 +212,11 @@ export default {
   data() {
     return {
       columns,
-      message: "",
-      selected: [],
       dataUsers: [],
       category: null,
       categories: [],
       rows: [],
       errors: [],
-      page: "",
-      files: null,
       meta: "",
       filter: "",
       curl: "",
@@ -241,7 +233,7 @@ export default {
 
   mounted() {
     this.onRequest({
-      filter: undefined,
+      // filter: undefined,
     });
   },
 
@@ -257,13 +249,12 @@ export default {
         .get(url)
         .then((response) => {
           console.log(response);
-          this.message = response.data.message;
           this.loading = false;
-          this.rows = response.data.data;
+          // this.rows = response.data.data;
           this.items = response.data.data;
           this.links = response.data.links;
           this.meta = response.data.meta;
-          this.dataUsers = response.data.data;
+          // this.dataUsers = response.data.data;
         })
         .catch(({ response }) => {
           // console.log(response);
@@ -278,10 +269,9 @@ export default {
         this.loading = true;
         this.$api
           .get(this.curl)
-          .then(({ data }) => {
+          .then((response) => {
             this.loading = false;
-            this.rows = data.data;
-            console.log(data);
+            // this.rows = response.data.data;
           })
           .catch(({ response }) => {
             console.log(response);
