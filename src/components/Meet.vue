@@ -213,7 +213,7 @@ export default {
 }
 @media (max-width: 950px) {
   .meet {
-    margin-top: -55%;
+    margin-top: -65%;
   }
 }
 @media (max-width: 800px) {
@@ -236,20 +236,25 @@ export default {
 }
 
 @media (max-width: 764px) {
-  .meet {
-    margin-top: -90%;
-    margin-bottom: 25%;
-  }
+  // .meet {
+  //   margin-top: -90%;
+  //   margin-bottom: 25%;
+  // }
   .heading {
     padding: 4rem 0 5rem !important;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .meet {
-    margin-top: -120%;
+    margin-top: -85%;
   }
   .heading {
     padding: 4rem 0 0rem !important;
+  }
+}
+@media (max-width: 500px) {
+  .meet {
+    margin-top: -115%;
   }
 }
 

@@ -36,8 +36,8 @@
         v-model="currentPage"
         @loading="loadingMore = true"
         @loaded="(items = $event), (loadingMore = false)"
-      /> </q-card-actions
-    >{{ initialPagination }}
+      />
+    </q-card-actions>
   </div>
 </template>
 
@@ -48,6 +48,12 @@ import { useMeta } from "quasar";
 const typekeys = {
   summit: "Summit",
   sector_expo: "Sector Expo",
+};
+const typekeys_prefered_sectors = {
+  Agriculture: "Agriculture",
+  Solid_Minerals: "Solid Minerals",
+  Infrastructure: "Infrastructure",
+  Technology: "Technology",
 };
 const columns = [
   {
@@ -96,9 +102,7 @@ const columns = [
     required: true,
     label: "Type",
     align: "left",
-    field: (e) =>
-      typekeys[typeof e.type === "object" ? e.type.join(", ") : e] ||
-      "Sector Expo",
+    field: (e) => e.type.toString(),
     sortable: false,
   },
   {
@@ -123,10 +127,11 @@ const columns = [
     required: true,
     label: "Prefered Sector",
     align: "left",
-    field: (e) =>
-      typekeys[typeof e.type === "object" ? e.type.join(", ") : e] ||
-      "Sector Expo",
-
+    field: (e) => e.prefered_sector.toString(),
+    //   typekeys_prefered_sectors[
+    //     typeof e.prefered_sector === "object" ? e.type.join(", ") : e
+    //   ],
+    // field: "prefered_sector",
     sortable: true,
   },
 ];

@@ -143,7 +143,7 @@ export default {
       ],
       speakers: [
         {
-          img: "/images/white.jpeg",
+          img: "/images/alok.jpeg",
           // title: "HIS HIGHNESS",
           name: "Alok Gupta",
           office: "Group Managing Director, African Industries Group",
@@ -313,7 +313,7 @@ p.desc {
   /* opacity: 0.8; */
   border-radius: 15px;
   width: 100%;
-  height: 350px;
+  height: 500px;
   object-fit: cover;
 }
 
@@ -334,6 +334,7 @@ span.name {
   text-transform: capitalize;
   color: #ffffff;
   letter-spacing: 0.0635em;
+  padding: 1rem;
 }
 span.office {
   font-weight: 700 !important;
@@ -486,6 +487,9 @@ figure.effect-sadie:hover p {
 @media (min-width: 1300px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .grid figure img {
+    height: 500px;
   }
 }
 @media (max-width: 800px) {
