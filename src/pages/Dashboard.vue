@@ -178,14 +178,7 @@ const columns = [
     field: "attending_via",
     sortable: true,
   },
-  {
-    name: "prefered_sector",
-    required: true,
-    label: "Prefered Sector",
-    align: "left",
-    field: "prefered_sector",
-    sortable: true,
-  },
+
   {
     name: "prefered_sector",
     required: true,
