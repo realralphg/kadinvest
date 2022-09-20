@@ -2,6 +2,7 @@ import { boot } from 'quasar/wrappers'
 import loadStore from "stores/loader";
 import helpers from "../plugins/helpers";
 import loader from "../plugins/loader";
+// import plugins from "../plugins";
 const $rootUrl = process.env.rootURL
 const $baseURL = process.env.baseURL
 require('../plugins/icons.js')
@@ -12,6 +13,8 @@ export default boot(async ({ app, router, store }) => {
    app.config.globalProperties.$rootUrl = $rootUrl
   app.config.globalProperties.$baseURL = $baseURL
   app.config.globalProperties.$helper = helpers
+  app.config.globalProperties.$h = helpers
   app.config.globalProperties.$loader = loader
+  // app.config.globalProperties.$plugins = plugins
   
 })
