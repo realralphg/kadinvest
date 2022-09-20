@@ -36,8 +36,8 @@
         v-model="currentPage"
         @loading="loadingMore = true"
         @loaded="(items = $event), (loadingMore = false)"
-      /> </q-card-actions
-    >{{ initialPagination }}
+      />
+    </q-card-actions>
   </div>
 </template>
 
