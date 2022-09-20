@@ -155,6 +155,38 @@ const columns = [
     sortable: true,
   },
   {
+    name: "type",
+    required: true,
+    label: "Type",
+    align: "left",
+    field: "type",
+    sortable: true,
+  },
+  {
+    name: "attending_as",
+    required: true,
+    label: "Attending as",
+    align: "left",
+    field: "attending_as",
+    sortable: true,
+  },
+  {
+    name: "attending_via",
+    required: true,
+    label: "Attending via",
+    align: "left",
+    field: "attending_via",
+    sortable: true,
+  },
+  {
+    name: "prefered_sector",
+    required: true,
+    label: "Prefered Sector",
+    align: "left",
+    field: "prefered_sector",
+    sortable: true,
+  },
+  {
     name: "prefered_sector",
     required: true,
     label: "Prefered Sector",
@@ -231,7 +263,7 @@ export default {
       this.$api
         .get(url)
         .then((response) => {
-          // console.log(response);
+          console.log(response);
           this.message = response.data.message;
           this.loading = false;
           this.rows = response.data.data;
