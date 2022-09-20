@@ -49,6 +49,12 @@ const typekeys = {
   summit: "Summit",
   sector_expo: "Sector Expo",
 };
+const typekeys_prefered_sectors = {
+  Agriculture: "Agriculture",
+  Solid_Minerals: "Solid Minerals",
+  Infrastructure: "Infrastructure",
+  Technology: "Technology",
+};
 const columns = [
   {
     name: "id",
@@ -123,7 +129,11 @@ const columns = [
     required: true,
     label: "Prefered Sector",
     align: "left",
-    field: "prefered_sector",
+    field: (e) => e.prefered_sector.toString(),
+    //   typekeys_prefered_sectors[
+    //     typeof e.prefered_sector === "object" ? e.type.join(", ") : e
+    //   ],
+    // field: "prefered_sector",
     sortable: true,
   },
 ];

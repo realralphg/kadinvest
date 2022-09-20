@@ -123,7 +123,10 @@ const columns = [
     required: true,
     label: "Prefered Sector",
     align: "left",
-    field: "prefered_sector",
+    field: (e) =>
+      typekeys[typeof e.type === "object" ? e.type.join(", ") : e] ||
+      "Sector Expo",
+
     sortable: true,
   },
 ];
