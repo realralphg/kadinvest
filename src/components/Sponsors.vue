@@ -56,6 +56,8 @@
             src="https://media.premiumtimesng.com/wp-content/files/2022/02/Nigerian-Breweries.jpg"
             alt=""
           />
+          <img src="/images/spo1.jpeg" alt="" />
+          <img src="/images/spo2.jpeg" alt="" />
         </div>
       </div>
       <div class="become q-mt-lg flex justify-end">
