@@ -35,6 +35,18 @@
             <span>Both:</span>
             <span class="text-weight-bold">{{ both_stats }}</span>
           </div>
+          <div class="data row justify-between">
+            <span>Physical:</span>
+            <span class="text-weight-bold">{{ physical_stats }}</span>
+          </div>
+          <div class="data row justify-between">
+            <span>Virtual:</span>
+            <span class="text-weight-bold">{{ virtual_stats }}</span>
+          </div>
+          <div class="data row justify-between">
+            <span>Metaverse:</span>
+            <span class="text-weight-bold">{{ metaverse_stats }}</span>
+          </div>
         </div>
         <q-input
           outlined
@@ -225,6 +237,9 @@ export default {
       sector_expo_stats: "",
       summit_stats: "",
       both_stats: "",
+      virtual_stats: "",
+      physical_stats: "",
+      metaverse_stats: "",
       items: [],
       meta: {},
       links: {},
@@ -292,7 +307,7 @@ export default {
     getStats() {
       this.$api
         .get(
-          "manage/form-data/stats/1?data=type:summit,type:sector_expo,type:summit.sector_expo"
+          "manage/form-data/stats/1?data=type:summit,type:sector_expo,type:summit.sector_expo,attending_via:Metaverse,attending_via:Physical,attending_via:Virtual"
         )
         .then((response) => {
           this.summit_stats = response.data.data.summit;
@@ -301,6 +316,10 @@ export default {
           this.summit_stats = response.data.data.summit;
           this.total = response.data.data.total;
           this.both_stats = response.data.data["summit.sector_expo"];
+          this.physical_stats = response.data.data.Physical;
+          this.metaverse_stats = response.data.data.Metaverse;
+          this.virtual_stats = response.data.data.Virtual;
+
           console.log(response);
         })
         .catch(({ response }) => {
