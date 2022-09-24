@@ -64,6 +64,19 @@ img {
   flex-direction: column;
 }
 
+.boot_dialog .q-dialog__inner > div {
+  pointer-events: all;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.dialog_wid {
+  box-shadow: none;
+}
+
 .welcome .q-toggle__label {
   color: #fff;
   font-size: 12px;
@@ -153,6 +166,24 @@ svg {
 
 .scroll_table .q-table__bottom {
   display: none;
+}
+
+// boot
+
+.boot .q-table__bottom {
+  display: none;
+}
+
+.boot_dialog .q-dialog__inner--minimized {
+  padding: 10px;
+}
+
+.boot .q-table__grid-content {
+  justify-content: center;
+  // margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 3rem 1rem;
 }
 @media (max-width: 1025px) {
   .about {

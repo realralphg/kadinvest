@@ -129,7 +129,7 @@
 </template>
 
 <script>
-import TPagination from "../components/TPagination.vue";
+import TPagination from "../../components/TPagination.vue";
 import { useMeta } from "quasar";
 
 const columns = [
@@ -291,7 +291,7 @@ export default {
           this.items = response.data.data;
           this.links = response.data.links;
           this.meta = response.data.meta;
-          console.log(this.items);
+          // console.log(this.items);
           this.initialPagination = {
             rowsPerPage: 30,
             rowsNumber: this.meta.to - this.meta.from + 1,

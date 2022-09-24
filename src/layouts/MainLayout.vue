@@ -82,6 +82,16 @@
           </li>
           <li>
             <q-btn
+              class="text-dark nav_items"
+              label="Boots"
+              ripple
+              no-caps
+              to="/boot"
+              exact
+            />
+          </li>
+          <li>
+            <q-btn
               class="text-dark sponsor nav_items"
               label="Become a sponsor"
               ripple
@@ -96,126 +106,7 @@
         </h1>
       </div>
     </nav>
-    <!-- <q-header elevated class="bg-white nav">
-      <q-toolbar class="navBar no_pad justify-center">
-        <div class="logo">
-          <img class="logoo" src="/images/logo.png" alt="" />
-        </div>
-        <div class="nav__links">
-          <q-tabs indicator-color="accent" dense active-color="accent">
-            <q-route-tab
-              label="Home"
-              class="text-dark nav_items"
-              ripple
-              no-caps
-              exact
-              @click="goHome"
-            />
 
-            <q-route-tab
-              class="text-dark nav_items"
-              label="About"
-              ripple
-              no-caps
-              exact
-              @click="gotoAbout"
-            />
-
-            <q-route-tab
-              label="Objectives "
-              class="text-dark nav_items"
-              ripple
-              no-caps
-              @click="gotoGoals"
-              exact
-            />
-            <q-route-tab
-              class="text-dark nav_items"
-              label="Features"
-              ripple
-              no-caps
-              @click="gotoFeatures"
-              exact
-            />
-
-            <q-route-tab
-              class="text-dark nav_items"
-              label="Speakers"
-              ripple
-              no-caps
-              exact
-              @click="gotoSpeakers"
-            />
-            <q-route-tab
-              class="text-dark nav_items"
-              label="Metaverse"
-              ripple
-              no-caps
-              @click="gotoMetaverse"
-              exact
-            />
-          </q-tabs>
-        </div>
-        <q-btn
-          flat
-          dense
-          round
-          size="2rem"
-          color="black"
-          aria-label="Menu"
-          class="nav__toggler"
-          @click="toggleLeftDrawer"
-          ><i class="ri-menu-4-fill"></i
-        ></q-btn>
-      </q-toolbar>
-    </q-header> -->
-
-    <!-- <q-drawer v-model="leftDrawerOpen" bordered>
-      <q-tabs class="column" active-color="primary">
-        <div
-          style="width: 100%"
-          class="column q-py-lg items-center side_bar justify-center"
-        >
-          <q-route-tab
-            class="q-my-sm text-dark addbor text-weight-bold"
-            to="/"
-            exact
-            label="Home"
-          />
-          <q-route-tab
-            class="q-my-sm text-dark addbor text-weight-bold"
-            to="/greyhobb"
-            label="GreyHobb"
-            exact
-          />
-
-          <q-route-tab
-            class="q-my-sm text-dark addbor text-weight-bold"
-            to="/greytech"
-            label="GreyTech"
-            exact
-          />
-          <q-route-tab
-            label="GreyCreate"
-            ripple
-            class="q-my-sm text-dark addbor text-weight-bold"
-            to="/greycreate"
-            exact
-          />
-          <q-route-tab
-            label="Metaverse"
-            ripple
-            class="q-my-sm text-dark addbor text-weight-bold"
-            to="/metaverse"
-            exact
-          />
-        </div>
-      </q-tabs>
-    </q-drawer> -->
-
-    <!-- <q-page-container>
-      <router-view />
-    </q-page-container> -->
     <q-page-container>
       <router-view v-slot="{ Component }">
         <transition name="route" mode="out-in">

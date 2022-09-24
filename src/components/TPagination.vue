@@ -37,10 +37,7 @@
       unelevated
       @click="navigate($links.prev)"
     ></q-btn>
-    <template
-      v-for="(page, index) in $meta.links"
-      :key="index"
-    >
+    <template v-for="(page, index) in $meta.links" :key="index">
       <q-btn
         v-if="is_numeric(page.label)"
         :disable="!page.url"
@@ -120,21 +117,21 @@ export default {
     },
   },
   watch: {
-    meta (e) {
+    meta(e) {
       this.$meta = e;
       this.canMeta = true;
     },
-    canMeta (e) {
+    canMeta(e) {
       this.jump(this.$route.query.page, e);
     },
-    modelValue (page) {
+    modelValue(page) {
       this.jump(page, true);
     },
-    links (e) {
+    links(e) {
       this.$links = e;
     },
   },
-  data () {
+  data() {
     return {
       canMeta: false,
       loading: false,
@@ -145,10 +142,10 @@ export default {
     };
   },
   methods: {
-    is_numeric (n) {
+    is_numeric(n) {
       return !isNaN(n);
     },
-    navigate (url, initial) {
+    navigate(url, initial) {
       this.loading = true;
       this.$emit("loading", true);
       this.$api
@@ -166,11 +163,12 @@ export default {
         })
         .catch((e) => {
           this.loading = false;
-          let error = this.$plugins.reader.error(e);
-          this.$h.notify(error.message || error, error.status || "error");
+          console.log(e);
+          // let error = this.$plugins.reader.error(e);
+          // this.$h.notify(error.message || error, error.status || "error");
         });
     },
-    jump (page2go, go = false) {
+    jump(page2go, go = false) {
       if (this.meta.links && page2go && go === true) {
         const current =
           this.meta.links.filter((e) => e.active === true)[0] || {};
@@ -185,7 +183,7 @@ export default {
         }
       }
     },
-    scrollToElement (el) {
+    scrollToElement(el) {
       el = typeof el === "string" ? document.querySelector(el) : el;
       const target = getScrollTarget(el);
       const offset = el.offsetTop;
