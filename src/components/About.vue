@@ -214,11 +214,11 @@ export default {
   padding: 2rem;
   gap: 1rem;
   margin-left: 0.5rem;
-  width: 65%;
+  width: 73%;
   height: 82%;
   position: absolute;
-  top: 8%;
-  left: 16.9%;
+  top: 7%;
+  left: 13%;
   /* left: 50%; */
   /* top: 50%; */
   transform: translate(-50%, -50%);
@@ -347,7 +347,7 @@ export default {
     width: 50%;
     position: absolute;
     bottom: 20%;
-    left: -13%;
+    left: -1%;
     z-index: 9;
   }
   .bottom_images .image3 {
@@ -383,10 +383,13 @@ export default {
     width: 90%;
   }
   .bottom_images .image2 {
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .bottom_images .image3 {
-    right: -15%;
+    right: -1%;
   }
 }
 
@@ -403,6 +406,9 @@ export default {
   }
   .paragraphs p {
     margin-bottom: 8rem;
+  }
+  .bottom_images .image2 {
+    width: 80%;
   }
 }
 

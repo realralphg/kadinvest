@@ -16,7 +16,7 @@
           <div></div>
           <img class="bump" src="/images/bump.png" alt="" />
           <div class="img">
-            <img src="/images/secretary.png" alt="" />
+            <img class="es" src="/images/secretary.png" alt="" />
 
             <img class="emoji emoji2" src="/images/emoji2.png" alt="" />
           </div>
@@ -99,9 +99,10 @@ h6.small_text {
   z-index: 10;
 }
 
-.mal_meta img.gov {
+.mal_meta img.gov,
+.img img.es {
   object-fit: cover;
-  height: 147px;
+  height: 250px;
   border-radius: 5px;
 }
 @media (max-width: 1025px) {
@@ -127,10 +128,16 @@ h6.small_text {
     width: 40%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .emoji,
   .emoji2 {
     width: 40px;
+  }
+  .mal_meta img.gov,
+  .img img.es {
+    object-fit: cover;
+    height: 178px;
+    border-radius: 5px;
   }
 }
 @media (max-width: 320px) {
