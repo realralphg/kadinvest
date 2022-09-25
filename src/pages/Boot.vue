@@ -63,7 +63,7 @@
               <q-card
                 :class="
                   props.selected || !props.row.is_available
-                    ? 'boot_card bg-grey-2'
+                    ? 'boot_card bg-grey-4'
                     : 'boot_card'
                 "
                 :style="`background-color:${props.row.custom_data.color}`"
