@@ -83,7 +83,7 @@
           <li>
             <q-btn
               class="text-dark nav_items"
-              label="Exhibition Booth"
+              label="Exhibition Booths"
               ripple
               no-caps
               to="/boot"

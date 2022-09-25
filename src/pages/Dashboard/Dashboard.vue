@@ -266,6 +266,7 @@
 import { ref, computed } from "vue";
 import { exportFile, useMeta } from "quasar";
 import TPagination from "../../components/TPagination.vue";
+import helper from "../../plugins/helpers";
 const columns = [
   {
     name: "id",
@@ -489,9 +490,9 @@ export default {
         (id && typeof id === "string") || typeof id === "number"
           ? [id]
           : this.selected.map((e) => e.id);
-      this.$helper
+      this.$h
         .notify(
-          "Are you sure you want to delete this fruitbay(s)? This action may be irreversible!",
+          "Are you sure you want to delete this space? This action may be irreversible!",
           "error",
           true,
           "Yes, Delete!"
@@ -545,7 +546,7 @@ export default {
           .get(this.curl)
           .then(({ data }) => {
             this.loading = false;
-            this.rows = data.data;
+            this.items = data.data;
             console.log(data);
           })
           .catch(({ response }) => {

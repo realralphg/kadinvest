@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="hold small_container">
-      <h1 class="main_text">Kadinvest 7.0 Exhibition Booth</h1>
+      <h1 class="main_text">Kadinvest 7.0 Exhibition Booths</h1>
       <p class="des">
         Kindly follow the steps to select your preferred exhibition booth
       </p>
@@ -9,7 +9,9 @@
       <div class="step_hold">
         <div class="wra">
           <div class="step step1">Step 1</div>
-          <p>Click your preferred exhibition booth position</p>
+          <p>
+            Click your preferred exhibition booth(each costs ₦250,000) position
+          </p>
         </div>
         <div class="wra">
           <div class="step step2">Step 2</div>
@@ -38,7 +40,7 @@
           </q-card>
         </div>
         <q-table
-          title="Booths"
+          title="Exhibition Booths"
           :rows="items"
           :columns="columns"
           row-key="name"
@@ -237,7 +239,7 @@
         </div>
       </q-card>
     </q-dialog>
-    <q-dialog v-model="responseModal" persistent>
+    <q-dialog v-model="responseModal">
       <div class="hold_dia">
         <div class="top">
           <div class="icon">
@@ -252,7 +254,7 @@
           >
         </div>
 
-        <q-card-actions align="center">
+        <!-- <q-card-actions align="center">
           <q-btn
             style="border-radius: 8px"
             class="bg-accent q-px-lg q-pt-xl q-pb-md text-white"
@@ -261,7 +263,7 @@
             label="Go home"
             color="primary"
           />
-        </q-card-actions>
+        </q-card-actions> -->
       </div>
     </q-dialog>
   </div>
@@ -402,7 +404,7 @@ export default {
       console.log(this.data);
 
       this.$api
-        .post(`spaces/9/reserve/guest`, this.data)
+        .post(`spaces/55/reserve/guest`, this.data)
         .then((resp) => {
           this.$q.loading.hide();
           console.log(resp);
@@ -417,6 +419,7 @@ export default {
           this.dialog = false;
           this.selected = [];
           this.refreshPage();
+          this.responseModal = true;
           //   window.location.reload();
         })
         .catch(({ response }) => {
@@ -707,6 +710,10 @@ label {
 
   .form_area {
     padding: 0;
+  }
+  .boots {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 </style>
