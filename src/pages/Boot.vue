@@ -17,13 +17,12 @@
         </div>
         <div class="wra">
           <div class="step step3">Step 3</div>
-          <p>Wait for a feedback from our team</p>
+          <p>Wait for feedback from our team</p>
         </div>
       </div>
-      <!-- {{ selected }}{{ selection }} -->
-      <!-- {{ columns }} -->
-      <!-- {{ selection }} -->
-      <!-- {{ selected }} -->
+      <div class="q-mt-xl boot_con q-mb-md">
+        <img class="boots" src="/images/boots.png" alt="" />
+      </div>
       <div id="contentContainer" class="q-mt-xl boot">
         <div v-if="load" class="q-gutter-md q-my-lg row items-start">
           <q-card
@@ -39,7 +38,7 @@
           </q-card>
         </div>
         <q-table
-          title="Boots"
+          title="Booths"
           :rows="items"
           :columns="columns"
           row-key="name"
@@ -159,7 +158,7 @@
               <p v-else class="q-my-md">You have not made any selection</p>
               <div class="q-my-md">
                 <div class="input_wrap">
-                  <label for="name"> Name: </label>
+                  <label for="name"> Full Name: </label>
                   <input
                     v-model="data.name"
                     name="name"
@@ -221,7 +220,7 @@
                     v-model="data.message"
                     name="message"
                     id=""
-                    placeholder="Type Your Message Here..."
+                    placeholder="Text Description..."
                   >
                   </textarea>
                 </div>
@@ -507,7 +506,14 @@ h6.title {
   color: #3a1f12;
   margin: 1rem 0;
 }
-
+.boot_con {
+  display: grid;
+  place-items: center;
+}
+.boots {
+  width: 70%;
+  margin: 0 auto;
+}
 .chips {
   /* display: flex; */
   justify-content: center;
