@@ -218,6 +218,19 @@
                 {{ errors.price[0] }}
               </div>
             </div>
+            <div class="col">
+              <q-item-label class="q-pb-xs">Color</q-item-label>
+              <q-input
+                dense
+                outlined
+                name="color"
+                v-model="data.custom_data[0].color"
+                label="Color"
+              />
+              <div class="error" v-if="errors.custom_data">
+                {{ errors.custom_data[0] }}
+              </div>
+            </div>
           </div>
           <div class="row q-gutter-sm">
             <div class="col">
@@ -266,7 +279,6 @@
 import { ref, computed } from "vue";
 import { exportFile, useMeta } from "quasar";
 import TPagination from "../../components/TPagination.vue";
-import helper from "../../plugins/helpers";
 const columns = [
   {
     name: "id",
@@ -343,7 +355,7 @@ export default {
       rows: [],
       errors: [],
       image: null,
-      data: {},
+      data: { custom_data: [{ color: "" }] },
       files: null,
       editstate: false,
       createstate: null,

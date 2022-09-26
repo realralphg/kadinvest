@@ -66,9 +66,14 @@
                     ? 'boot_card bg-grey-4'
                     : 'boot_card'
                 "
-                :style="`background-color:${props.row.custom_data.color}`"
+                :style="`background-color:${props.row.custom_data}`"
               >
-                <!-- {{ props.row.is_available }} -->
+                <!-- :style="
+                  props.row.custom_data[0]
+                    ? `background-color:${props.row.custom_data[0].color}`
+                    : ''
+                " -->
+                <!-- {{ props.row.custom_data[0] }} -->
                 <q-card-section>
                   <!-- <small v-if="!props.row.is_available"> Already Picked </small> -->
                   <q-checkbox
