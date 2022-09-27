@@ -58,6 +58,11 @@
           />
           <img src="/images/spo1.jpeg" alt="" />
           <img src="/images/spo2.jpeg" alt="" />
+          <img src="/images/log.svg" alt="" />
+          <!-- <div class="grey row items-center">
+            <img src="/images/log.svg" alt="" />
+            <span>GreySoft NG</span>
+          </div> -->
         </div>
       </div>
       <div class="become q-mt-lg flex justify-end">
