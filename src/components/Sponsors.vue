@@ -58,7 +58,7 @@
           />
           <img src="/images/spo1.jpeg" alt="" />
           <img src="/images/spo2.jpeg" alt="" />
-          <img src="/images/log.svg" alt="" />
+          <img src="/images/greylogo.jpeg" alt="" />
           <!-- <div class="grey row items-center">
             <img src="/images/log.svg" alt="" />
             <span>GreySoft NG</span>

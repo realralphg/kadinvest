@@ -218,7 +218,7 @@
                 {{ errors.price[0] }}
               </div>
             </div>
-            <div class="col">
+            <!-- <div class="col">
               <q-item-label class="q-pb-xs">Color</q-item-label>
               <q-input
                 dense
@@ -230,7 +230,7 @@
               <div class="error" v-if="errors.custom_data">
                 {{ errors.custom_data[0] }}
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="row q-gutter-sm">
             <div class="col">
