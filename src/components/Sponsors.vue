@@ -22,6 +22,7 @@
             src="https://pbs.twimg.com/profile_images/1351875712110755840/dXISVR3y_400x400.jpg"
             alt=""
           />
+          <img class="bigger" src="/images/greylogo.jpeg" alt="" />
           <img
             style="width: 60px"
             class="small"
@@ -58,7 +59,7 @@
           />
           <img src="/images/spo1.jpeg" alt="" />
           <img src="/images/spo2.jpeg" alt="" />
-          <img src="/images/greylogo.jpeg" alt="" />
+
           <!-- <div class="grey row items-center">
             <img src="/images/log.svg" alt="" />
             <span>GreySoft NG</span>
