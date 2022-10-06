@@ -92,6 +92,16 @@
           </li>
           <li>
             <q-btn
+              class="text-dark nav_items"
+              label="Sector Expo"
+              ripple
+              no-caps
+              to="/sector-expo"
+              exact
+            />
+          </li>
+          <li>
+            <q-btn
               class="text-dark sponsor nav_items"
               label="Become a sponsor"
               ripple
