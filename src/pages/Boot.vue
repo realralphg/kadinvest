@@ -330,6 +330,7 @@ export default {
     selectionIds() {
       let ids = this.selected.map((boot) => {
         let bootIds = Object.entries(boot);
+        console.log(bootIds);
         return bootIds[0][1];
       });
 
@@ -406,10 +407,10 @@ export default {
       this.$q.loading.show();
       this.loading = true;
       this.data.space_ids = this.selectionIds;
-      console.log(this.data);
+      // console.log(this.data);
 
       this.$api
-        .post(`spaces/55/reserve/guest`, this.data)
+        .post(`spaces/100/reserve/guest`, this.data)
         .then((resp) => {
           this.$q.loading.hide();
           console.log(resp);
