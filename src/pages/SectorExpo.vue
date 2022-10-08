@@ -569,7 +569,7 @@ label {
     max-width: 90%;
   }
   .wrapperr {
-    padding: 12rem 0 0rem;
+    padding: 8rem 0 0rem;
   }
 }
 </style>
