@@ -201,6 +201,7 @@
                   v-model="data.attending_via"
                   val="Physical"
                   label="Physical(limited)"
+                  v-show="hideSector"
                 />
                 <q-radio
                   v-model="data.attending_via"
@@ -377,6 +378,7 @@ export default {
       fields: [],
       data: { type: ["summit"], prefered_sector: [] },
       loading: false,
+      hideSector: false,
       errors: [],
       hideImg: false,
       hide_preferred: false,
@@ -403,9 +405,11 @@ export default {
       if (sector_expo) {
         this.hideImg = true;
         this.hide_preferred = true;
+        this.hideSector = true;
       } else {
         this.hideImg = false;
         this.hide_preferred = false;
+        this.hideSector = false;
       }
 
       let sector = newVal.find((ele) => {
