@@ -98,26 +98,20 @@
                       val="Agriculture"
                       label="Agriculture"
                       color="teal"
-                      :disable="disable"
                       name="prefered_sector"
-                      :size="disable ? '30px' : '40px'"
                     />
                     <q-checkbox
                       v-model="data.prefered_sector"
                       val="Solid Minerals"
                       label="Solid Minerals"
                       color="orange"
-                      :disable="disable"
                       name="Solid Minerals"
-                      :size="disable ? '30px' : '40px'"
                     />
 
                     <q-checkbox
                       v-model="data.prefered_sector"
                       val="Infrastructure"
                       label="Infrastructure"
-                      :disable="disable"
-                      :size="disable ? '30px' : '40px'"
                       color="orange"
                       name="prefered_sector"
                     />
@@ -125,10 +119,8 @@
                       v-model="data.prefered_sector"
                       val="Technology"
                       label="Technology"
-                      :disable="disable"
                       color="orange"
                       name="prefered_sector"
-                      :size="disable ? '30px' : '40px'"
                     />
                   </div>
                 </div>
@@ -156,10 +148,14 @@
               ></i>
             </div>
 
-            <p class="text-subtitle6 text-black">
+            <p class="text-subtitle7 q-mt-lg text-black">
               Dear {{ personData.name }} you have successfully <br />
               registered for KADINVEST 7.0 Sector Expo.
             </p>
+
+            <div class="qr">
+              <img :src="personData.qr" alt="" />
+            </div>
           </div>
 
           <q-card-actions align="center">
@@ -281,6 +277,13 @@ h2.head {
   text-transform: capitalize;
   color: #1f1b5e;
 }
+.qr {
+  margin: 1.5rem 0;
+}
+
+.qr img {
+  width: 150px;
+}
 
 .become {
   margin-top: 4rem;
@@ -357,7 +360,7 @@ label {
 
 .btnn {
   padding: 9.49248px 14.832px;
-  gap: 5.93px;
+  /* gap: 5.93px; */
   background: #00a250;
   border-radius: 2.37312px;
   font-weight: 500;

@@ -304,7 +304,7 @@ label {
 
 .btnn {
   padding: 9.49248px 14.832px;
-  gap: 5.93px;
+  /* gap: 5.93px; */
   background: #00a250;
   border-radius: 2.37312px;
   font-weight: 500;

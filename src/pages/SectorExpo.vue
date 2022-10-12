@@ -149,7 +149,12 @@
       </div>
     </div>
     <div class="feedback small_container q-pt-xl">
-      <a href="" class="q-px-xl q-py-sm bg-accent text-white">Give Feedback</a>
+      <a
+        target="_blank"
+        href="https://www.menti.com/als2nfy46oxe"
+        class="q-px-xl q-py-sm bg-accent text-white"
+        >Give Feedback</a
+      >
     </div>
 
     <q-dialog v-model="responseModal" persistent>
