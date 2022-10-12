@@ -37,6 +37,8 @@ const routes = [
       { path: '/join', component: () => import('pages/Join.vue') },
       { path: '/boot', component: () => import('pages/Boot.vue') },
       { path: '/sector-expo', component: () => import('pages/SectorExpo.vue') },
+      { path: '/onsite-sectorexpo-registration', component: () => import('pages/BusinessExpo.vue') },
+      { path: '/onsite-summit-registration', component: () => import('pages/Summit.vue') },
     ]
   },
 

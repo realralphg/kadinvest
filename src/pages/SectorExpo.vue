@@ -4,7 +4,7 @@
       <!-- <div class="card_wrapper"></div> -->
       <h2 class="head">Sector Expo Program of Events</h2>
 
-      <div class="q-py-lg q-mt-lg" style="max-width: 100%; width: 100%">
+      <div class="q-mt-lg" style="max-width: 100%; width: 100%">
         <q-list bordered class="rounded-borders">
           <q-expansion-item>
             <template v-slot:header>
@@ -26,7 +26,7 @@
             </template>
 
             <q-card>
-              <iframe
+              <!-- <iframe
                 src="https://docs.google.com/document/d/e/2PACX-1vSaWmwGe_KOSzXseAIaw9lCAMvTPup-LItd2v76LUYPrWTzpVBcx5alHQQEi93dQhEdauKS5P8BrHXL/pub?embedded=true"
                 frameborder="0"
                 width="100%"
@@ -34,15 +34,15 @@
                 allowfullscreen="true"
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
-              ></iframe>
+              ></iframe> -->
 
               <div class="text-center">
                 <a
-                  href="/images/INFRASTRUCTURE SECTOR EXPO DRAFT POE.pdf"
+                  href="/images/infrastructure POE.pdf"
                   download="INFRASTRUCTURE SECTOR EXPO DRAFT POE"
                   class="link text-white"
                 >
-                  <q-btn class="dwn q-py-lg q-mb-lg bg-primary text-white">
+                  <q-btn class="dwn q-my-lg bg-primary text-white">
                     Download
                   </q-btn></a
                 >
@@ -60,7 +60,7 @@
             </template>
 
             <q-card>
-              <iframe
+              <!-- <iframe
                 src="https://docs.google.com/document/d/e/2PACX-1vSl_IgoYZZoQ2XGJb8cUUPk5-dowmPcaj-d-IfEFpmXk6Cf7ZX4sZSRXD7R6PCf8z60-S0bcR9daRKA/pub?embedded=true"
                 frameborder="0"
                 width="100%"
@@ -68,15 +68,15 @@
                 allowfullscreen="true"
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
-              ></iframe>
+              ></iframe> -->
 
               <div class="text-center">
                 <a
-                  href="/images/AGRICULTURE SECTOR EXPO DRAFT POE.pdf"
+                  href="/images/Agriculture POE.pdf"
                   download="AGRICULTURE SECTOR EXPO DRAFT POE"
                   class="link text-white"
                 >
-                  <q-btn class="dwn q-py-lg q-mb-lg bg-primary text-white">
+                  <q-btn class="dwn q-my-lg bg-primary text-white">
                     Download
                   </q-btn></a
                 >
@@ -90,7 +90,7 @@
             </template>
 
             <q-card>
-              <iframe
+              <!-- <iframe
                 src="https://docs.google.com/document/d/e/2PACX-1vS2EmrwHLLzCAnDZ4P7fQvhE4GL6DUb_eVHpPHIOrkFOZfA_lSVWUMVwOwQCVGA8VDVUJ6kolAdk3L9/pub?embedded=true"
                 frameborder="0"
                 width="100%"
@@ -98,7 +98,7 @@
                 allowfullscreen="true"
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
-              ></iframe>
+              ></iframe> -->
 
               <div class="text-center">
                 <a
@@ -106,7 +106,7 @@
                   download="SOLID MINERALS & OTHERS POE"
                   class="link text-white"
                 >
-                  <q-btn class="dwn q-py-lg q-mb-lg bg-primary text-white">
+                  <q-btn class="dwn q-my-lg bg-primary text-white">
                     Download
                   </q-btn></a
                 >
@@ -122,7 +122,7 @@
             </template>
 
             <q-card>
-              <iframe
+              <!-- <iframe
                 src="https://docs.google.com/document/d/e/2PACX-1vTPcJ_bf1br3PlGi4KVFiIzUWiC3O7BGTkDGJS5OUpdGRBfqagfvO4vyRtCO0W_eIZnehX5Gk5CV_XE/pub?embedded=true"
                 frameborder="0"
                 width="100%"
@@ -130,15 +130,15 @@
                 allowfullscreen="true"
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
-              ></iframe>
+              ></iframe> -->
 
               <div class="text-center">
                 <a
-                  href="/images/TECHNOLOGY SECTOR EXPO DRAFT POE.pdf"
+                  href="/images/tech POE.pdf"
                   download="TECHNOLOGY SECTOR EXPO DRAFT POE"
                   class="link text-white"
                 >
-                  <q-btn class="dwn q-py-lg q-mb-lg bg-primary text-white">
+                  <q-btn class="dwn q-my-lg bg-primary text-white">
                     Download
                   </q-btn></a
                 >
@@ -148,123 +148,33 @@
         </q-list>
       </div>
     </div>
-
-    <!-- <div class="become">
-      <div class="werap small_container">
-        <header class="heading">
-          <div class="abt">
-            <h2 class="about">Become</h2>
-            <h2 class="about">A Sponsor</h2>
-          </div>
-
-          <div class="line"></div>
-        </header>
-      </div>
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#fff"
-          fill-opacity="1"
-          d="M0,32L1440,256L1440,320L0,320Z"
-        ></path>
-      </svg>
+    <div class="feedback small_container q-pt-xl">
+      <a href="" class="q-px-xl q-py-sm bg-accent text-white">Give Feedback</a>
     </div>
-    <div id="sponsorPackages" class="form_area">
-      <h6>Select your prefered package</h6>
 
-      <div class="form_style">
-        <div class="form_img flex justify-center">
-          <img src="/images/logo.png" alt="" />
+    <q-dialog v-model="responseModal" persistent>
+      <div class="hold_dia">
+        <div class="top">
+          <div class="icon">
+            <i style="font-size: 4rem" class="fa-duotone fa-check"></i>
+          </div>
+
+          <!-- <p class="text-subtitle6 text-green">
+            Dear {{ personData.name }} you have successfully registered for
+            KADINVEST 7.0
+          </p> -->
         </div>
-        <form @submit.prevent="submit" action="">
-          <div class="q-my-md">
-            <div class="input_wrap">
-              <label for="name"> Name: </label>
-              <input
-                v-model="data.name"
-                name="name"
-                type="text"
-                placeholder="John Doe"
-              />
-            </div>
-            <div class="error" v-if="errors['data.name']">
-              {{ errors["data.name"][0] }}
-            </div>
-          </div>
-          <div class="q-my-md">
-            <div class="input_wrap">
-              <label for="company"> Company: </label>
-              <input
-                v-model="data.company"
-                type="text"
-                name="company"
-                placeholder="John Doe and sons"
-              />
-            </div>
-            <div class="error" v-if="errors['data.company']">
-              {{ errors["data.company"][0] }}
-            </div>
-          </div>
 
-          <div class="q-my-md">
-            <div class="input_wrap">
-              <label for="email"> Email: </label>
-              <input
-                v-model="data.email"
-                type="text"
-                name="email"
-                placeholder="johndoe@yourmail.com"
-              />
-            </div>
-            <div class="error" v-if="errors['data.email']">
-              {{ errors["data.email"][0] }}
-            </div>
-          </div>
-
-          <div class="q-my-md">
-            <div class="input_wrap">
-              <label for="phone"> Phone Number: </label>
-              <input
-                v-model="data.phone"
-                name="phone"
-                type="text"
-                placeholder="00000000"
-              />
-            </div>
-            <div class="error" v-if="errors['data.phone']">
-              {{ errors["data.phone"][0] }}
-            </div>
-          </div>
-          <div class="q-my-md">
-            <div class="input_wrap">
-              <textarea
-                v-model="data.message"
-                name="message"
-                id=""
-                placeholder="Type Your Message Here..."
-              >
-              </textarea>
-            </div>
-            <div class="error" v-if="errors['data.message']">
-              {{ errors["data.message"][0] }}
-            </div>
-          </div>
-
-          <div class="flex q-my-lg justify-end">
-            <q-btn type="submit" class="btnn"> Send Message</q-btn>
-          </div>
-        </form>
+        <q-card-actions align="center">
+          <q-btn
+            style="border-radius: 8px"
+            class="bg-accent q-px-lg q-pt-xl q-pb-md text-white"
+            flat
+            label="Close"
+            color="primary"
+          />
+        </q-card-actions>
       </div>
-    </div> -->
-    <q-dialog full-width v-model="dialog">
-      <q-card
-        style="height: fit-content; width: 80%"
-        class="dialog_wid q-pa-md"
-      >
-        <div class="delp">
-          <Table />
-        </div>
-      </q-card>
     </q-dialog>
 
     <Footer />
@@ -286,6 +196,7 @@ export default {
       plan: [],
       data: {},
       errors: [],
+      responseModal: false,
     };
   },
   methods: {
@@ -293,18 +204,13 @@ export default {
       this.dialog = true;
       this.plan = plan;
     },
-    getPackage() {
-      document
-        .getElementById("sponsorPackages")
-        .scrollIntoView({ behavior: "smooth" });
-    },
 
     submit() {
       this.$q.loading.show();
       this.loading = true;
 
       this.$api
-        .post("get/form-data/2", { data: this.data })
+        .post("get/form-data/4", { data: this.data })
         .then((resp) => {
           this.$q.loading.hide();
           console.log(resp);
@@ -314,6 +220,8 @@ export default {
             position: "top",
             timeout: 3000,
           });
+
+          this.responseModal = true;
 
           this.data = {};
 
@@ -341,6 +249,9 @@ export default {
   padding: 10rem 0 0rem;
 }
 
+.head {
+  margin-bottom: 2rem;
+}
 .about {
   font-style: normal;
   font-weight: 700;

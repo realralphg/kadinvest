@@ -23,6 +23,7 @@
             src="https://pbs.twimg.com/profile_images/1351875712110755840/dXISVR3y_400x400.jpg"
             alt=""
           />
+          <img class="" src="/images/span.jpeg" alt="" />
         </div>
       </div>
       <div class="sponsors">
@@ -38,11 +39,11 @@
             src="https://pbs.twimg.com/media/FNrv5UaVkAEkAyI?format=jpg&name=large"
             alt=""
           />
-          <img
+          <!-- <img
             class=""
             src="https://www.ocpafrica.com/sites/default/files/Logo%20OCP%20AFRICA%20couleurs.png"
             alt=""
-          />
+          /> -->
           <img
             class=""
             src="https://i0.wp.com/www.blueprint.ng/wp-content/uploads/2021/06/NEXIM-Bank-logo.png?fit=600%2C330&ssl=1&resize=350%2C200"
@@ -58,6 +59,12 @@
             src="https://www.fcmbuk.com/wp-content/uploads/2019/03/fcmb_logo.png"
             alt=""
           />
+          <img class="" src="/images/sterling.jpeg" alt="" />
+          <img class="" src="/images/ama.jpeg" alt="" />
+
+          <img class="" src="/images/plast.jpeg" alt="" />
+          <img class="" src="/images/windcas.jpeg" alt="" />
+          <img class="" src="/images/silv.jpeg" alt="" />
           <img
             class=""
             src="https://i1.wp.com/www.theairmingle.com/wp-content/uploads/2018/10/Urban-Shelter-TAM-Client-Logo.png?ssl=1"

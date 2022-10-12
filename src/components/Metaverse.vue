@@ -19,6 +19,20 @@
             <div class="btns">
               <q-btn to="/join" class="join"> Join us live </q-btn>
               <q-btn class="submit"> Summit programme </q-btn>
+              <a
+                target="_blank"
+                href="https://us06web.zoom.us/j/82887673797?pwd=blpkM1Y2UjlPS1pMZC8yMnhlc1JJdz09"
+                class="submit"
+              >
+                Join us virtually
+              </a>
+            </div>
+
+            <div class="virtual_det">
+              <code class="text-white text-weight-bold"
+                >Meeting ID for Virtual event: 828 8767 3797 Passcode for
+                Virtual event: 134565</code
+              >
             </div>
           </div>
         </div>
