@@ -52,12 +52,7 @@
             Experience KADINVEST <br />
             in the metaverse
           </h3>
-          <div class="auto_grid">
-            <a href="" class="enter ellipsis"> Join the Infrastructure Expo </a>
-            <a href="" class="enter ellipsis"> Join the Agriculture Expo </a>
-            <a href="" class="enter ellipsis"> Join the Solid Minerals Expo </a>
-            <a href="" class="enter ellipsis"> Join the Technology Expo </a>
-          </div>
+          <q-btn class="enter"> Enter the metaverse </q-btn>
         </div>
       </div>
     </div>

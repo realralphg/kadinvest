@@ -1,7 +1,13 @@
 <template>
   <div class="count_wrapper">
     <div class="count_hold">
-      <vue-countdown
+      <div class="auto_grid">
+        <a href="" class="enter ellipsis"> Join the Infrastructure Expo </a>
+        <a href="" class="enter ellipsis"> Join the Agriculture Expo </a>
+        <a href="" class="enter ellipsis"> Join the Solid Minerals Expo </a>
+        <a href="" class="enter ellipsis"> Join the Technology Expo </a>
+      </div>
+      <!-- <vue-countdown
         :time="2 * 24 * 60 * 60 * 13000"
         :transform="transformSlotProps"
         v-slot="{ days, hours, minutes, seconds }"
@@ -30,13 +36,8 @@
             </div>
           </div>
         </div>
-        <!-- <div class="time">
-          <span class="days">{{ days }}Days</span>
-          <span class="hours">{{ hours }}Hours</span>
-          <span class="minutes">{{ minutes }}Minutes</span>
-          <span class="secs"> {{ seconds }} seconds</span>
-        </div> -->
-      </vue-countdown>
+        
+      </vue-countdown> -->
     </div>
   </div>
 </template>
@@ -72,6 +73,34 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.auto_grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.auto_grid .enter {
+  text-overflow: ellipsis;
+  width: 200px;
+}
+
+.enter {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13.2px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #00a250;
+  background: #f2f2f2;
+  border-radius: 10px;
+  margin: 1rem 0;
+  padding: 1rem;
 }
 .count_wrapper {
   background: hsl(234, 17%, 12%) no-repeat center center/cover;
