@@ -23,7 +23,7 @@
             src="https://pbs.twimg.com/profile_images/1351875712110755840/dXISVR3y_400x400.jpg"
             alt=""
           />
-          <img class="" src="/images/span.jpeg" alt="" />
+          <img class="bigger" src="/images/span.jpeg" alt="" />
         </div>
       </div>
       <div class="sponsors">
