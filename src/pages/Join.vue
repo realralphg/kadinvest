@@ -2,10 +2,34 @@
   <div class="count_wrapper">
     <div class="count_hold">
       <div class="auto_grid">
-        <a href="" class="enter ellipsis"> Join the Infrastructure Expo </a>
-        <a href="" class="enter ellipsis"> Join the Agriculture Expo </a>
-        <a href="" class="enter ellipsis"> Join the Solid Minerals Expo </a>
-        <a href="" class="enter ellipsis"> Join the Technology Expo </a>
+        <a
+          target="_blank"
+          href="https://spatial.io/s/KADINVEST-7-0_Infrastructure-6347c0dc61f1bf000134a03c?share=8127328616726458222"
+          class="enter ellipsis"
+        >
+          Join the Infrastructure Expo
+        </a>
+        <a
+          target="_blank"
+          href="https://spatial.io/s/KADINVEST-7-0_Agric-63402dd8e290f80001a1bce5?share=192474115220888067"
+          class="enter ellipsis"
+        >
+          Join the Agriculture Expo
+        </a>
+        <a
+          target="_blank"
+          href="https://spatial.io/s/KADINVEST-7-0_Solid-minerals-6347c35e76bb8b0001759319?share=7456321790297307554"
+          class="enter ellipsis"
+        >
+          Join the Solid Minerals Expo
+        </a>
+        <a
+          target="_blank"
+          href="https://spatial.io/s/KADINVEST-7-0_Tech-6347c44076bb8b0001759328?share=7375352181393008270"
+          class="enter ellipsis"
+        >
+          Join the Technology Expo
+        </a>
       </div>
       <!-- <vue-countdown
         :time="2 * 24 * 60 * 60 * 13000"
