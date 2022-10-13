@@ -243,6 +243,7 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   align-items: center;
   gap: 1rem;
+  margin: 2rem 0;
 }
 
 .sponsors_wrap img {
