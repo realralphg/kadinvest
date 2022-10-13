@@ -20,22 +20,42 @@
 
           <q-expansion-item>
             <template v-slot:header>
-              <q-item-section>
-                INFRASTRUCTURE SECTOR EXPO DRAFT POE
-              </q-item-section>
+              <q-item-section> PREVIEW PROGRAM OF EVENTS </q-item-section>
             </template>
 
             <q-card>
-              <!-- <iframe
-                src="https://docs.google.com/document/d/e/2PACX-1vSaWmwGe_KOSzXseAIaw9lCAMvTPup-LItd2v76LUYPrWTzpVBcx5alHQQEi93dQhEdauKS5P8BrHXL/pub?embedded=true"
+              <iframe
                 frameborder="0"
                 width="100%"
                 height="500"
                 allowfullscreen="true"
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
-              ></iframe> -->
+                src="https://docs.google.com/document/d/e/2PACX-1vRuZzC32MVn_1BToM0bVn8rU_QUZw0uAoJFvI-3q9F_m4kULKSVPh9C8rg574r5Kw/pub?embedded=true"
+              ></iframe>
 
+              <div class="text-center">
+                <a
+                  href="/images/All Business Expo PoE.docx"
+                  download="All Business Expo PoE"
+                  class="link text-white"
+                >
+                  <q-btn class="dwn q-my-lg bg-primary text-white">
+                    Download
+                  </q-btn></a
+                >
+              </div>
+            </q-card>
+          </q-expansion-item>
+          <q-separator />
+          <q-expansion-item>
+            <template v-slot:header>
+              <q-item-section>
+                INFRASTRUCTURE SECTOR EXPO DRAFT POE
+              </q-item-section>
+            </template>
+
+            <q-card>
               <div class="text-center">
                 <a
                   href="/images/infrastructure POE.pdf"
@@ -60,16 +80,6 @@
             </template>
 
             <q-card>
-              <!-- <iframe
-                src="https://docs.google.com/document/d/e/2PACX-1vSl_IgoYZZoQ2XGJb8cUUPk5-dowmPcaj-d-IfEFpmXk6Cf7ZX4sZSRXD7R6PCf8z60-S0bcR9daRKA/pub?embedded=true"
-                frameborder="0"
-                width="100%"
-                height="500"
-                allowfullscreen="true"
-                mozallowfullscreen="true"
-                webkitallowfullscreen="true"
-              ></iframe> -->
-
               <div class="text-center">
                 <a
                   href="/images/Agriculture POE.pdf"
@@ -90,20 +100,10 @@
             </template>
 
             <q-card>
-              <!-- <iframe
-                src="https://docs.google.com/document/d/e/2PACX-1vS2EmrwHLLzCAnDZ4P7fQvhE4GL6DUb_eVHpPHIOrkFOZfA_lSVWUMVwOwQCVGA8VDVUJ6kolAdk3L9/pub?embedded=true"
-                frameborder="0"
-                width="100%"
-                height="500"
-                allowfullscreen="true"
-                mozallowfullscreen="true"
-                webkitallowfullscreen="true"
-              ></iframe> -->
-
               <div class="text-center">
                 <a
-                  href="/images/SOLID MINERALS & OTHERS POE.pdf"
-                  download="SOLID MINERALS & OTHERS POE"
+                  href="/images/solid-minerals.pdf"
+                  download="SOLID MINERALS POE"
                   class="link text-white"
                 >
                   <q-btn class="dwn q-my-lg bg-primary text-white">
