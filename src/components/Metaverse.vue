@@ -99,6 +99,7 @@ export default {
   align-items: center;
   gap: 2rem;
   margin: 1.5rem 0;
+  flex-wrap: wrap;
 }
 .top_card {
   background: linear-gradient(274.66deg, #2d25a6 33.66%, #463cdf 80.38%);
@@ -328,7 +329,27 @@ h3.heading {
   .reducepad {
     padding: 1rem 0 !important;
   }
+  .auto_grid {
+    gap: 0rem;
+  }
+  .btns {
+    gap: 1rem;
+  }
+
+  .info_main,
+  h3.heading {
+    font-size: 30.57px;
+  }
+
+  .top_card .right {
+    padding: 1rem;
+  }
+
+  p.date {
+    line-height: 1.4;
+  }
 }
+
 @media (max-width: 320px) {
   .info_main,
   h3.heading {
