@@ -70,7 +70,7 @@
                 {{ errors["data.phone"][0] }}
               </div>
             </div>
-            <div class="q-my-md">
+            <!-- <div class="q-my-md">
               <div class="input_wrap">
                 <textarea
                   v-model="data.message"
@@ -83,7 +83,7 @@
               <div class="error" v-if="errors['data.message']">
                 {{ errors["data.message"][0] }}
               </div>
-            </div>
+            </div> -->
 
             <div class="flex q-my-lg justify-end">
               <q-btn type="submit" class="btnn"> Register</q-btn>
