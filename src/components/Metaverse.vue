@@ -52,7 +52,7 @@
             Experience KADINVEST <br />
             in the metaverse
           </h3>
-          <q-btn class="enter"> Enter the metaverse </q-btn>
+          <q-btn to="/join" class="enter"> Enter the metaverse </q-btn>
         </div>
       </div>
     </div>
