@@ -331,7 +331,7 @@ h1 {
     line-height: unset;
   }
 }
-@media (max-width: 987px) {
+@media (max-width: 1075px) {
   .navbar {
     opacity: 0.95;
   }
@@ -456,7 +456,7 @@ h1 {
     display: none;
   }
 }
-@media (max-width: 987px) {
+@media (max-width: 1075px) {
   .menu {
     display: block;
   }
@@ -465,7 +465,7 @@ h1 {
     display: none;
   }
 }
-@media (max-width: 987px) {
+@media (max-width: 1075px) {
   .nav__toggler {
     display: flex;
   }

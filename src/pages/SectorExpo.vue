@@ -96,7 +96,7 @@
           <q-separator />
           <q-expansion-item>
             <template v-slot:header>
-              <q-item-section> SOLID MINERALS & OTHERS POE </q-item-section>
+              <q-item-section> SOLID MINERALS DRAFT POE </q-item-section>
             </template>
 
             <q-card>

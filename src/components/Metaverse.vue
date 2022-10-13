@@ -52,7 +52,12 @@
             Experience KADINVEST <br />
             in the metaverse
           </h3>
-          <q-btn to="/join" class="enter"> Coming soon </q-btn>
+          <div class="auto_grid">
+            <a href="" class="enter ellipsis"> Join the Infrastructure Expo </a>
+            <a href="" class="enter ellipsis"> Join the Agriculture Expo </a>
+            <a href="" class="enter ellipsis"> Join the Solid Minerals Expo </a>
+            <a href="" class="enter ellipsis"> Join the Technology Expo </a>
+          </div>
         </div>
       </div>
     </div>
@@ -108,6 +113,20 @@ export default {
 
 .logo {
   width: 150px;
+}
+
+.auto_grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.auto_grid .enter {
+  text-overflow: ellipsis;
+  width: 200px;
 }
 
 .top_card .left {
