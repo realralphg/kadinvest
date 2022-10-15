@@ -36,7 +36,7 @@
           <!-- <i class="fa-sharp fa-solid fa-user-astronaut"></i> -->
           <a
             target="_blank"
-            href="https://spatial.io/s/KADINVEST-7-0_Agric-63402dd8e290f80001a1bce5?share=192474115220888067"
+            href="https://spatial.io/s/KADINVEST-Main-Summit-63402dd8e290f80001a1bce5?share=192474115220888067"
             class="enter ellipsis"
           >
             Enter
