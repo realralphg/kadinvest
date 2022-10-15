@@ -51,7 +51,7 @@
           <img src="/images/10.png" alt="" />
           <a
             target="_blank"
-            href="https://spatial.io/s/KADINVEST-7-0_Agric-63402dd8e290f80001a1bce5?share=192474115220888067"
+            href="https://spatial.io/s/KADINVEST_Exhibition-633d966fe290f800019990a3?share=707216404350606130"
             class="enter ellipsis"
           >
             Enter
