@@ -18,20 +18,27 @@
 
             <div class="btns">
               <q-btn to="/join" class="join"> Join us live </q-btn>
-              <q-btn class="submit"> Summit programme </q-btn>
+              <q-btn class="submit"> Summit Event </q-btn>
               <a
                 target="_blank"
-                href="https://us06web.zoom.us/j/82887673797?pwd=blpkM1Y2UjlPS1pMZC8yMnhlc1JJdz09"
+                href="https://us02web.zoom.us/j/81901237097?pwd=SWhxTFRmVDBmSFhkY0ZRYWx2ZDkyUT09"
                 class="submit"
               >
-                Join us virtually
+                Join us virtually(Zoom)
               </a>
             </div>
 
             <div class="virtual_det">
               <code class="text-white text-weight-bold"
-                >Meeting ID for Virtual event: 828 8767 3797 Passcode for
-                Virtual event: 134565</code
+                >Topic: INVITATION TO PARTICIPATE IN NIGERIA AGRIBUSINESS GROUP
+                (NABG) STRATEGY Time: Oct 14, 2022 02:00 PM West Central
+                Africa.</code
+              >
+              <br />
+              <br />
+              <code class="text-white text-weight-bold"
+                >Meeting ID for Virtual event: 819 0123 7097 Passcode for
+                Virtual event: 524815</code
               >
             </div>
           </div>
@@ -132,6 +139,7 @@ export default {
   align-items: center;
   border-right: 1px dashed #ffffff;
   padding: 2rem;
+  text-align: center;
 }
 
 .top_card .right {

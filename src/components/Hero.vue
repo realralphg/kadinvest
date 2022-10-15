@@ -14,7 +14,9 @@
       <p class="smaller_text">KADUNA STATE</p>
       <h2 class="subtext"><q>Building a Resilient Economy</q></h2>
 
-      <q-btn to="/register" class="register"> Register Now </q-btn>
+      <q-btn to="/onsite-summit-registration" class="register">
+        Register Now
+      </q-btn>
     </div>
   </div>
 </template>
