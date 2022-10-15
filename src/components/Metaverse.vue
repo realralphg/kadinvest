@@ -18,7 +18,7 @@
 
             <div class="btns">
               <q-btn to="/join" class="join"> Join us live </q-btn>
-              <q-btn class="submit"> Summit Event </q-btn>
+              <!-- <q-btn class="submit"> Summit Event </q-btn> -->
               <a
                 target="_blank"
                 href="https://us02web.zoom.us/j/81901237097?pwd=SWhxTFRmVDBmSFhkY0ZRYWx2ZDkyUT09"
