@@ -71,6 +71,24 @@
               <p class="q-ml-md">Paid Reservations</p>
             </div>
           </q-item>
+          <q-item clickable v-ripple to="/SectorExpoScan">
+            <div class="wrapp">
+              <i class="fa-duotone fa-money-bill"></i>
+              <p class="q-ml-md">SectorExpo</p>
+            </div>
+          </q-item>
+          <q-item clickable v-ripple to="/summit">
+            <div class="wrapp">
+              <i class="fa-duotone fa-money-bill"></i>
+              <p class="q-ml-md">Summit</p>
+            </div>
+          </q-item>
+          <q-item clickable v-ripple to="/scanned">
+            <div class="wrapp">
+              <i class="fa-duotone fa-money-bill"></i>
+              <p class="q-ml-md">Scanned</p>
+            </div>
+          </q-item>
         </div>
 
         <!-- <q-item clickable v-ripple to="/">

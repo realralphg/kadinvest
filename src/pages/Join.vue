@@ -654,7 +654,7 @@ h2 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 764px) {
   .count_wrapper {
     height: 100%;
   }

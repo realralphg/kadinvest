@@ -20,6 +20,9 @@ const routes = [
       { path: '/user/dashboard', component: () => import('pages/Dashboard/Dashboard.vue'), name:'user.dashboard', meta: { requireAuth: true, }} ,
       { path: '/reservations', component: () => import('pages/Dashboard/Reservations.vue'), name:'reservations' ,meta: { requireAuth: true, }} ,
       { path: '/paidReservations', component: () => import('pages/Dashboard/PaidReservations.vue'), name:'paidReservations', meta: { requireAuth: true, }} ,
+      { path: '/SectorExpoScan', component: () => import('pages/Dashboard/SectorExpoScan.vue'), name:'SectorExpoScan', meta: { requireAuth: true, }} ,
+      { path: '/summit', component: () => import('pages/Dashboard/Summit.vue'), name:'summit', meta: { requireAuth: true, }} ,
+      { path: '/scanned', component: () => import('pages/Dashboard/Scanned.vue'), name:'scanned', meta: { requireAuth: true, }} ,
     ]
   },
   {

@@ -218,7 +218,7 @@ export default {
         .post("get/form-data/4", { data: this.data })
         .then((resp) => {
           this.$q.loading.hide();
-          console.log(resp);
+          // console.log(resp);
           this.$q.notify({
             message: "Submission Successful",
             color: "green",
